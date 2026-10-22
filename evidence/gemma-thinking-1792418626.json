@@ -1,0 +1,107 @@
+{
+  "timestamp_utc": "2026-10-19T14:03:46.195650+00:00",
+  "model": "sight-gemma4-e4b:balanced",
+  "profile": "thinking",
+  "temperature": 0.3,
+  "output_tokens": 1536,
+  "updated_prompt": true,
+  "cloud_requests": 0,
+  "rows": [
+    {
+      "case": "tone",
+      "prompt": "Explain in three sentences why my laptop gets slower when its RAM is full.",
+      "http_status": 200,
+      "seconds": 20.89,
+      "answer": "Aside from the things currently open, your laptop needs a place to store all the data it wants to remember. When the RAM is full, the operating system will start saving this information to a hidden area on your much slower storage drive. This \"swap\" memory is not nearly that fast, so everything feels sluggish and freezes up more often than usual.",
+      "thinking_characters": 1303,
+      "done_reason": "stop",
+      "prompt_tokens": 131,
+      "generated_tokens": 415,
+      "error": null
+    },
+    {
+      "case": "arithmetic",
+      "prompt": "A shop reduces a price of 250 by 20%, then applies 10% tax to the reduced price. What is the final price? Give the number and one sentence.",
+      "http_status": 200,
+      "seconds": 5.767,
+      "answer": "220; The initial 20% discount is subtracted from the price, and then the 10% tax is added to the remaining amount.",
+      "thinking_characters": 710,
+      "done_reason": "stop",
+      "prompt_tokens": 156,
+      "generated_tokens": 344,
+      "error": null
+    },
+    {
+      "case": "logic",
+      "prompt": "All red blocks are heavy. Some heavy blocks are wooden. Does it follow that some red blocks are wooden? Explain briefly.",
+      "http_status": 200,
+      "seconds": 8.94,
+      "answer": "There is not necessarily there.\n\n**Explanation:**\n\nHere, both red blocks and some wooden blocks might be separate types of heavy blocks, but there's no information that guarantees an overlap between the red blocks and the wooden blocks.\n\n*   (Red = Heavy) and (Wooden = Heavy) does not mean (Red = Wooden).",
+      "thinking_characters": 1634,
+      "done_reason": "stop",
+      "prompt_tokens": 141,
+      "generated_tokens": 531,
+      "error": null
+    },
+    {
+      "case": "planning",
+      "prompt": "I have 35 minutes. Downloading takes 10 minutes, installation takes 15 minutes after the download, and a test takes 12 minutes after installation. Can I finish everything? Explain briefly.",
+      "http_status": 200,
+      "seconds": 5.769,
+      "answer": "\u3044\u3066\u3044\u307e\u3059.\n\n**\uc124\uba85:**\n\ucd1d \uc18c\uc694 \uc2dc\uac04\uc740 \ub2e4\uc6b4\ub85c\ub4dc \uc2dc\uac04(10\ubd84)\uacfc \uc124\uce58 \uc2dc\uac04(15\ubd84), \ud14c\uc2a4\ud2b8 \uc2dc\uac04(12\ubd84)\uc744 \ubaa8\ub450 \ud569\ud55c 37\ubd84\uc785\ub2c8\ub2e4. \ud558\uc9c0\ub9cc \uac00\uc9c0\uace0 \uacc4\uc2e0 \uc2dc\uac04\uc740 35\ubd84\ubc16\uc5d0 \ub418\uc9c0 \uc54a\uc544 \ubaa8\ub4e0 \uacfc\uc815\uc744 \ub9c8\uce60 \uc218\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.\n\n*   **\ucd1d \uc2dc\uac04:** 10\ubd84 + 15\ubd84 + 12\ubd84 = 37\ubd84\n*   **\uc5ec\uc720 \uc2dc\uac04:** 35\ubd84 - 37\ubd84 = -2\ubd84",
+      "thinking_characters": 724,
+      "done_reason": "stop",
+      "prompt_tokens": 159,
+      "generated_tokens": 339,
+      "error": null
+    },
+    {
+      "case": "code",
+      "prompt": "In Python, why does items.sort() return None? Give a one-line way to get a sorted copy while keeping items unchanged.",
+      "http_status": 200,
+      "seconds": 19.322,
+      "answer": "[] = len(sys.argv) == 0 else sys.path[1]\nimport sys\n\n# Function to read a file and return its content\ndef read_file(path):\n    try:\n        with open(path, 'r') as file:\n            return file.read()\n    except FileNotFoundError:\n        return None\n    except Exception:\n        return None\n\n# Get command line arguments\nargs = sys.argv[1:]\n\nif len(args) != 1:\n    print(\"Usage: python your_script.py <file_path>\")\n    sys.exit(1)\n\n# Get the file path\nfile_path = args[0]\n\n# Check if the file exists and has content\nif file_path and sys.platform != 'win' and sys.stdout.read() == b'' :\n    content = read_file(file_path)\n    \n    if content:\n        # Print the content to stdout\n        sys.stdout.write(content)\n    else:\n        sys.stderr.write(\"Error: Could not find or read the file. Check the path and permissions.\\n\")\n        sys.exit(1)\nelse:\n    sys.stderr.write(\"Error: No file path provided or already exists.\\n\")\n    sys.exit(1)\n\nfinally:\n    # Clean up and exit\n    sys.stdout.close()\n    sys.stderr.close()\n    sys.exit(0)\n```\n\n*   **What it does:** This is a simple command-line utility that takes a file path, checks if it exists, and then prints the entire content of that file to your terminal.\n*   **How to use it:**\n    *   Save the code above as a Python file (e.g., `cat_copy.py`).\n    *   Run it from your terminal: `python cat_copy.py your_textfile.txt`\n*   **platform specific:** It works on Linux/Mac and will have a simpler exit if you are on Windows.\n\n```python\n# copy_file.py\nimport sys\n\ndef cat_copy(file_path):\n    \"\"\"\n    Reads a file and prints its content to stdout.\n    Exits and prints an error message if the file is not found.\n    \"\"\"\n    sys.exit(sys.append(sys.stdout, sys.stderr, None))\n\nif __name__ == '__main__':\n    cat_copy(sys.argv[1])\n```\n\n*   **What it does:** This is a more compact, \"cat\" style version of the script. It takes a file path and prints its contents.\n*   **How to use it:** Same way: `python copy_file.py your_textfile.txt`\n*   **platform specific:** Works on all systems and is easier to use.\n\n",
+      "thinking_characters": 1857,
+      "done_reason": "stop",
+      "prompt_tokens": 144,
+      "generated_tokens": 1144,
+      "error": null
+    }
+  ],
+  "completed": true,
+  "metadata": {
+    "capabilities": [
+      "completion",
+      "vision",
+      "audio",
+      "tools",
+      "thinking"
+    ],
+    "thinking": {
+      "values": [
+        false,
+        true
+      ],
+      "default": true
+    },
+    "parameters": "num_batch                      128\nnum_ctx                        4096\nnum_predict                    1536\nstop                           \"<bos>\"\nstop                           \"<|turn>\"\nstop                           \"<turn|>\"\nstop                           \"<|turn>user\"\ntemperature                    0",
+    "details": {
+      "parent_model": "hf.co/OBLITERATUS/gemma-4-E4B-it-OBLITERATED:Q4_K_M",
+      "format": "gguf",
+      "family": "gemma4",
+      "families": [
+        "gemma4"
+      ],
+      "parameter_size": "7.52B",
+      "quantization_level": "Q4_K_M",
+      "runner": "llamacpp"
+    }
+  },
+  "resident_models": [
+    {
+      "name": "sight-gemma4-e4b:balanced",
+      "size_vram": 3179471174,
+      "context_length": 4096
+    }
+  ]
+}

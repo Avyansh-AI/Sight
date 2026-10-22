@@ -1,0 +1,125 @@
+{
+  "timestamp_utc": "2026-10-21T15:30:02.866100+00:00",
+  "python": "3.12.5",
+  "windows": "Windows-11-10.0.26300-SP0",
+  "ollama": {
+    "version": "0.40.6",
+    "executable_sha256": "71d2002d3ae572d5fa8c1d368ce9d1b9a39c7187cf169e8b330c55410bf6c58e",
+    "notices": [
+      {
+        "path": "lib\\ollama\\CPP_HTTPLIB_LICENSE",
+        "bytes": 1097,
+        "sha256": "bb546eae5924d8ee842e0e567e6d533c5824bdebccf605f99a5b3429034e6697"
+      },
+      {
+        "path": "lib\\ollama\\CUDNN_LICENSE.txt",
+        "bytes": 1169,
+        "sha256": "b6fe452605fe29245f0cbafa724b42df94a5e170bedb9d45bc9cfaa4883ad907"
+      },
+      {
+        "path": "lib\\ollama\\CUTLASS_LICENSE.txt",
+        "bytes": 1888,
+        "sha256": "48eb34a9124af8fdd2ad1858a64be9827ebc42e5389c6dd4b5a93e411ac7e693"
+      },
+      {
+        "path": "lib\\ollama\\DLPACK_LICENSE",
+        "bytes": 11546,
+        "sha256": "9bda2385fa325d1df6dc39772eba3cc6d07bdfaf2c656cd644cd29f7509514fd"
+      },
+      {
+        "path": "lib\\ollama\\FMT_LICENSE",
+        "bytes": 1458,
+        "sha256": "25b5db04aa6070c12ac518b91cbd0a59725c050ecb091456e6ebc3d3eeb369cf"
+      },
+      {
+        "path": "lib\\ollama\\GO_LICENSE",
+        "bytes": 166573,
+        "sha256": "7fee9b29a1541b5a9ec03c5d57e095ad280f67a824cf3818445ba6996f86fe85"
+      },
+      {
+        "path": "lib\\ollama\\JSON_LICENSE.MIT",
+        "bytes": 1076,
+        "sha256": "86b998c792894ccb911a1cb7994f7a9652894e7a094c0b5e45be2f553f45cf14"
+      },
+      {
+        "path": "lib\\ollama\\LLAMA_CPP_LICENSE",
+        "bytes": 1099,
+        "sha256": "bcd8ec749126d45cb06737d0690295d73df4b6e7e194205bcf91190368f27285"
+      },
+      {
+        "path": "lib\\ollama\\LLAMA_CPP_VENDORS_LICENSE",
+        "bytes": 7424,
+        "sha256": "7547ae6372a35e7382898dd9f5519ebc16e93095f69c2466b5b74b617c33d4da"
+      },
+      {
+        "path": "lib\\ollama\\MLX_C_LICENSE",
+        "bytes": 1088,
+        "sha256": "d8d63c7fa57071d80d30116d014e4189c52ef4cb2d1671f6d848e78d9f6cfad0"
+      },
+      {
+        "path": "lib\\ollama\\MLX_LICENSE",
+        "bytes": 1087,
+        "sha256": "e93675e97d080c4fcfef6dd530448b9a6fd7c1ad43c736d593537079cd669d3d"
+      },
+      {
+        "path": "lib\\ollama\\NVTX3_LICENSE.txt",
+        "bytes": 12706,
+        "sha256": "c3b19baa37cf18bac07b65700824acadcfa617316f02af10d3852ed20f4f6ab8"
+      },
+      {
+        "path": "lib\\ollama\\PICOJSON_LICENSE",
+        "bytes": 1441,
+        "sha256": "02f4aea46c66a0c110bb4fd995817db2dc2af0b57c18336b367e6bc9c27eb91f"
+      },
+      {
+        "path": "lib\\ollama\\XGRAMMAR_LICENSE",
+        "bytes": 11558,
+        "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+      },
+      {
+        "path": "lib\\ollama\\XGRAMMAR_NOTICE",
+        "bytes": 57,
+        "sha256": "93971ad2b725c8398df171dbd7c8145fc9d11bf016294aa69a8a783b55a40775"
+      }
+    ],
+    "redistributed": false
+  },
+  "chromium": {
+    "version": "156.0.8078.4",
+    "notices": [],
+    "redistributed": false
+  },
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU, 617.42, 8188",
+  "windows_speech": "Installed System.Speech/SAPI; OS component, not redistributed",
+  "uncensored_weights": {
+    "source_model": "hf.co/OBLITERATUS/gemma-4-E4B-it-OBLITERATED:Q4_K_M",
+    "profile_model": "sight-gemma4-e4b:uncensored",
+    "same_weight_and_projector_blob_references": true,
+    "source_manifest_sha256": "fd375f9da7aa1f034f42bc8f4062a56ba151780c81b9fec5a62470eb22aa0d54",
+    "profile_manifest_sha256": "2c79316210cfa846a7148f7e14b179ba4af6e8c5e0e6a037210bc8c2554a7d6d",
+    "blob_references": [
+      {
+        "mediaType": "application/vnd.ollama.image.model",
+        "digest": "sha256:819372c2cd9e5aa62950f07db6c5e849769a2fd17f2f25d4932b6f2dd567d4e2",
+        "size": 5335289792
+      },
+      {
+        "mediaType": "application/vnd.ollama.image.projector",
+        "digest": "sha256:b75adfbc8d804d782d935df4e59f8b559a6abefba47193d1591bd8fc38ea77e0",
+        "size": 990372288
+      }
+    ],
+    "gguf_format": "GGUF",
+    "gguf_version": 3,
+    "tensor_count": 720,
+    "metadata_entries": 44,
+    "fresh_blob_rehash_performed": false,
+    "weights_redistributed": false
+  },
+  "official_comparison_tag_absent": true,
+  "external_binary_advisory_coverage": "NOT_CERTIFIED: PyPI OSV scan does not cover every bundled CUDA/Chromium/Windows component.",
+  "limits": [
+    "License-file observations are not legal clearance.",
+    "No driver, OS or Ollama upgrade was installed."
+  ]
+}

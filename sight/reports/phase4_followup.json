@@ -1,0 +1,23 @@
+{
+  "timestamp_utc": "2026-10-21T15:51:56.826553+00:00",
+  "scope": "Startup-helper portability and parent-environment restoration; full model-file verification; paired prompt diagnosis",
+  "previous_verified_handoff_sha256": "ef9760ebdd753464db04a0bf196e81130ffd987a09d1b6e945c36212f0b1c499",
+  "previous_verified_handoff_snapshot": "C:\\Users\\Dell\\Documents\\Ai projects\\Sight\\Phase-4\\previous-handoffs\\SIGHT-Phase4-ef9760ebdd75.zip",
+  "launcher_live_passed": true,
+  "startup_fixture_scenarios": 9,
+  "prior_readiness_scenarios": 4,
+  "fresh_windows_account_tested": false,
+  "soak_runtime_sources_unchanged": true,
+  "soak_dependencies_unchanged": true,
+  "soak_evidence": "C:\\Users\\Dell\\Documents\\Ai projects\\Sight\\Phase-4\\evidence\\soak-20261021T100817Z-fa2acf",
+  "soak_seconds": 3601.125,
+  "soak_scope_note": "The original 3601.125-second run covers unchanged server/UI/lock files. Revised startup helpers were tested separately; no new one-hour run is claimed.",
+  "uncensored_profile_changed": false,
+  "selected_model": "sight-gemma4-e4b:uncensored",
+  "cloud_inference_requests": 0,
+  "launcher_sha256": {
+    "Start-Local-Runtime.ps1": "f9e56b1d9292a35719782369ce9dde1539ebf2f335217b5187243d7a4c431807",
+    "Run-Gemma.ps1": "3a0b9e7d61ec0cb886b8c6adffd87d23a68a6de0d7e5eb19f36edda6cd17f18f",
+    "sight\\scripts\\find_ollama.ps1": "fdc28f802ab917c53e4b1c98b01455d037aa33ed160d3c8113fd5b0bd4e754d8"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "timestamp_utc": "2026-10-19T13:45:11.994919+00:00",
+  "model": "hf.co/OBLITERATUS/gemma-4-E4B-it-OBLITERATED:Q4_K_M",
+  "profile": "original",
+  "cloud_requests": 0,
+  "rows": [
+    {
+      "case": "tone",
+      "prompt": "Explain in three sentences why my laptop gets slower when its RAM is full.",
+      "http_status": 500,
+      "seconds": 21.072,
+      "answer": "",
+      "thinking_characters": 0,
+      "done_reason": null,
+      "prompt_tokens": null,
+      "generated_tokens": null,
+      "error": "llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error"
+    }
+  ],
+  "completed": false,
+  "metadata": {
+    "capabilities": [
+      "tools",
+      "completion",
+      "vision",
+      "audio"
+    ],
+    "thinking": null,
+    "parameters": "stop                           \"<bos>\"\nstop                           \"<|turn>\"\nstop                           \"<turn|>\"\nstop                           \"<|turn>user\"",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "gemma4",
+      "families": [
+        "gemma4"
+      ],
+      "parameter_size": "7.52B",
+      "quantization_level": "Q4_K_M"
+    }
+  },
+  "resident_models": []
+}

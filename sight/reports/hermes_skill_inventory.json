@@ -1,0 +1,4900 @@
+[
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/autonomous-ai-agents/agent-merge-conflict-arbiter/SKILL.md",
+    "name": "agent-merge-conflict-arbiter",
+    "sha256": "f8b1a0cf2392a1da0d3890e1ebc6429b1edb83a8f076e104b8f7c8cb7465d1be",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/autonomous-ai-agents/antigravity-cli/SKILL.md",
+    "name": "antigravity-cli",
+    "sha256": "d697957e832c0c17c807464d106a471b8be15f573049b1f008c700ff89506e4a",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/autonomous-ai-agents/blackbox/SKILL.md",
+    "name": "blackbox",
+    "sha256": "6cd96ccabb85c4abd7a325ecf7d12678f7e7ce39194920136865bb69ad98cd3c",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-g"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/autonomous-ai-agents/dynamic-workflow/SKILL.md",
+    "name": "dynamic-workflow",
+    "sha256": "a030cce5a966e68b5b283fd530416adbebd6c1dc10c7592edc8d96bcffb2edc6",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/autonomous-ai-agents/grok/SKILL.md",
+    "name": "grok",
+    "sha256": "51623f5627eb62c739497f158267f6192c952a2ba73c6ed4591856561f3b207b",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-g",
+      "over"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "remote-write"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/autonomous-ai-agents/honcho/SKILL.md",
+    "name": "honcho",
+    "sha256": "1264edc366860d17ff5fb520f36893c59ce9bb0082e91268ee82a0ecf6d57517",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/autonomous-ai-agents/openhands/SKILL.md",
+    "name": "openhands",
+    "sha256": "7abd61ab5c9be09f20c7f15caace5f7ee95722bc179fcca4bc4c730ea64dc598",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "openhands-ai"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/blockchain/evm/SKILL.md",
+    "name": "evm",
+    "sha256": "11a5ad5e76a00594347810c7fc61a52a5b166be963a51e0599c7f37966856538",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/blockchain/hyperliquid/SKILL.md",
+    "name": "hyperliquid",
+    "sha256": "34a8fbb3da27c634420539b47d4773c65ddbaac925ed02b25497e91795e8dfdd",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/blockchain/solana/SKILL.md",
+    "name": "solana",
+    "sha256": "d6b383f6932800f9efda0311f51778fed4cac85f788235d30d1745e272f940d0",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/communication/one-three-one-rule/SKILL.md",
+    "name": "one-three-one-rule",
+    "sha256": "31ae7d7c5fc127d7f49d3282c3f93e3e3c3afa295f9bbd6660cc88ca9248248b",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/ai-presenter-video/SKILL.md",
+    "name": "ai-presenter-video",
+    "sha256": "243d99e90872c7b27de40d31332d17687dcc6fe0a06a53f15f18077cd23c5f47",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/anatomy/SKILL.md",
+    "name": "anatomy",
+    "sha256": "c682d42079f2927ecc3eddc02e852437d31f7a2871b423474646bf5cefaf7079",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/archify/SKILL.md",
+    "name": "archify",
+    "sha256": "34fb98942ef067cfe4acfb78a80fcd04e75c5e20d7b5de06f0433aa5f6aa523b",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/ascii-art/SKILL.md",
+    "name": "ascii-art",
+    "sha256": "4863e641e63ce1e2fee28b623a82264e1ad1699bc67af46f0eb4b02716a346b2",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "boxes",
+      "cowsay",
+      "jp2a",
+      "pyfiglet",
+      "toilet"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/audiocraft-audio-generation/SKILL.md",
+    "name": "audiocraft-audio-generation",
+    "sha256": "a2f1c3b8b5d9c89e06ce7927d1a62e0cc5813a5f5dd63d81637a3c317665d002",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "audiocraft",
+      "git",
+      "transformers"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/auteur/SKILL.md",
+    "name": "auteur",
+    "sha256": "51988bc97cf00b15fcde05294f71c71402a4ef3dd469325711523517d13e98a8",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "playwright"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/baoyu-article-illustrator/SKILL.md",
+    "name": "baoyu-article-illustrator",
+    "sha256": "a35f48b18cc561511af570c0ddcc50e270de02951bc99892ef298c86365927fc",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "delete"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/baoyu-comic/SKILL.md",
+    "name": "baoyu-comic",
+    "sha256": "f90f4d8eb7f05563dcdfca928a2691cfb4f061bafb369d3ffb06bd49f80f9565",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/brag-slim/SKILL.md",
+    "name": "brag-slim",
+    "sha256": "3726b48278409ec62ba0a480ad0bf0edc3f429beed053714faa5c7010278613b",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/brag/SKILL.md",
+    "name": "brag",
+    "sha256": "4dffb3e3d053bb8ab0abcd0973731adf259e2a1ba2cd07d4ad7b28ab19d166d8",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "hyperframes"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/comfyui/SKILL.md",
+    "name": "comfyui",
+    "sha256": "1013a06bf6accc0cbcb43a7dbb6e31130ed7e692b4db454877ccb38fbe66815e",
+    "catalog": "optional",
+    "platforms": "[macos, linux, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[\"python\"]"
+    ],
+    "install_indicators": [
+      "--user",
+      "-r",
+      "torch",
+      "websocket-client"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/concept-diagrams/SKILL.md",
+    "name": "concept-diagrams",
+    "sha256": "ae9bea1de66fb6e10a03520356458f7b3abf10fee5bd74d056f9ffce408bd558",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/creative-ideation/SKILL.md",
+    "name": "creative-ideation",
+    "sha256": "b0b2a36387ecdf363550a341ee6941fe4fae0443564d730c0121a6a66114f36c",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/draw-your-font/SKILL.md",
+    "name": "draw-your-font",
+    "sha256": "4af4d74f055d789b4b8a1bf770f0e9633e709dfeef64a5b77e2097d9ffca6ea2",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-y"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/dream-loop/SKILL.md",
+    "name": "dream-loop",
+    "sha256": "188dac5e2989504115152585737de670b470eb4e09f1816ccf2847fb1080c42c",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/excalidraw/SKILL.md",
+    "name": "excalidraw",
+    "sha256": "cb0558445251fc1087a99dd85b445b83565a98aef6d3e0874641000f7e89e253",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "cryptography"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/heartmula/SKILL.md",
+    "name": "heartmula",
+    "sha256": "4dd8127902c4ea964e83d04e591a4711018fb7a732215f4be1ed7089b2cd8fd4",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "--upgrade",
+      "-e"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/hyperframes/SKILL.md",
+    "name": "hyperframes",
+    "sha256": "65f32ac7049ce5cf2fd6f70290597f13a17817e093dbc6d2c3bc020355693728",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "Apache-2.0",
+    "prerequisites": [
+      "[node, ffmpeg, npx]"
+    ],
+    "install_indicators": [
+      "-g",
+      "hyperframes",
+      "puppeteer"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/impeccable/SKILL.md",
+    "name": "impeccable",
+    "sha256": "c4dae781ecd9c850f514c9327eea6fa7aff2136c87be47454861ac3ce921164d",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "Apache-2.0",
+    "prerequisites": [],
+    "install_indicators": [
+      "impeccable"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/ip-as-logo/SKILL.md",
+    "name": "ip-as-logo",
+    "sha256": "70089da302baaadf9f6f9e250970e656acc0a58f746ce1a1b550eb32db41b931",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/kanban-video-orchestrator/SKILL.md",
+    "name": "kanban-video-orchestrator",
+    "sha256": "a30d5a1f4267ceebb054a79a25d985875141bf5e11bf72c36ace5d19daaaf499",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/meme-generation/SKILL.md",
+    "name": "meme-generation",
+    "sha256": "bd43e558ebca6d31d87a0eba0bacd39e0f02f750596ede59b1a10fe0f967a669",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/mono-color/SKILL.md",
+    "name": "mono-color",
+    "sha256": "71c7b67ffc20732f0ef69f6250780effe20667b65bb2285330a071503e5a7cb5",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/pixel-art/SKILL.md",
+    "name": "pixel-art",
+    "sha256": "eae06833ec560c7061e5c168a83fb564832c58f14c13c836c585fa013fd07aed",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "Pillow"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/pretext/SKILL.md",
+    "name": "pretext",
+    "sha256": "8c8e1ab1be9da016a787024d7a171ea66d0723145d922304ff6a5052a146df16",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/simple-english/SKILL.md",
+    "name": "simple-english",
+    "sha256": "9d43d7ce95a09e9e65e04e9f99d46f223d3f0d4ec620f37fd8495536bca87a42",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/sketch/SKILL.md",
+    "name": "sketch",
+    "sha256": "c9472691dbd91b31710d9ace3d05a81a5cedcf524a1707f8b3e410b27ed0a243",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "get-shit-done-cc"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/social-media-content-calendar/SKILL.md",
+    "name": "social-media-content-calendar",
+    "sha256": "f12b235ea3eedf611022c0a89a967f08a5dc25bbd1531572f1c37f7545177298",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "remote-write"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/system-atlas/SKILL.md",
+    "name": "system-atlas",
+    "sha256": "981aaa2f4eb7610cda7e528413891d3c227966d69241ada4587648d05c7f4fab",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "needed",
+      "serve"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/tldraw-offline/SKILL.md",
+    "name": "tldraw-offline",
+    "sha256": "a3c4ce28121ef2c76dc853ae91a69658cd66e07c62c6e4caf033a7c52568af27",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/creative/unreal-mcp/SKILL.md",
+    "name": "unreal-mcp",
+    "sha256": "0313d8761479a8b8a458b83bb6c563f63294245096139dfe52045691ef2aa610",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "Unreal Editor 5.8+ with the Unreal MCP plugin enabled and its server running"
+    ],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/data-science/jupyter-notebook/SKILL.md",
+    "name": "jupyter-notebook",
+    "sha256": "d6cde84618f8c741f8f61eeb3100afdbd2a8b5485ea2e0b1a28d8b6880eefa37",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/devops/actual-setup/SKILL.md",
+    "name": "actual-setup",
+    "sha256": "1b9e6bbfc5f45be775efff004471b48285a7a56cf177dd1ed73dc5d596be617d",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/devops/docker-management/SKILL.md",
+    "name": "docker-management",
+    "sha256": "6425a2cf3f682f4b6812522dcb7ceaea7dab9ba0fbf159fb900280edc5f69e50",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/devops/hermes-s6-container-supervision/SKILL.md",
+    "name": "hermes-s6-container-supervision",
+    "sha256": "b9b65b6d74ef9d9fee60813700bf93da7bb2f28d1f952686c82c178ebe158246",
+    "catalog": "optional",
+    "platforms": "[linux]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/devops/inference-sh-cli/SKILL.md",
+    "name": "inference-sh-cli",
+    "sha256": "85fba85372930c17ce35d87e1d07fc4b7758078725ff649add1cebb61a6ca39e",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/devops/pinggy-tunnel/SKILL.md",
+    "name": "pinggy-tunnel",
+    "sha256": "8c490b70421a4610aae3e402f55f5d82765e8e1d7efaa3e7cbb0673b4c3f97c7",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/devops/setup-wizard-generator/SKILL.md",
+    "name": "setup-wizard-generator",
+    "sha256": "987c638600e6ba05cd91a1c5bd8a771980f5e2a83844d7ea7329ad222717b5f5",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/devops/watchers/SKILL.md",
+    "name": "watchers",
+    "sha256": "29c01df1882d6e15c36a4c0af5a854a3c4fab5cf1c6657c02a0979315e8c606a",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/dogfood/adversarial-ux-test/SKILL.md",
+    "name": "adversarial-ux-test",
+    "sha256": "d687ee7727174fd58acbe638038b207f7fb86ea27603a34cb3b0f1b0889b0dd7",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/email/agentmail/SKILL.md",
+    "name": "agentmail",
+    "sha256": "9d7f5cb6ff4271c713bf30c37957fbe0a2a07cee92f5c8b638ee0d4f89448dd1",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[agentmail]"
+    ],
+    "install_indicators": [
+      "-g"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/finance/3-statement-model/SKILL.md",
+    "name": "3-statement-model",
+    "sha256": "2022e0ec2ef095489fb74cf191b5d02167abf84f20a60847abaea1b98f8eca7c",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "Apache-2.0",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/finance/comps-analysis/SKILL.md",
+    "name": "comps-analysis",
+    "sha256": "dcc2e6a91c584253daa1633db00b6cdd1595ba385ef4339296595f2318aee2c6",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "Apache-2.0",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "remote-write"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/finance/dcf-model/SKILL.md",
+    "name": "dcf-model",
+    "sha256": "bd6f6c023da4b0e86b1ca717c35a91285a34ca49f418865b75f0fd49f29bcf8f",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "Apache-2.0",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/finance/excel-author/SKILL.md",
+    "name": "excel-author",
+    "sha256": "f0228fe29411fc841dde1b93fe26965fade3431f396517027b610d4cf4a57988",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "Apache-2.0",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/finance/lbo-model/SKILL.md",
+    "name": "lbo-model",
+    "sha256": "76fb6630ce41257d5982085fd9dc3a225af841c6976dea802556f4a001341e5f",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "Apache-2.0",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/finance/merger-model/SKILL.md",
+    "name": "merger-model",
+    "sha256": "1e2893e53bd591934416914e1e1158cd339834c9a99eab2040e2d6be1a7eac73",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "Apache-2.0",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/finance/polymarket/SKILL.md",
+    "name": "polymarket",
+    "sha256": "6a7288650ad7c40cd590703b67502b63a90e7ff98820b142600a46cfd021c287",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/finance/pptx-author/SKILL.md",
+    "name": "pptx-author",
+    "sha256": "800c8ab3e98db2ddd4d05eb44efd2000e9c232ec75a39747cea1aa3140135895",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "Apache-2.0",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/finance/stocks/SKILL.md",
+    "name": "stocks",
+    "sha256": "6321095d5501cdd22a90e17ccae09efccbf9ad3d435961272bdd7c5947f73c64",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/gaming/minecraft-modpack-server/SKILL.md",
+    "name": "minecraft-modpack-server",
+    "sha256": "beed24b7b0da2c3fec570c1db40e0c31b9ded59f9ca1b57bf9d7d8ddb35d4cdd",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "openjdk-17-jre-headless",
+      "openjdk-21-jre-headless",
+      "openjdk-8-jre-headless"
+    ],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/gaming/pokemon-player/SKILL.md",
+    "name": "pokemon-player",
+    "sha256": "034d12e6c8142041e48728dddf389de4693b1e2af1e677ebfb0494ee06bfbc10",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/health/fitness-nutrition/SKILL.md",
+    "name": "fitness-nutrition",
+    "sha256": "cadfe2928cef65fb6f41836c96741eeee571c433f1bce822569f9f4abaf15532",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[curl, python]"
+    ],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/health/neuroskill-bci/SKILL.md",
+    "name": "neuroskill-bci",
+    "sha256": "0b7aad0d0987928c973eb24a6504bf27e0264c7485606ae2b0e029825856d917",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "neuroskill"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mcp/fastmcp/SKILL.md",
+    "name": "fastmcp",
+    "sha256": "f4072408b8b5e4bf170deae0db48534ea838f45200f86c8735f595331180cc08",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[python]"
+    ],
+    "install_indicators": [
+      "fastmcp",
+      "httpx"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mcp/mcp-oauth-remote-gateway/SKILL.md",
+    "name": "mcp-oauth-remote-gateway",
+    "sha256": "a96e1e3a8c909265fb854b1dc20c067ddc752305cce866ec155f3b343550e840",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "subprocess"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mcp/mcporter/SKILL.md",
+    "name": "mcporter",
+    "sha256": "39be15caad8f01f0e32ace926807876c772796d04e128739b250a442f5772305",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[npx]"
+    ],
+    "install_indicators": [
+      "-g",
+      "-y",
+      "mcporter"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/migration/openclaw-migration/SKILL.md",
+    "name": "openclaw-migration",
+    "sha256": "0474e3938e15cf71d9be714c94c74a7ddf5a20ab10208ee42ac474781d16c59f",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/accelerate/SKILL.md",
+    "name": "accelerate",
+    "sha256": "eb28b6e06c1e7a3b14304ff94f28197ea1bddbb3ade674dc8a17a1c25809f972",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "accelerate",
+      "deepspeed"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/chroma/SKILL.md",
+    "name": "chroma",
+    "sha256": "c51f4db1e6f4888d22815e01a1cdc86e421940b0a2af6012df10ff40454115c0",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "chromadb"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/clip/SKILL.md",
+    "name": "clip",
+    "sha256": "f3458c939550db4ee0f69bf032b35ad9c97b90ba1c3bcf4cc0b8ae907a48c40b",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "git",
+      "torch"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/evaluation/evaluating-llms-harness/SKILL.md",
+    "name": "evaluating-llms-harness",
+    "sha256": "9a021e8e64fdc2f76f734d6e4ec99eda4624971720b5f52a90e6938ebeb5f3fc",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "lm-eval",
+      "vllm"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/evaluation/weights-and-biases/SKILL.md",
+    "name": "weights-and-biases",
+    "sha256": "bc87d8c94c656ed76aaae6123b1f62c2f0341fcf8e44bb9556efc04c52a2cda1",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "wandb"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/faiss/SKILL.md",
+    "name": "faiss",
+    "sha256": "b85efbef93c4885b25ca97a0b461449d65fddc58973377af23ce742a9f6b6dfb",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "faiss-cpu",
+      "faiss-gpu"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/flash-attention/SKILL.md",
+    "name": "flash-attention",
+    "sha256": "d45849457af34ac332f2748b76b5dc530c422f9fd50263d5024c6857e7eb5e2c",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "--upgrade",
+      "flash-attn"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/guidance/SKILL.md",
+    "name": "guidance",
+    "sha256": "e6549204b864a934df9b13613c7437fe5f110acef8ea3f09b748d319d2da461a",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "guidance"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/huggingface-tokenizers/SKILL.md",
+    "name": "huggingface-tokenizers",
+    "sha256": "79ca48477b7b72a9d5b59e472c89bec4399048ba2f5e9cc3698ed6e6facc5b0c",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "tokenizers"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/inference/llama-cpp/SKILL.md",
+    "name": "llama-cpp",
+    "sha256": "9c1ef45f6197fbc08b643416d5f2c2e5469dbd45fb01e17cf48a0406ffacf8c2",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "llama-cpp-python",
+      "llama.cpp"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/inference/outlines/SKILL.md",
+    "name": "outlines",
+    "sha256": "0621fb3388753cdbc90946a47342194ecc8408008a58f723aae0b4d11ca71aed",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "outlines"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/inference/serving-llms-vllm/SKILL.md",
+    "name": "serving-llms-vllm",
+    "sha256": "1c64cbeec7e77ffc682da5fcf06d03741f1ecd7055a8f5c2fa12408716644c17",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "locust",
+      "vllm"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/instructor/SKILL.md",
+    "name": "instructor",
+    "sha256": "61c88e70b5255a1428cda9235a3f6cc7872a2f6ff63381c7e3cacc6ad3948c4a",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "instructor"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/lambda-labs/SKILL.md",
+    "name": "lambda-labs",
+    "sha256": "7cfe3a21940cfc299664461b52553ea4605c66c0fa73b5d1663a6d66e6e562bd",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-r",
+      "lambda-cloud-client",
+      "transformers"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/llava/SKILL.md",
+    "name": "llava",
+    "sha256": "ee0406e407d9b184a0a4b4e3e7bb98f0a84c55ee164083964bf5839189e7d1a8",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-e"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/modal/SKILL.md",
+    "name": "modal",
+    "sha256": "93da9443caef0605769d727c308b8b9fb48d4159e330db5f2a74fdd16d1fe68e",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "modal"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/models/huggingface-hub/SKILL.md",
+    "name": "huggingface-hub",
+    "sha256": "68ee2e5ae17e0f2968f8550534f3fce1c7eae461b95cbe1dbc34b8d487665bc5",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "remote-write"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/models/segment-anything-model/SKILL.md",
+    "name": "segment-anything-model",
+    "sha256": "fd89c3c5b477141d13afd5fa1e2f829891d92cdeda9f0a7339a954a6899c9f4f",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "git",
+      "opencv-python",
+      "transformers"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/nemo-curator/SKILL.md",
+    "name": "nemo-curator",
+    "sha256": "f77bfa870bca7253aeb56bc16b6df2327dece5980f4b1842671ba34eec620ebf",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/obliteratus/SKILL.md",
+    "name": "obliteratus",
+    "sha256": "24da632ac0014fcb23c79b6183dae74ae7c6a050ea38e7af184aded1b5c0b985",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-e"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/peft/SKILL.md",
+    "name": "peft",
+    "sha256": "9c9dea66a3e774e0821ef50765dbaec2bc561111a0b87ebb09c93ea504bf6d22",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "peft"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/pinecone/SKILL.md",
+    "name": "pinecone",
+    "sha256": "7947f49681dd4107f2795a6e33e9ea36a187e65bc3addf5a24be094b1efee2e3",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "pinecone"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/pytorch-fsdp/SKILL.md",
+    "name": "pytorch-fsdp",
+    "sha256": "b83b96daf42281fa96faa860e9d828826e7912b45cfcd53a1a86344abae41e41",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/pytorch-lightning/SKILL.md",
+    "name": "pytorch-lightning",
+    "sha256": "7f35d8b7bed8dde58a13616c26b7128de305e5ab532bce45ad74c150bd875b54",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "lightning"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/qdrant/SKILL.md",
+    "name": "qdrant",
+    "sha256": "60dc4d7bcc4c18d37366de0b2480024c5761c79ff57284f7511d6d776bc301bd",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "qdrant-client"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/research/dspy/SKILL.md",
+    "name": "dspy",
+    "sha256": "67410a6b216d79eb257eba1c5d0fa945080b98998ffc131e2cf873bee77e3dd0",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "dspy",
+      "git"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/saelens/SKILL.md",
+    "name": "saelens",
+    "sha256": "3824d601010487764e8c1bd22689d490a8481a1a042f4e0a58ff84e2b52726e9",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "sae-lens"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/simpo/SKILL.md",
+    "name": "simpo",
+    "sha256": "b17535b2c78605a0ba70ed18fec9bf6326273410286c7a8fc38358cd97d96b03",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      ".",
+      "flash-attn"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/slime/SKILL.md",
+    "name": "slime",
+    "sha256": "2ce3104dce3072af78a1e8460cef787baedba14351fc11f3e6daad0f2b928a68",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-e",
+      "-r"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/stable-diffusion/SKILL.md",
+    "name": "stable-diffusion",
+    "sha256": "fe828c165dec3dc7c59ccfd74a9279f8740a2f50dc87c9a2179ccf144de8b3cb",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "diffusers",
+      "xformers"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/tensorrt-llm/SKILL.md",
+    "name": "tensorrt-llm",
+    "sha256": "97b60d50ae7e74598ce831098d26e71661addb26e6e2b83e41e87bec4898808f",
+    "catalog": "optional",
+    "platforms": "[linux]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "tensorrt_llm"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/torchtitan/SKILL.md",
+    "name": "torchtitan",
+    "sha256": "9457edf13839b0f273bedcff4d57aef1dbd2d01c83794b0dbcd4e208b7e4c680",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-r",
+      "git",
+      "torchtitan"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/training/axolotl/SKILL.md",
+    "name": "axolotl",
+    "sha256": "10fcf7cb9234818373d21df7cb50e9f089adc2d9d335fc45a149b18dbefbd3ad",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/training/trl-fine-tuning/SKILL.md",
+    "name": "trl-fine-tuning",
+    "sha256": "5d1837410fff9e37c8839c6e903b0f5749c8939f7cc5c75b5ea3050fe1fb616e",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "trl"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/training/unsloth/SKILL.md",
+    "name": "unsloth",
+    "sha256": "967497adab1910c2d1bdb3ff54526e84beb362ab4933fbf9d6aee01fb7e7299a",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "remote-write"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/mlops/whisper/SKILL.md",
+    "name": "whisper",
+    "sha256": "4db9296c11967aef85a6fadcefe21b751db06bbdf25f1654900704dcce90284f",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-U",
+      "faster-whisper",
+      "ffmpeg"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/payments/mpp-agent/SKILL.md",
+    "name": "mpp-agent",
+    "sha256": "f44db1c9d2d0a4d49a5051aa16b4e92e18ba4ce3db611b92e5a7fd8e3b204445",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-g",
+      "agentcash"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/payments/stripe-link-cli/SKILL.md",
+    "name": "stripe-link-cli",
+    "sha256": "4b84f2be0a8ed6e72751f4c6ff04c6145ed632855986371621bd731fae9397af",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-g",
+      "@stripe/link-cli"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/payments/stripe-projects/SKILL.md",
+    "name": "stripe-projects",
+    "sha256": "e290eb0073ea3ce364e62019bbf257571b58caacc029543999e96071b98e222e",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "stripe/stripe-cli/stripe"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/productivity/canvas/SKILL.md",
+    "name": "canvas",
+    "sha256": "e2335a4e635a018dab2918eb3ad9dd3450203e885b4582aa2670d46607c56130",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/productivity/decision-questionnaire/SKILL.md",
+    "name": "decision-questionnaire",
+    "sha256": "84a781708b86a797e41d4a0b9234d4da48f95d14fc9cee23a0eb2cf8574e8ca2",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/productivity/here-now/SKILL.md",
+    "name": "here-now",
+    "sha256": "f684f55fed57e0cdbe8bef4c6fc4d58bd97079056b15d30d37b3fa6dd2c1505b",
+    "catalog": "optional",
+    "platforms": "[macos, linux]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[curl, file, jq]"
+    ],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/productivity/live-dashboard/SKILL.md",
+    "name": "live-dashboard",
+    "sha256": "8232300ca251f11b485cc30b0306a3e9af8f75553545b7683e3951f470b67ac7",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/productivity/memento-flashcards/SKILL.md",
+    "name": "memento-flashcards",
+    "sha256": "2d2e97cea8a89e8c7f6a01a513374e877d2624fd192dea0cf655e0da10c43b71",
+    "catalog": "optional",
+    "platforms": "[macos, linux]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/productivity/property-listings/SKILL.md",
+    "name": "property-listings",
+    "sha256": "5f701fc0837997ed2b0d34f2d2b14cff8ef027388d970afa3b3cb577e52e4070",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/productivity/shop/SKILL.md",
+    "name": "shop",
+    "sha256": "11cebb959f2f4d1edbb145178194d6cc33aeb3389678de08697d5da8ec6d6358",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[curl, node]"
+    ],
+    "install_indicators": [
+      "--global"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/productivity/shopify/SKILL.md",
+    "name": "shopify",
+    "sha256": "f7669570b5e69870607f715466035ec41792c180b0aba444c7719c619fed2388",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[curl, jq]"
+    ],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/productivity/siyuan/SKILL.md",
+    "name": "siyuan",
+    "sha256": "e62436e6a814e88ba6fa1f3e985ecceead41cbd81b293a4d096d2a72f22d8bbe",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[curl, jq]"
+    ],
+    "install_indicators": [
+      "args"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/productivity/telephony/SKILL.md",
+    "name": "telephony",
+    "sha256": "41ec6380adce44ffe76259a6642412b121ca1de0fd5381acc6d501f1f4334d12",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/research/bioinformatics/SKILL.md",
+    "name": "bioinformatics",
+    "sha256": "49cd910728b4e36f77636cfd028e59ebe91b193ac59fb1d7ea2a218baac76cf6",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-r",
+      "biopython",
+      "samtools"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/research/blogwatcher/SKILL.md",
+    "name": "blogwatcher",
+    "sha256": "5f77f5d2e0405d7b6ccf7882bff40ae6b4fe1d3960308d39113b114009631805",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[blogwatcher-cli]"
+    ],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/research/darwinian-evolver/SKILL.md",
+    "name": "darwinian-evolver",
+    "sha256": "1039b9559f13f90d9b413a4b442f600366c6b580fbdac80a2167df2cab9ac6e3",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "darwinian-evolver"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/research/domain-intel/SKILL.md",
+    "name": "domain-intel",
+    "sha256": "a212e30bced6fd3260f94d9a4c3de8d2e305371629ffb8551da3b526daf56556",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/research/drug-discovery/SKILL.md",
+    "name": "drug-discovery",
+    "sha256": "83ce85111e3a5bf2ca140866450717c5a432a8396b021d030440611ce09f3bda",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[curl, python]"
+    ],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/research/duckduckgo-search/SKILL.md",
+    "name": "duckduckgo-search",
+    "sha256": "ea5ee32dee8ba94efc7e733086c0c71d23135850ca3dd8d377822c0c6fe31939",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "ddgs"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/research/gitnexus-explorer/SKILL.md",
+    "name": "gitnexus-explorer",
+    "sha256": "332f66417f1fb47f7374c16210b42ff481bcbf18fa1f55b404e4c5ac14aa1601",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "fi",
+      "gitnexus",
+      "vite"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "delete",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/research/osint-investigation/SKILL.md",
+    "name": "osint-investigation",
+    "sha256": "1e480fc9f76a14aa948d43668f18fdab6dda79245a45d3d7012dac2ab214b72f",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/research/parallel-cli/SKILL.md",
+    "name": "parallel-cli",
+    "sha256": "255305b5c636feeeef90d41d9d4ffedc1a90b7dedc42489053342772b339f159",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "--upgrade",
+      "-g",
+      "parallel-web/tap/parallel-cli"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/research/pinecone-research/SKILL.md",
+    "name": "pinecone-research",
+    "sha256": "540dafd300c1ea3c2fe17275291a8ff51aeda94ca9e56c502a22bf6a2c63937e",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "pinecone-client"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/research/qmd/SKILL.md",
+    "name": "qmd",
+    "sha256": "9ee7a5c501db706960e768754fe1536419b39e585180c2a64ed9e19d9a5799a6",
+    "catalog": "optional",
+    "platforms": "[macos, linux]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-g",
+      "node@22",
+      "sqlite"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/research/research-paper-writing/SKILL.md",
+    "name": "research-paper-writing",
+    "sha256": "ad6b059c628f8dbac24a4603e62185927352f8b42fe183ff50265976165469b1",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-y",
+      "arxiv"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/research/rss-feeds/SKILL.md",
+    "name": "rss-feeds",
+    "sha256": "bdd3a7c1005cb7f1a5266b31fb464fc50d6c7b3389ad888a1e4341467be82ff8",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/research/scrapling/SKILL.md",
+    "name": "scrapling",
+    "sha256": "ae44f6f4813c292eb37e83c9f3f545d749b863e68fd7fecb4cc0e0579c81751a",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[scrapling, python]"
+    ],
+    "install_indicators": [
+      "--",
+      "scrapling"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/research/searxng-search/SKILL.md",
+    "name": "searxng-search",
+    "sha256": "263b151f4277aaae24025ec98737a060cd272bd7deb6d10da85e4717bba2365f",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "searxng"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/security/1password/SKILL.md",
+    "name": "1password",
+    "sha256": "55270738bd61fb1e45aa5e79b4fe0a2cfabd22e8679d5510d08b192bcacb4e60",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "1password-cli"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/security/godmode/SKILL.md",
+    "name": "godmode",
+    "sha256": "f68b2f329580f40bad1af024af884530e77f098eeddbfeefc2b00b1016e2ab9d",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/security/oss-forensics/SKILL.md",
+    "name": "oss-forensics",
+    "sha256": "be59e5d09ac5cef311c3c3f310381a2f96c636b8f4025890f28b15ffac6160c4",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/security/sherlock/SKILL.md",
+    "name": "sherlock",
+    "sha256": "2438794f4699d7f3758b8c82dfd2f8509196f7968aeb670cb0eecedf656564f1",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[sherlock]"
+    ],
+    "install_indicators": [
+      "sherlock-project"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/security/unbroker/SKILL.md",
+    "name": "unbroker",
+    "sha256": "781ddef023637bf7ad3b0eba3ce9402ef6c77a9e4e6bfe1b4f10fb30d319ab9a",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[python]"
+    ],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/security/web-pentest/SKILL.md",
+    "name": "web-pentest",
+    "sha256": "0e2e199e97fe0145ea7d4ff70166755438c6491d9900793a13f1a64ff400a498",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/smart-home/openhue/SKILL.md",
+    "name": "openhue",
+    "sha256": "252844f95f6a4b4dec7fffc593ca187d51bc1216882fadd2f5e5d86634f749d9",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[openhue]"
+    ],
+    "install_indicators": [
+      "openhue/cli/openhue-cli"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/social-media/reddit-reading/SKILL.md",
+    "name": "reddit-reading",
+    "sha256": "bda3f43049f2e688d483c575dffe33dabd8e0287563e3e6950efe1ed306d4765",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/software-development/ast-grep/SKILL.md",
+    "name": "ast-grep",
+    "sha256": "e5404b443ee1b74da558d1ea6d3bfac888061a93561138adf500c0a4b124fe47",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/software-development/code-wiki/SKILL.md",
+    "name": "code-wiki",
+    "sha256": "5d3e5b93dfd188483f45e75f00a7d4f16d044681f41c36b785aae900c7397576",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "delete",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/software-development/grill-me/SKILL.md",
+    "name": "grill-me",
+    "sha256": "6e3b3b81c1ad3a0b3ba3d36ec725e376d225e7867bfbf23a5129cf245e94bb0c",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/software-development/pr-lens/SKILL.md",
+    "name": "pr-lens",
+    "sha256": "b11e1eba1f74fd91d8b7c4d4462dde741b1883332c7059fcded88c986a1f19b5",
+    "catalog": "optional",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-y",
+      "@coldtea/pr-lens-cli@latest"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/software-development/rest-graphql-debug/SKILL.md",
+    "name": "rest-graphql-debug",
+    "sha256": "18228139612c555dbb4a53b74039dadb53cb1163507dd9325a4fcfa3326e475d",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/software-development/subagent-driven-development/SKILL.md",
+    "name": "subagent-driven-development",
+    "sha256": "52bf4892e66d9307fcbfa0c6e524be7f562273ba91921fc213e3b418d26082c9",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/web-development/cloudflare-temporary-deploy/SKILL.md",
+    "name": "cloudflare-temporary-deploy",
+    "sha256": "ec695df0ee006fac524fed07dd3ab0c47c5d4419cbf503525d3b325153c3ac53",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "wrangler@latest"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/web-development/har-derived-api-client/SKILL.md",
+    "name": "har-derived-api-client",
+    "sha256": "6645d1a0403f5b8111867c26e61bb4e1b7663e58325c2f24cd4390299d6a6d52",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "playwright"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/web-development/page-agent/SKILL.md",
+    "name": "page-agent",
+    "sha256": "cf803e1f809666425867808a898a966186af3c80bb80df91df84aa0bdda58ad9",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "into",
+      "page-agent"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/web-development/publish-site/SKILL.md",
+    "name": "publish-site",
+    "sha256": "d6c66ce995d2392be9b8dd56d1305afc5bf643839bfb23a67e0fe21f4a854d93",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "wrangler@latest"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/web-development/scrollcraft/SKILL.md",
+    "name": "scrollcraft",
+    "sha256": "c148e88bb7bbca73a73e827ab8c2cf3f7546006f22cacf513fdcbb2228e80f32",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "playwright"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "optional-skills/yuanbao/SKILL.md",
+    "name": "yuanbao",
+    "sha256": "6636244d779f103fc47c874b44d7a75c94aa62226aa200cfa41d38198cb49124",
+    "catalog": "optional",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "remote-write"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "plugins/google_meet/SKILL.md",
+    "name": "google_meet",
+    "sha256": "ebb8d8ce826765ea5f4f16450fae21ffc3b7c07d6ce84f55a7412954969731e1",
+    "catalog": "plugin/other",
+    "platforms": "- linux",
+    "rights": "root MIT; inspect bundled terms",
+    "prerequisites": [],
+    "install_indicators": [
+      "blackhole-2ch",
+      "pulseaudio-utils"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/apple/apple-notes/SKILL.md",
+    "name": "apple-notes",
+    "sha256": "1ba042cb17e3aca06a68415526e926ada464bf873c8592c3326125cd72cb397f",
+    "catalog": "built-in",
+    "platforms": "[macos]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[memo]"
+    ],
+    "install_indicators": [
+      "antoniorodr/memo/memo"
+    ],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/apple/apple-reminders/SKILL.md",
+    "name": "apple-reminders",
+    "sha256": "ee5084f2d7ec196488bef2c74248fb3d8328d1b2e3277ddda3f0de9da6fc7131",
+    "catalog": "built-in",
+    "platforms": "[macos]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[remindctl]"
+    ],
+    "install_indicators": [
+      "steipete/tap/remindctl"
+    ],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/apple/findmy/SKILL.md",
+    "name": "findmy",
+    "sha256": "e35d4d165daadfd066661df59a202a4159c5df41b77642884d3656830054d6bc",
+    "catalog": "built-in",
+    "platforms": "[macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "steipete/tap/peekaboo"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/apple/imessage/SKILL.md",
+    "name": "imessage",
+    "sha256": "bc68b1648e301409bc25b1084ec26766213ca9f3c1b2fd3d3d6ebe3dbde9e967",
+    "catalog": "built-in",
+    "platforms": "[macos]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[imsg]"
+    ],
+    "install_indicators": [
+      "steipete/tap/imsg"
+    ],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/autonomous-ai-agents/claude-code/SKILL.md",
+    "name": "claude-code",
+    "sha256": "9cf9b448e9272335d90dc8552126b4d82022ae0cdc783a6d206a657c7254ae54",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-g",
+      "@anthropic-ai/server-postgres",
+      "@anthropic-ai/server-puppeteer",
+      "@modelcontextprotocol/server-github"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "delete",
+      "install",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/autonomous-ai-agents/codex/SKILL.md",
+    "name": "codex",
+    "sha256": "1b15b57bcaba128b83ebe9f050b6873958198a1570bc801d4ca0406fb7e3271d",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-g"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "remote-write"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/autonomous-ai-agents/computer-use/SKILL.md",
+    "name": "computer-use",
+    "sha256": "778833ecfea4385cab79ec4dda0ffe956e3f4bf9231eb80e52c5d113ee4e6cdf",
+    "catalog": "built-in",
+    "platforms": "[macos, windows, linux]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "delete"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/autonomous-ai-agents/hermes-agent/SKILL.md",
+    "name": "hermes-agent",
+    "sha256": "dcdc4b2d232ad415c76e09cc229a2c861f3e1225fd1f1262b33a965ea4732b24",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/autonomous-ai-agents/opencode/SKILL.md",
+    "name": "opencode",
+    "sha256": "885582e6f2d5b88f431c5a0bc3b69b88f5aab701774f91572487a6f4e4679a0b",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "anomalyco/tap/opencode"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/creative/architecture-diagram/SKILL.md",
+    "name": "architecture-diagram",
+    "sha256": "0e7e2736aafe052e409c2ad27863d51ef3007c116711e584033787ccb5d99d3f",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/creative/ascii-video/SKILL.md",
+    "name": "ascii-video",
+    "sha256": "3bd3f39985a52954e2693866608bd8105f4dc0efbca5b6baa3045c2b641bda26",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/creative/baoyu-infographic/SKILL.md",
+    "name": "baoyu-infographic",
+    "sha256": "2922677ca6d3c75646cc7bc455ea4f5f6314fc148060ca84d679d624bfdc52ee",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/creative/claude-design/SKILL.md",
+    "name": "claude-design",
+    "sha256": "1582b0d49e48bdf937b2f555098484e0979cdfa285c6cc9fa329ba8e416d347a",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/creative/design-md/SKILL.md",
+    "name": "design-md",
+    "sha256": "7ed56bba40ffc9573fa51b33b2424f37fb5f774e9ecb7e76e737797afd0b62ae",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-y",
+      "@google/design.md"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/creative/humanizer/SKILL.md",
+    "name": "humanizer",
+    "sha256": "887d5e3467a682da9b166e5293007f8bbbc299f8a6718ae00f26161b7d062b04",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "remote-write"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/creative/manim-video/SKILL.md",
+    "name": "manim-video",
+    "sha256": "467376469fc2043e2674a843509f8eea52660791e76fb2e142074ecd4abc7e69",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "manim"
+    ],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/creative/p5js/SKILL.md",
+    "name": "p5js",
+    "sha256": "3b39b75303e082af69b3f4e2deab7a55b27d60293eff6a561fb627188194a33e",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/creative/popular-web-designs/SKILL.md",
+    "name": "popular-web-designs",
+    "sha256": "cd89bdb86008bb30b35d9bdd30e06587f75ee54055c54e1a79afb20418264b3d",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/creative/songwriting-and-ai-music/SKILL.md",
+    "name": "songwriting-and-ai-music",
+    "sha256": "5dbf92dc336e9b17be45c35c92a5bb307e4655e39a86617f07b7654678f92583",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/devops/sdlc-review/SKILL.md",
+    "name": "sdlc-review",
+    "sha256": "ce90e8a3e145cce69c62880dc85921700110879f9290952d6cec28218503155f",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/email/email-inbox-triage/SKILL.md",
+    "name": "email-inbox-triage",
+    "sha256": "deeade1bb70f8835b2f3158980030b8aa41bb1ea6f798631451c89cfd632bcc8",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/email/himalaya/SKILL.md",
+    "name": "himalaya",
+    "sha256": "0f6c9bb4c0a5c4f4627e139b6beb2b1ba0addd7145895196528b8125929e3837",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[himalaya]"
+    ],
+    "install_indicators": [
+      "himalaya"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/media/gif-search/SKILL.md",
+    "name": "gif-search",
+    "sha256": "a8349043740a8805d4ebfeb3a21f67ec0e9a9733a84f96403ca142c88a312b5d",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[curl, jq]"
+    ],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/media/songsee/SKILL.md",
+    "name": "songsee",
+    "sha256": "d9d8d1394c630bd83329cd54cd8f18e0e3cd140debe31c3ccf5d9667f054de07",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[songsee]"
+    ],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/media/youtube-content/SKILL.md",
+    "name": "youtube-content",
+    "sha256": "b556a0d2a220b46b80eb011619f0c951404f4d6e2edcc8b4847faec512b55132",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/note-taking/obsidian/SKILL.md",
+    "name": "obsidian",
+    "sha256": "7aea4e8f89f94ab2876d79898d10a5d4cdab31390c53f72ad6934b071179f826",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/productivity/airtable/SKILL.md",
+    "name": "airtable",
+    "sha256": "28253f1e20c4d250725eb7f475c886952a4c6a1ef43ef6900c2dc0e75ebb40e6",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[curl]"
+    ],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/productivity/box/SKILL.md",
+    "name": "box",
+    "sha256": "e9672412333de4feff348e6dc387d9022d32005247360347a10a7131fb87eb13",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[box]"
+    ],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "remote-write"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/productivity/document-to-action-items/SKILL.md",
+    "name": "document-to-action-items",
+    "sha256": "8a7556754aca2a7d04d38847131fb4db8d6705fa2106fcb154279e26117b41ee",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/productivity/docx/SKILL.md",
+    "name": "docx",
+    "sha256": "9678b14d5e7841d588b969f6a4696cd46bcc46c3e4ac1479edc7656a051aa5ff",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "python-docx"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/productivity/google-workspace/SKILL.md",
+    "name": "google-workspace",
+    "sha256": "4ab062fe5131d123a6c4f1297e58c7f75b8d517fd282b68547da7ebfabb2a0b9",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/productivity/maps/SKILL.md",
+    "name": "maps",
+    "sha256": "775ef9f79be9cd147bc81e0c4a4ef952230a04736a6082f44dbac78554ef89ab",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/productivity/meeting-action-items/SKILL.md",
+    "name": "meeting-action-items",
+    "sha256": "1902f782551da96ee1f9b34d6f13af627f06150a498d874b0cc2a75d06d35aa8",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "remote-write"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/productivity/notion/SKILL.md",
+    "name": "notion",
+    "sha256": "e5aaf194f2688223890cb2eb6cf5ce866e6390082f1dff845c9e37a25fe0bfee",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "--global"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/productivity/pdf/SKILL.md",
+    "name": "pdf",
+    "sha256": "c16b9c159a3a0b49353bfcd10c498b02aef3d319207b1019aa7dc8db129d06ab",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "pypdf",
+      "pypdfium2"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/productivity/powerpoint/SKILL.md",
+    "name": "powerpoint",
+    "sha256": "b71d29d9809c4464d7f8d10afabf4f22f6a26c647cf7aacb6f9faf196ebe82f2",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "python-pptx"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/productivity/product-price-monitor/SKILL.md",
+    "name": "product-price-monitor",
+    "sha256": "b87bf2102fed13d2c7c64759fa153f24f5e43a0afcf6f8ec5e13def92a6642ef",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/productivity/teams-meeting-pipeline/SKILL.md",
+    "name": "teams-meeting-pipeline",
+    "sha256": "ae1b08f044d7dfd9abb01c643cac3b69e4a3a1cbe7fd5782dd17785964cdc441",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[hermes]"
+    ],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/productivity/weekly-review-planning/SKILL.md",
+    "name": "weekly-review-planning",
+    "sha256": "a689257facb937cfca9bc5507dd9e729f287f0cd3f6abbf73448eb25f73fbaab",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/productivity/xlsx/SKILL.md",
+    "name": "xlsx",
+    "sha256": "b302d7ac997843a757ab3c11513ea012889ebdae32f842edb44faa9a4485f19b",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "openpyxl"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/research/arxiv/SKILL.md",
+    "name": "arxiv",
+    "sha256": "9b41877bcb64166dc2355a43aedd3198c3e5214af67f09e1d1b717a989d92f72",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/research/competitor-news-monitor/SKILL.md",
+    "name": "competitor-news-monitor",
+    "sha256": "d8fd2a3a26ff45455709595132a092825a48f6c9dd3bcc98b06c1a43eaa7fcca",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/research/grounded-citations/SKILL.md",
+    "name": "grounded-citations",
+    "sha256": "19fba3a4ceedf768af6851e094b268a66b62af750d4d0689c5d62d5d50c032b6",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/research/llm-wiki/SKILL.md",
+    "name": "llm-wiki",
+    "sha256": "0229e37c1783fcac5b77cfb3242703666cf4aa472d2ae85b6bd5279756b515b6",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "-g"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/social-media/xurl/SKILL.md",
+    "name": "xurl",
+    "sha256": "5457319ee337284b1152dc9f60146c72685ade489299afed08e0b46ca5a97080",
+    "catalog": "built-in",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[xurl]"
+    ],
+    "install_indicators": [
+      "--cask",
+      "-g"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/software-development/codebase-inspection/SKILL.md",
+    "name": "codebase-inspection",
+    "sha256": "d62554263461919dff7d77c3c0c284c2190c894f312a84d7a770a030dab642dc",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [
+      "[pygount]"
+    ],
+    "install_indicators": [
+      "--break-system-packages",
+      "pygount"
+    ],
+    "network_indicated": false,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/software-development/dogfood/SKILL.md",
+    "name": "dogfood",
+    "sha256": "1b2793734493dbc624a1d1f1c0667cb510e191fa79b1c740d866706550190560",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/software-development/github/SKILL.md",
+    "name": "github",
+    "sha256": "9d70e7c842fe7db75b5a50526552a69862f5bcfc1e59aa93785241649a09d5a3",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/software-development/hermes-agent-skill-authoring/SKILL.md",
+    "name": "hermes-agent-skill-authoring",
+    "sha256": "1f8d0be987c7c2d6095849ebb6dc8ff908ca1a43bdcc300fa936922c14271ecd",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/software-development/inspecting-hermes-desktop-dom/SKILL.md",
+    "name": "inspecting-hermes-desktop-dom",
+    "sha256": "8dfdcf2fe3797beec4297ce629e62395d7a69ec2691fc00ef25bc6273139cbc4",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "electron"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/software-development/node-inspect-debugger/SKILL.md",
+    "name": "node-inspect-debugger",
+    "sha256": "422eed9a0997182c5b197a8879ab194647799d69e573000e53b65b8708cf3a77",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/software-development/python-debugpy/SKILL.md",
+    "name": "python-debugpy",
+    "sha256": "cb1b8b0795a56fa0fd79f80f3363f1ad79d404a6757d6cf547971cf89f21155e",
+    "catalog": "built-in",
+    "platforms": "[linux, macos]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "into"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "install",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/software-development/requesting-code-review/SKILL.md",
+    "name": "requesting-code-review",
+    "sha256": "1e26ced9f05e357950e035b93ad1a937dd8a9e578a44d3c8d4fa734a09b7f814",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "eslint",
+      "tsc"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "remote-write",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/software-development/simplify-code/SKILL.md",
+    "name": "simplify-code",
+    "sha256": "9ee977c3362a1c07f2e327198e066ddb3c0ed67709706fc410165ee820b2ca01",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/software-development/spike/SKILL.md",
+    "name": "spike",
+    "sha256": "573d8fc0d6699eaf5308e742402bc02c883152ffeebe14607f164c6c538495c2",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [
+      "get-shit-done-cc"
+    ],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "install"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/software-development/systematic-debugging/SKILL.md",
+    "name": "systematic-debugging",
+    "sha256": "bd480f51a2e9969c88544003c30b7539b7df0b7358703f99b0495514c2dd878a",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/software-development/test-driven-development/SKILL.md",
+    "name": "test-driven-development",
+    "sha256": "649e6ab89bd8aaad2f9b162c60321f227cff8a8cda56393f07a81d1c6825a692",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "path": "skills/web/blocked-page-recovery/SKILL.md",
+    "name": "blocked-page-recovery",
+    "sha256": "b71179e82ff27c002e6593e792d9a64dad9a444901b8938f30204fa115592061",
+    "catalog": "built-in",
+    "platforms": "[linux, macos, windows]",
+    "rights": "MIT",
+    "prerequisites": [],
+    "install_indicators": [],
+    "network_indicated": true,
+    "secret_names": "[redacted]",
+    "unsafe_indicators": [
+      "credentials",
+      "shell"
+    ],
+    "status": "REFERENCE_ONLY",
+    "applicability": "Indexed guidance only; no imported executable adapter. Independent SIGHT tools may cover a narrower behavior.",
+    "activation": "disabled",
+    "classification": "Static conservative indicators; absence is not safety evidence",
+    "execution": "never executed"
+  }
+]

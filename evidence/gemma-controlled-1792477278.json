@@ -1,0 +1,110 @@
+{
+  "timestamp_utc": "2026-10-20T06:21:18.012713+00:00",
+  "model": "sight-gemma4-e4b:uncensored",
+  "profile": "controlled",
+  "temperature": 0.7,
+  "output_tokens": 512,
+  "updated_prompt": false,
+  "minimal_prompt": true,
+  "repeat_penalty": 1.1,
+  "seed": 42,
+  "cloud_requests": 0,
+  "rows": [
+    {
+      "case": "tone",
+      "prompt": "Explain in three sentences why my laptop gets slower when its RAM is full.",
+      "http_status": 200,
+      "seconds": 1.15,
+      "answer": "When there is not enough free RAM, the operating system will start to use a quick drive space on your hard drive to store temporary data instead. This method of swap can be much slower than the regular installed memory, causing everything to freeze or skip. Consequently, you experience significant slowdowns and glitches with time.",
+      "thinking_characters": 0,
+      "done_reason": "stop",
+      "prompt_tokens": 71,
+      "generated_tokens": 63,
+      "error": null
+    },
+    {
+      "case": "arithmetic",
+      "prompt": "A shop reduces a price of 250 by 20%, then applies 10% tax to the reduced price. What is the final price? Give the number and one sentence.",
+      "http_status": 200,
+      "seconds": 0.149,
+      "answer": "1900",
+      "thinking_characters": 0,
+      "done_reason": "stop",
+      "prompt_tokens": 96,
+      "generated_tokens": 5,
+      "error": null
+    },
+    {
+      "case": "logic",
+      "prompt": "All red blocks are heavy. Some heavy blocks are wooden. Does it follow that some red blocks are wooden? Explain briefly.",
+      "http_status": 200,
+      "seconds": 1.577,
+      "answer": "This is a fallacy in syllogistic reasoning.\n\nIt does not have to be true that some red blocks are wooden. This is because the unknown quantity of \"wooden\" blocks might overlap with the \"red\" blocks, or it might only contain some of the ones that aren't red but are heavy.\n\nExample: All apples are red. Some bananas are red. This does not mean there are any apples that are bananas.",
+      "thinking_characters": 0,
+      "done_reason": "stop",
+      "prompt_tokens": 81,
+      "generated_tokens": 89,
+      "error": null
+    },
+    {
+      "case": "planning",
+      "prompt": "I have 35 minutes. Downloading takes 10 minutes, installation takes 15 minutes after the download, and a test takes 12 minutes after installation. Can I finish everything? Explain briefly.",
+      "http_status": 200,
+      "seconds": 1.1,
+      "answer": "yes, you can finish everything.\n\nThis is because the total time required for all steps is 10 minutes (download) + 15 minutes (installation) + 12 minutes (test) = 37 minutes, which is more than your 35-minute allowance.",
+      "thinking_characters": 0,
+      "done_reason": "stop",
+      "prompt_tokens": 99,
+      "generated_tokens": 61,
+      "error": null
+    },
+    {
+      "case": "code",
+      "prompt": "In Python, why does items.sort() return None? Give a one-line way to get a sorted copy while keeping items unchanged.",
+      "http_status": 200,
+      "seconds": 3.835,
+      "answer": "there are two main reasons this happens:\n\n1. **mutable type confusion:** it's a common mistake to think you can use a built-in function like `sorted()` (which returns a new list) with the same syntax that works on all iterables, but also has a way to reassign the whole variable if you don't need the original.\n2. **python idiom:** python's list method `sort()` is designed to do this \"stuff happens, no return value needed\" thing, which is called a side effect. it modifies the list in place and then returns nothing, so you also end up with a variable that looks like it did work but has lost all its data.\n\nhere is a one-line way to get a sorted copy without changing the original:\n\n```python\nnew_list = items[:]\nnew_list.sort()\n```\n\nor, which is usually preferred because you don't have to do anything with `items` anymore:\n\n```python\nnew_list = sorted(items)\n```",
+      "thinking_characters": 0,
+      "done_reason": "stop",
+      "prompt_tokens": 84,
+      "generated_tokens": 218,
+      "error": null
+    }
+  ],
+  "completed": true,
+  "metadata": {
+    "capabilities": [
+      "completion",
+      "vision",
+      "audio",
+      "tools",
+      "thinking"
+    ],
+    "thinking": {
+      "values": [
+        false,
+        true
+      ],
+      "default": true
+    },
+    "parameters": "num_batch                      128\nrepeat_penalty                 1.1\ntop_k                          40\ntop_p                          0.9\nuse_mmap                       true\nnum_ctx                        4096\nnum_predict                    1536\nstop                           \"<bos>\"\nstop                           \"<|turn>\"\nstop                           \"<turn|>\"\nstop                           \"<|turn>user\"\ntemperature                    0.7",
+    "details": {
+      "parent_model": "hf.co/OBLITERATUS/gemma-4-E4B-it-OBLITERATED:Q4_K_M",
+      "format": "gguf",
+      "family": "gemma4",
+      "families": [
+        "gemma4"
+      ],
+      "parameter_size": "7.52B",
+      "quantization_level": "Q4_K_M",
+      "runner": "llamacpp"
+    }
+  },
+  "resident_models": [
+    {
+      "name": "sight-gemma4-e4b:uncensored",
+      "size_vram": 3179471174,
+      "context_length": 4096
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "verdict": "PARTIAL",
+  "tests": {
+    "PASS": 221,
+    "FAIL": 0,
+    "SKIP": 0
+  },
+  "seconds": 55.599,
+  "live_checks": 48,
+  "original_ui_zero_difference_cases": 16,
+  "available_local_capabilities": 20,
+  "blocked_broader_capabilities": 17,
+  "cloud_calls": 0,
+  "source_semantic_complete": false,
+  "phase4_started": false
+}

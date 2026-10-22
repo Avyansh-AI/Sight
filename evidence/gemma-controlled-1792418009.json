@@ -1,0 +1,96 @@
+{
+  "timestamp_utc": "2026-10-19T13:53:29.414300+00:00",
+  "model": "hf.co/OBLITERATUS/gemma-4-E4B-it-OBLITERATED:Q4_K_M",
+  "profile": "controlled",
+  "cloud_requests": 0,
+  "rows": [
+    {
+      "case": "tone",
+      "prompt": "Explain in three sentences why my laptop gets slower when its RAM is full.",
+      "http_status": 200,
+      "seconds": 26.225,
+      "answer": "The first three sentences should be here-by here's your answer.\n* it*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\*\\\\",
+      "thinking_characters": 0,
+      "done_reason": "length",
+      "prompt_tokens": 149,
+      "generated_tokens": 1024,
+      "error": null
+    },
+    {
+      "case": "arithmetic",
+      "prompt": "A shop reduces a price of 250 by 20%, then applies 10% tax to the reduced price. What is the final price? Give the number and one sentence.",
+      "http_status": 200,
+      "seconds": 18.307,
+      "answer": "v3.2.0-pc-windows-10/svelte-extras/src/icons/heart.svg?sv=63122232\n\n#| comments/add-after-print.js?v=8c23222e.0~next/bottom/add-after-body.svelte#lite.svelte\n\n```svelte\n  <div class=\"container\">\n    <h1 class=\"has-margin-top\">Price Calculator Here</h1>\n    <div id=\"math-app\">\n      <label>Price</label>\n      <input type=\"number\" placeholder=\"Enter price here\" />\n      <button>equals</button>\n    </div>\n  </div>\n  </div>\n</svelte>\n```\n\n</svelte>*}*</pre>*}*>*}*</details*>*/div*/h3*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*",
+      "thinking_characters": 0,
+      "done_reason": "length",
+      "prompt_tokens": 174,
+      "generated_tokens": 1024,
+      "error": null
+    },
+    {
+      "case": "logic",
+      "prompt": "All red blocks are heavy. Some heavy blocks are wooden. Does it follow that some red blocks are wooden? Explain briefly.",
+      "http_status": 200,
+      "seconds": 19.13,
+      "answer": ">>> here are the character count options: 200, 300, 400, 500, 0; etc. <<<\\\\n red, blue, green, black; etc. \\\\\\n* etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n etc. *\\\\n",
+      "thinking_characters": 0,
+      "done_reason": "length",
+      "prompt_tokens": 159,
+      "generated_tokens": 1024,
+      "error": null
+    },
+    {
+      "case": "planning",
+      "prompt": "I have 35 minutes. Downloading takes 10 minutes, installation takes 15 minutes after the download, and a test takes 12 minutes after installation. Can I finish everything? Explain briefly.",
+      "http_status": 200,
+      "seconds": 19.308,
+      "answer": "body{\ub824\uc788\uc5b4\uc694.}*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*mt;*",
+      "thinking_characters": 0,
+      "done_reason": "length",
+      "prompt_tokens": 177,
+      "generated_tokens": 1024,
+      "error": null
+    },
+    {
+      "case": "code",
+      "prompt": "In Python, why does items.sort() return None? Give a one-line way to get a sorted copy while keeping items unchanged.",
+      "http_status": 200,
+      "seconds": 18.701,
+      "answer": "alphanumeric comparison: 'a' < 'b'\n\nstuff = ['b', 'a']\nprint(stuff)\n\nstuff.sort() # also ['a', 'b']\nprint(stuff)\n\n# What happens if you do this?\nstuff['b'] = 'a'\nstuff[0] = 'b'\nprint(stuff)\n\n# What if you want to do it with a different value?\nstuff = [1, 2, 3]\nstuff = stuff[2]: print(stuff)\n\n# What if you want to add a third value?\nstuff = stuff[1::3]\nprint(stuff)\n```\n*unopened file*\n\n<|prepprocess|>text:alphanumeric comparison: 'a' < 'b' - stuff = ['b', 'a'] - print(stuff) - stuff.sort() # also ['a', 'b'] - print(stuff) - stuff['b'] = 'a' - stuff[0] = 'b' - print(stuff) - stuff = [1, 2, 3] - stuff = stuff[2]: print(stuff) - stuff[1::3] - print(stuff)\n\n<prepprocess_output>alphanumeric comparison: 'a' < 'b'\nstuff = ['b', 'a']\nprint(stuff)\n\nstuff.sort() # also ['a', 'b']\nprint(stuff)\n\n# What happens if you are here?\nstuff['b'] = 'a'\nstuff[0] = 'b'\nprint(stuff)\n\n# What if you want to do it with a different value?\nstuff = [1, 2, 3]\nstuff = stuff[2]: print(stuff)\n\n# What else do you want to know?\nstuff = stuff[1::3]\nprint(stuff)\n</prepprocess_output>\n</code>\n\n*none files*\n<prepprocess_output>none files</prepprocess_output>\n\n</prepprocess_output>\nhomepage.mdgitgou.com>\n\n</prepprocess_output>\nhomepage.mdgitgou.comgitgou.com/favicon.ico>\n\n</prepprocess_output>\nhomepage.mdgitgou.com/assets/mobile.stuff.js?_dump=1>\n\n</prepprocess_output>\nhomepage.mdgitgou.com/assets/mobile.stuff.js/favicon.ico?_dump=1?v=2&t=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2&attachment=2",
+      "thinking_characters": 0,
+      "done_reason": "length",
+      "prompt_tokens": 162,
+      "generated_tokens": 1024,
+      "error": null
+    }
+  ],
+  "completed": true,
+  "metadata": {
+    "capabilities": [
+      "tools",
+      "completion",
+      "vision",
+      "audio"
+    ],
+    "thinking": null,
+    "parameters": "stop                           \"<bos>\"\nstop                           \"<|turn>\"\nstop                           \"<turn|>\"\nstop                           \"<|turn>user\"",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "gemma4",
+      "families": [
+        "gemma4"
+      ],
+      "parameter_size": "7.52B",
+      "quantization_level": "Q4_K_M"
+    }
+  },
+  "resident_models": [
+    {
+      "name": "sight-gemma4-e4b:balanced",
+      "size_vram": 3179471174,
+      "context_length": 4096
+    }
+  ]
+}

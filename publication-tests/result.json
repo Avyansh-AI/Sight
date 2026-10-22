@@ -1,0 +1,8 @@
+{
+  "passed": 314,
+  "failed": 0,
+  "skipped": 0,
+  "seconds": 120.65,
+  "scope": "All tests from the exported GitHub checkout using the already provisioned Python environment on the current Windows account; not a fresh-account install or live official-model inference.",
+  "model_inference": "fixtures only"
+}

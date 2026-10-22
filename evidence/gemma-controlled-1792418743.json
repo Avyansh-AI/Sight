@@ -1,0 +1,107 @@
+{
+  "timestamp_utc": "2026-10-19T14:05:43.139810+00:00",
+  "model": "sight-gemma4-e4b:balanced",
+  "profile": "controlled",
+  "temperature": 0.0,
+  "output_tokens": 1536,
+  "updated_prompt": true,
+  "cloud_requests": 0,
+  "rows": [
+    {
+      "case": "tone",
+      "prompt": "Explain in three sentences why my laptop gets slower when its RAM is full.",
+      "http_status": 200,
+      "seconds": 1.664,
+      "answer": "Unexpected slowdown can occur because your laptop has to save the unknown times used by active programs to a left-over space called \"swap file\" on the much slower hard drive. This extra step means the computer runs out of quick memory and has to constantly wait for information to be stored somewhere else. Over time, this leads to a general feeling of sluggishness and freezing that you can't quite put your finger on.",
+      "thinking_characters": 0,
+      "done_reason": "stop",
+      "prompt_tokens": 129,
+      "generated_tokens": 85,
+      "error": null
+    },
+    {
+      "case": "arithmetic",
+      "prompt": "A shop reduces a price of 250 by 20%, then applies 10% tax to the reduced price. What is the final price? Give the number and one sentence.",
+      "http_status": 200,
+      "seconds": 0.728,
+      "answer": "250 - 20% + 10% = 297.50\nThe final price of the item is 297.50 rupees.",
+      "thinking_characters": 0,
+      "done_reason": "stop",
+      "prompt_tokens": 154,
+      "generated_tokens": 39,
+      "error": null
+    },
+    {
+      "case": "logic",
+      "prompt": "All red blocks are heavy. Some heavy blocks are wooden. Does it follow that some red blocks are wooden? Explain briefly.",
+      "http_status": 200,
+      "seconds": 3.254,
+      "answer": "Araxiomically, no.\n\n**Explanation:**\n\nThis is a classic example of a syllogistic problem. We know:\n1. All red blocks are heavy. (Red $\\rightarrow$ Heavy)\n2. Some heavy blocks are wooden. (Some Heavy $\\rightarrow$ Wooden)\n\nThis tells us that group of things called \"red blocks\" is entirely inside the \"heavy\" category, and there is some overlap between the \"heavy\" and \"wooden\" categories. However, this doesn't require that there is a specific red block that is also on the wooden side of the \"heavy\" category. the red blocks might just be a heavy block that is totally separate from the wooden ones.\n\n*Example:* Red means \"fire truck\"; some heavy blocks are \"clue-up-here\"; and some \"clue-up-here\" are \"wooden\". This doesn't mean any of the fire trucks are yours.",
+      "thinking_characters": 0,
+      "done_reason": "stop",
+      "prompt_tokens": 139,
+      "generated_tokens": 194,
+      "error": null
+    },
+    {
+      "case": "planning",
+      "prompt": "I have 35 minutes. Downloading takes 10 minutes, installation takes 15 minutes after the download, and a test takes 12 minutes after installation. Can I finish everything? Explain briefly.",
+      "http_status": 200,
+      "seconds": 1.596,
+      "answer": "yes, you can finish everything.\n\n-- here's a breakdown of the time needed:\n*   **Download:** 10 minutes\n*   **Installation:** 15 minutes\n*   **Test:** 12 minutes\n*   **Total time:** $10 + 15 + 12 = 37$ minutes\n\nSince you have 35 minutes, you can't do it all.",
+      "thinking_characters": 0,
+      "done_reason": "stop",
+      "prompt_tokens": 157,
+      "generated_tokens": 91,
+      "error": null
+    },
+    {
+      "case": "code",
+      "prompt": "In Python, why does items.sort() return None? Give a one-line way to get a sorted copy while keeping items unchanged.",
+      "http_status": 200,
+      "seconds": 2.795,
+      "answer": "Python's `list` has a method called `sort()` which is said to have \"side effects\" because it modifies the list object that is otherwise called \"memareferenced\" with the same value. It also does not return the new list, but returns a string that no longer has any useful value, which is called `None`.\n\nHere is a one-line way to get a sorted copy of a list without changing the original list:\n\n```python\nnew_list = items[:]\nnew_list.sort()\n```\n\nAlternatively, you can use the built-in `sorted()` function, which does everything automatically:\n\n```python\nnew_list = sorted(items)\n```\n\nThis will give you a sorted list, leaving the original `items` list intact.",
+      "thinking_characters": 0,
+      "done_reason": "stop",
+      "prompt_tokens": 142,
+      "generated_tokens": 164,
+      "error": null
+    }
+  ],
+  "completed": true,
+  "metadata": {
+    "capabilities": [
+      "completion",
+      "vision",
+      "audio",
+      "tools",
+      "thinking"
+    ],
+    "thinking": {
+      "values": [
+        false,
+        true
+      ],
+      "default": true
+    },
+    "parameters": "num_batch                      128\nnum_ctx                        4096\nnum_predict                    1536\nstop                           \"<bos>\"\nstop                           \"<|turn>\"\nstop                           \"<turn|>\"\nstop                           \"<|turn>user\"\ntemperature                    0",
+    "details": {
+      "parent_model": "hf.co/OBLITERATUS/gemma-4-E4B-it-OBLITERATED:Q4_K_M",
+      "format": "gguf",
+      "family": "gemma4",
+      "families": [
+        "gemma4"
+      ],
+      "parameter_size": "7.52B",
+      "quantization_level": "Q4_K_M",
+      "runner": "llamacpp"
+    }
+  },
+  "resident_models": [
+    {
+      "name": "sight-gemma4-e4b:balanced",
+      "size_vram": 3179471174,
+      "context_length": 4096
+    }
+  ]
+}

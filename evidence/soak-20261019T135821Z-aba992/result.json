@@ -1,0 +1,171 @@
+{
+  "started_utc": "2026-10-19T13:58:21.635039+00:00",
+  "requested_seconds": 10,
+  "model": "sight-gemma4-e4b:balanced",
+  "data_dir": "C:\\Users\\Dell\\Documents\\Ai projects\\Sight\\Phase-4\\test-data\\soak-20261019T135821Z-aba992",
+  "checks": [
+    {
+      "name": "home HTML exact bytes",
+      "passed": true,
+      "elapsed_seconds": 2.688,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 2.766,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 2.844,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 2.907,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 2.953,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 2.953,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 2.969,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 3.188,
+      "detail": null
+    },
+    {
+      "name": "real Gemma inference",
+      "passed": true,
+      "elapsed_seconds": 24.766,
+      "detail": null
+    },
+    {
+      "name": "one reminder without replay",
+      "passed": true,
+      "elapsed_seconds": 24.782,
+      "detail": null
+    },
+    {
+      "name": "all WebSocket requests durably recorded",
+      "passed": true,
+      "elapsed_seconds": 25.016,
+      "detail": {
+        "completed_requests": 2
+      }
+    },
+    {
+      "name": "event start and finish records retained",
+      "passed": true,
+      "elapsed_seconds": 25.016,
+      "detail": null
+    },
+    {
+      "name": "no stuck durable agents",
+      "passed": true,
+      "elapsed_seconds": 25.016,
+      "detail": null
+    },
+    {
+      "name": "exactly one receipt per completed task",
+      "passed": true,
+      "elapsed_seconds": 25.016,
+      "detail": null
+    },
+    {
+      "name": "soak output files survive full restore",
+      "passed": true,
+      "elapsed_seconds": 25.375,
+      "detail": null
+    },
+    {
+      "name": "runtime source unchanged during soak",
+      "passed": true,
+      "elapsed_seconds": 25.391,
+      "detail": null
+    }
+  ],
+  "cloud_requests": 0,
+  "fault_scope": "Test-process loopback model transport; host network unchanged",
+  "source_hashes": {
+    "sight_core/__init__.py": "ba90670254fe47f418ab14be3b3be9504f17d926353794588fc52ee42faa745d",
+    "sight_core/api.py": "1f14970f5ac3fdef7ba3c94d8f863715c693b771d06e53121128c2ce0c65d3a9",
+    "sight_core/artifacts.py": "63a3cda1a3aab2ec384cf976e13eabb3a94ee982db53e5cf63fad18fc9e763c6",
+    "sight_core/brain_store.py": "336256ad8e10e2f77ce689e6324fed9468ce05265d80bebc40efd087639bbdc8",
+    "sight_core/capabilities.py": "ea119ff951bf47d863033994ff6119bdb6a1bbb20288ce821da5d50d18aeddee",
+    "sight_core/capability_worker.py": "d033a1dd808df6977f91ca343ae164a4251a7880aa5999e215222192b3ab45b6",
+    "sight_core/chatgpt.py": "71d352e1bd876a1f789d0a069c8863400777f1c5acd0c23062d8fcc6b82c845b",
+    "sight_core/cli.py": "61a701c56a9e513a0100379c6c546f2e3a474714bb754f18b15898b745c752e8",
+    "sight_core/config.py": "8f130850712c01a2a5c731cc7e538d55c71600d45f1db36c39eab0e068238d7a",
+    "sight_core/connector_contracts.py": "be01f06176268207823c2187da324cbe4c76ec3e260012948d55935c99f1f143",
+    "sight_core/forge.py": "724409e815ebbe15e9fab01a52aa332c52389f67e3cc3b417c10a4be478a9bcf",
+    "sight_core/jobs.py": "28f02fb59809c6fd120f1b14ffda218a913ce9817ce3a5008e7ea4d7ffe69719",
+    "sight_core/learning_api.py": "d0c7c2f37fb10d211e3f8cfdde8c9ab8a4f9da329c22de0bbeba985f22b06336",
+    "sight_core/local_adapters.py": "eae42f13db3415b19666d89ca8911808500eedb0819e79c74bef1d54601af52a",
+    "sight_core/mcp_bridge.py": "49d6c1e6e9e326dc4188ec81c976ca62ba1d260918dc59a53b98d9e28ef69460",
+    "sight_core/memory.py": "13f8d865655ea0057886fa2b7e96fd9a730aa2e20dc9730af6e4a478d3d7ff4a",
+    "sight_core/models.py": "8f6d3d192b376d893ae36e7cd746f18c05f4ece33dfd606fdbff64fb973f3fd1",
+    "sight_core/proactive.py": "8a2862d1198608a1c90eda2ae983bdfe2dae3b7d7bbf1ca0dda0fdf3e7c375cf",
+    "sight_core/quotas.py": "2a674f9fa940a3a94a4a1988aeb78f66ccdaa39fce15268028ce070fbf2b1162",
+    "sight_core/recovery.py": "90031d470fe5759074210f1ce4a7965ae131a0777c1858079e2f92f68f2ea9bf",
+    "sight_core/releases.py": "fffc22da8bf3596c1d9f3e116b9e253573c0e106042a74a36afb1066880503c6",
+    "sight_core/routing.py": "3bf5f0432ff2b000c636da4d7fd0c2ed4276db1f8c177e80c38ce8b4dd3553ca",
+    "sight_core/security.py": "da7e38fa8a99113261bfa7c88556bebf03b875c211a1a0b8426211ca6dc52710",
+    "sight_core/skill_worker.py": "111825fb41aa4e9623e08a962457982ba446eeb1dfc2c13fbca4fc5777690eff",
+    "sight_core/store.py": "d3126ce6ce4d68372f2ad1597c0ac6919f500ca9123863b8b7c628cf925ad231",
+    "sight_core/tools.py": "44dbef9c6cac45c76409b2ceded7712f20ea39c22cac33eedbf04c134e1ea47a",
+    "apps/ui/capabilities.html": "7568d669423d7f8353fd9627754a1ad7d4fc60725b4b90b2c9784161f31c9d9d",
+    "apps/ui/index.html": "0883f953221ab94b0ecf21a7894ff1f5b2d650f14ccaf26b467365761cee01a6",
+    "apps/ui/learning.html": "1df2b6bddebc2410919b1f99f6a70b1b5d25761bbb515c8c715b8e584b33cda0",
+    "apps/ui/systems.html": "3d9b4528b18cb524916c34d8146e67cb3f7b92e82b45cb5a5a1bda1e44edf2c3",
+    "apps/ui/tasks.html": "24735dc59e928e0056eedfc036727067192028a84ff770659583cf8e3c44ab83",
+    "apps/ui/vision.html": "acf16546b60d2c0348c9e78834f5d98a450575470aaaa1937875e342b78231c5"
+  },
+  "complete": true,
+  "cycles": 1,
+  "model_calls": [
+    {
+      "cycle": 0,
+      "seconds": 21.578,
+      "status": "ok",
+      "answer": "42"
+    }
+  ],
+  "planned_server_crashes": 0,
+  "unplanned_server_exits": 0,
+  "elapsed_seconds": 25.407,
+  "source_unchanged_during_run": true,
+  "telemetry": {
+    "samples": 5,
+    "peak_gpu_mib": 4261.0,
+    "peak_gpu_temperature_c": 61.0,
+    "minimum_available_host_ram_mib": 656.91,
+    "peak_host_cpu_percent": 60.23,
+    "peak_server_working_set_mib": 63.28,
+    "cpu_temperature": "not available from the standard interfaces used"
+  },
+  "one_hour_qualified": false,
+  "model_latency": {
+    "median_seconds": 21.578,
+    "max_seconds": 21.578,
+    "sample_count": 1
+  }
+}

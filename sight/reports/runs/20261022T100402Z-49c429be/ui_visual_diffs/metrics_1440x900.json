@@ -1,0 +1,82 @@
+[
+  {
+    "state": "standby",
+    "viewport": [
+      1440,
+      900
+    ],
+    "changed_pixels": 0,
+    "baseline_sha256": "f49b0eefe505a81ed369024b9e1fda2e1b8a43869ac668ea7c0afe27492a5dc7",
+    "actual_sha256": "f49b0eefe505a81ed369024b9e1fda2e1b8a43869ac668ea7c0afe27492a5dc7"
+  },
+  {
+    "state": "listening",
+    "viewport": [
+      1440,
+      900
+    ],
+    "changed_pixels": 0,
+    "baseline_sha256": "41e9bb4ce34869ede0b057916579c4ac74cafed49ad24db3ffbddfa3344ab5af",
+    "actual_sha256": "41e9bb4ce34869ede0b057916579c4ac74cafed49ad24db3ffbddfa3344ab5af"
+  },
+  {
+    "state": "thinking",
+    "viewport": [
+      1440,
+      900
+    ],
+    "changed_pixels": 0,
+    "baseline_sha256": "2bfb76bc93ae76a201705db211bef6864fc0060b9a6d7c07fbf2fff7bf26489d",
+    "actual_sha256": "2bfb76bc93ae76a201705db211bef6864fc0060b9a6d7c07fbf2fff7bf26489d"
+  },
+  {
+    "state": "speaking",
+    "viewport": [
+      1440,
+      900
+    ],
+    "changed_pixels": 0,
+    "baseline_sha256": "627b30aeffc1862df85717bd2c2e24114d089ce05ebee9987ad9c4a03c52761f",
+    "actual_sha256": "627b30aeffc1862df85717bd2c2e24114d089ce05ebee9987ad9c4a03c52761f"
+  },
+  {
+    "state": "vision",
+    "viewport": [
+      1440,
+      900
+    ],
+    "changed_pixels": 0,
+    "baseline_sha256": "9a98ddad646569a2b94c2c8560d127bfe05a81a03bea40bcdd9238f1f353c4a5",
+    "actual_sha256": "9a98ddad646569a2b94c2c8560d127bfe05a81a03bea40bcdd9238f1f353c4a5"
+  },
+  {
+    "state": "alert",
+    "viewport": [
+      1440,
+      900
+    ],
+    "changed_pixels": 0,
+    "baseline_sha256": "5393dc7a0fffaf73682b06a83f0a2b74502acf43b9e32df19543427e247480cd",
+    "actual_sha256": "5393dc7a0fffaf73682b06a83f0a2b74502acf43b9e32df19543427e247480cd"
+  },
+  {
+    "state": "offline",
+    "viewport": [
+      1440,
+      900
+    ],
+    "changed_pixels": 0,
+    "baseline_sha256": "8dc7c06d11c57d53ce6d021f7825db32e32ee3581519a489eb52aee3d424fcfb",
+    "actual_sha256": "8dc7c06d11c57d53ce6d021f7825db32e32ee3581519a489eb52aee3d424fcfb"
+  },
+  {
+    "state": "error",
+    "viewport": [
+      1440,
+      900
+    ],
+    "changed_pixels": 0,
+    "baseline_sha256": "d2d6e3bd7c2e647bf2bc849b776fffd219aa5327c51765a23a8fec5088a22296",
+    "actual_sha256": "d2d6e3bd7c2e647bf2bc849b776fffd219aa5327c51765a23a8fec5088a22296"
+  }
+]

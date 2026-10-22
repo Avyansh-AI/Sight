@@ -1,0 +1,48 @@
+{
+  "timestamp_utc": "2026-10-20T06:52:03.886910+00:00",
+  "validator_sha256": "1f01156e55b88156ee28b5eac88872d577ffbdf68e960c0932d6193e0b7fd8eb",
+  "archives": [
+    {
+      "archive": "Ada-SI-main.zip",
+      "entries": 359,
+      "passed": true
+    },
+    {
+      "archive": "Brahma-AI---Lite-main.zip",
+      "entries": 96,
+      "passed": true
+    },
+    {
+      "archive": "Brahma-AI-main.zip",
+      "entries": 141,
+      "passed": true
+    },
+    {
+      "archive": "Brahma-Ai-Evo-main.zip",
+      "entries": 338,
+      "passed": true
+    },
+    {
+      "archive": "Brahma-Echo-main.zip",
+      "entries": 239,
+      "passed": true
+    },
+    {
+      "archive": "ada_local-main.zip",
+      "entries": 85,
+      "passed": true
+    },
+    {
+      "archive": "ada_v2-main.zip",
+      "entries": 71,
+      "passed": true
+    },
+    {
+      "archive": "hermes-agent-main.zip",
+      "entries": 21309,
+      "passed": true
+    }
+  ],
+  "total_entries": 22638,
+  "extraction_performed": false
+}

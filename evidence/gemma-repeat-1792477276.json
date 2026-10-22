@@ -1,0 +1,97 @@
+{
+  "started_utc": "2026-10-20T06:21:16.382712+00:00",
+  "model": "sight-gemma4-e4b:uncensored",
+  "thinking": false,
+  "cloud_requests": 0,
+  "rows": [
+    {
+      "seed": 0,
+      "status": 200,
+      "seconds": 0.391,
+      "answer": "42",
+      "thinking_characters": 0,
+      "done": true,
+      "done_reason": "stop",
+      "generated_tokens": 3,
+      "error": null
+    },
+    {
+      "seed": 1,
+      "status": 200,
+      "seconds": 0.094,
+      "answer": "42",
+      "thinking_characters": 0,
+      "done": true,
+      "done_reason": "stop",
+      "generated_tokens": 3,
+      "error": null
+    },
+    {
+      "seed": 2,
+      "status": 200,
+      "seconds": 0.093,
+      "answer": "42",
+      "thinking_characters": 0,
+      "done": true,
+      "done_reason": "stop",
+      "generated_tokens": 3,
+      "error": null
+    },
+    {
+      "seed": 3,
+      "status": 200,
+      "seconds": 0.079,
+      "answer": "42",
+      "thinking_characters": 0,
+      "done": true,
+      "done_reason": "stop",
+      "generated_tokens": 3,
+      "error": null
+    },
+    {
+      "seed": 4,
+      "status": 200,
+      "seconds": 0.093,
+      "answer": "42",
+      "thinking_characters": 0,
+      "done": true,
+      "done_reason": "stop",
+      "generated_tokens": 3,
+      "error": null
+    },
+    {
+      "seed": 5,
+      "status": 200,
+      "seconds": 0.094,
+      "answer": "42",
+      "thinking_characters": 0,
+      "done": true,
+      "done_reason": "stop",
+      "generated_tokens": 3,
+      "error": null
+    },
+    {
+      "seed": 6,
+      "status": 200,
+      "seconds": 0.078,
+      "answer": "42",
+      "thinking_characters": 0,
+      "done": true,
+      "done_reason": "stop",
+      "generated_tokens": 3,
+      "error": null
+    },
+    {
+      "seed": 7,
+      "status": 200,
+      "seconds": 0.094,
+      "answer": "42",
+      "thinking_characters": 0,
+      "done": true,
+      "done_reason": "stop",
+      "generated_tokens": 3,
+      "error": null
+    }
+  ],
+  "complete": true
+}

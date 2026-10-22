@@ -1,0 +1,412 @@
+{
+  "timestamp_utc": "20261021T100451Z",
+  "environment": "Windows; current owner account; isolated synthetic data",
+  "model": "sight-gemma4-e4b:uncensored",
+  "thinking": false,
+  "run_manifest": {
+    "run_id": "growth-20261021T100451Z-1a42e8a9",
+    "fresh_data_directory": true,
+    "data_directory": "C:\\Users\\Dell\\Documents\\Ai projects\\Sight\\Phase-4\\test-data\\growth-20261021T100451Z-1a42e8a9",
+    "environment": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.5",
+    "seeded_inputs": "Three fixed synthetic text tasks; no owner data copied",
+    "source_hashes": {
+      "sight_core/__init__.py": "ba90670254fe47f418ab14be3b3be9504f17d926353794588fc52ee42faa745d",
+      "sight_core/api.py": "fbe04062a624d4e9a9fdd68cfe2a42a8b4f68f4d4fd38435fe8c1002d96bd0dc",
+      "sight_core/artifacts.py": "63a3cda1a3aab2ec384cf976e13eabb3a94ee982db53e5cf63fad18fc9e763c6",
+      "sight_core/brain_store.py": "fcaa29228b8986e8aa86fac9bcf069a1561b4e85f1217936dd79d07db407f5ff",
+      "sight_core/capabilities.py": "ea119ff951bf47d863033994ff6119bdb6a1bbb20288ce821da5d50d18aeddee",
+      "sight_core/capability_worker.py": "9153358ea1ae4145c00e18aba87fed95177a9abc56745e0e69963e7558043451",
+      "sight_core/chatgpt.py": "71d352e1bd876a1f789d0a069c8863400777f1c5acd0c23062d8fcc6b82c845b",
+      "sight_core/cli.py": "61a701c56a9e513a0100379c6c546f2e3a474714bb754f18b15898b745c752e8",
+      "sight_core/config.py": "8f130850712c01a2a5c731cc7e538d55c71600d45f1db36c39eab0e068238d7a",
+      "sight_core/connector_contracts.py": "be01f06176268207823c2187da324cbe4c76ec3e260012948d55935c99f1f143",
+      "sight_core/forge.py": "724409e815ebbe15e9fab01a52aa332c52389f67e3cc3b417c10a4be478a9bcf",
+      "sight_core/jobs.py": "28f02fb59809c6fd120f1b14ffda218a913ce9817ce3a5008e7ea4d7ffe69719",
+      "sight_core/learning_api.py": "d0c7c2f37fb10d211e3f8cfdde8c9ab8a4f9da329c22de0bbeba985f22b06336",
+      "sight_core/local_adapters.py": "eae42f13db3415b19666d89ca8911808500eedb0819e79c74bef1d54601af52a",
+      "sight_core/mcp_bridge.py": "49d6c1e6e9e326dc4188ec81c976ca62ba1d260918dc59a53b98d9e28ef69460",
+      "sight_core/memory.py": "13f8d865655ea0057886fa2b7e96fd9a730aa2e20dc9730af6e4a478d3d7ff4a",
+      "sight_core/models.py": "8a96ae9e3cf8272d86efbfdfdc8c1f90ce30fbd0dd6b00fccd920c5ce489c25b",
+      "sight_core/proactive.py": "8a2862d1198608a1c90eda2ae983bdfe2dae3b7d7bbf1ca0dda0fdf3e7c375cf",
+      "sight_core/quotas.py": "2a674f9fa940a3a94a4a1988aeb78f66ccdaa39fce15268028ce070fbf2b1162",
+      "sight_core/recovery.py": "90031d470fe5759074210f1ce4a7965ae131a0777c1858079e2f92f68f2ea9bf",
+      "sight_core/releases.py": "fffc22da8bf3596c1d9f3e116b9e253573c0e106042a74a36afb1066880503c6",
+      "sight_core/routing.py": "4e27f6a0f66a19974f717c825b5adf8b9ef93036478fe4635eb68ca1e6b84759",
+      "sight_core/security.py": "1b2eeb4442fae466f87ca2a94c1705b69d7577f269f1f28fe24403a302712ec3",
+      "sight_core/skill_worker.py": "111825fb41aa4e9623e08a962457982ba446eeb1dfc2c13fbca4fc5777690eff",
+      "sight_core/store.py": "6e89a62392497bbaf6a2618aa1154c82309b6a68a375867f8066cf95f089c9ab",
+      "sight_core/tools.py": "44dbef9c6cac45c76409b2ceded7712f20ea39c22cac33eedbf04c134e1ea47a"
+    },
+    "generation_budget": {
+      "local_requests": 1,
+      "cloud_requests": 0
+    },
+    "comparison_budget_per_task": {
+      "tools": 4,
+      "model": 0
+    }
+  },
+  "live_generation": {
+    "candidate_id": "2100a4a6-1c8a-4a87-a34a-269cd041a61a",
+    "digest": "43ed3c4120daaeba56a7b677531e9ce4dd9856c9b25c694e39c1b286bbd4e79e",
+    "state": "tested",
+    "tests": [
+      {
+        "passed": true,
+        "actual": "a\nb",
+        "expected": "a\nb"
+      },
+      {
+        "passed": true,
+        "actual": "x\nz",
+        "expected": "x\nz"
+      }
+    ],
+    "manifest": {
+      "id": "text.clean",
+      "title": "Remove duplicate lines, then sort the remaining lines alphabetically.",
+      "description": "Remove duplicate lines, then sort the remaining lines alphabetically.",
+      "project_id": "default",
+      "operations": [
+        {
+          "op": "dedupe_lines",
+          "value": "",
+          "old": "",
+          "new": ""
+        },
+        {
+          "op": "sort_lines",
+          "value": "",
+          "old": "",
+          "new": ""
+        }
+      ],
+      "tests": [
+        {
+          "text": "b\na\nb",
+          "expected": "a\nb"
+        },
+        {
+          "text": "z\nx\nz",
+          "expected": "x\nz"
+        }
+      ],
+      "license": "owner-generated",
+      "permissions": [
+        "text.transform"
+      ],
+      "network_required": false,
+      "secrets": [],
+      "dependencies": [],
+      "timeout_seconds": 2,
+      "rollback": "immutable_version"
+    },
+    "generation_method": "model:local",
+    "dependency_policy": "No external dependencies"
+  },
+  "generation_seconds": 1.539,
+  "promotion": {
+    "id": "text.clean",
+    "version": 1,
+    "rollback_target": null
+  },
+  "rows": [
+    {
+      "stage": "baseline",
+      "task": "owner correction",
+      "state": "complete",
+      "correct": false,
+      "seconds": 0.029671,
+      "tool_calls": 1,
+      "model_calls": 0,
+      "budget": {
+        "tools": 4,
+        "model": 0
+      },
+      "job_id": "0fb05fbe-f857-4f4e-8f42-e644ed4c4ea6",
+      "result": {
+        "memory_id": null,
+        "remote_allowed": true,
+        "source_event_id": null,
+        "step_source_event_id": 3,
+        "text": "Hello SIGHT"
+      }
+    },
+    {
+      "stage": "baseline",
+      "task": "missing skill",
+      "state": "failed",
+      "correct": false,
+      "seconds": 0.031135,
+      "tool_calls": 1,
+      "model_calls": 0,
+      "budget": {
+        "tools": 4,
+        "model": 0
+      },
+      "job_id": "f74bc352-b7d9-40cb-b01b-ae74b98d481d",
+      "result": null
+    },
+    {
+      "stage": "baseline",
+      "task": "workflow consolidation",
+      "state": "complete",
+      "correct": true,
+      "seconds": 0.184428,
+      "tool_calls": 2,
+      "model_calls": 0,
+      "budget": {
+        "tools": 4,
+        "model": 0
+      },
+      "job_id": "3ce8594f-4df5-4092-9fcd-219ffc0108af",
+      "result": {
+        "remote_allowed": true,
+        "step_source_event_id": 14,
+        "text": "a\nb"
+      }
+    },
+    {
+      "stage": "after",
+      "task": "owner correction",
+      "state": "complete",
+      "correct": true,
+      "seconds": 0.034606,
+      "tool_calls": 1,
+      "model_calls": 0,
+      "budget": {
+        "tools": 4,
+        "model": 0
+      },
+      "job_id": "01d16f7f-a592-4c17-85af-791cd1cd2ff5",
+      "result": {
+        "memory_id": "3ee0eec9-d295-461f-9ece-5f4097f3660b",
+        "remote_allowed": false,
+        "source_event_id": "owner-ab701c06-2a8d-449a-8091-4c08630231d4",
+        "step_source_event_id": 22,
+        "text": "HELLO SIGHT"
+      }
+    },
+    {
+      "stage": "after",
+      "task": "missing skill",
+      "state": "complete",
+      "correct": true,
+      "seconds": 0.11238,
+      "tool_calls": 1,
+      "model_calls": 0,
+      "budget": {
+        "tools": 4,
+        "model": 0
+      },
+      "job_id": "7a173861-a828-43b8-9c8d-bc2208a2e625",
+      "result": {
+        "remote_allowed": true,
+        "skill_id": "text.clean",
+        "skill_invocation_id": "2f220f52-0c45-47f8-84cc-4f1ca5f79a3e",
+        "source_event_id": "model-draft-55334f27-9cba-40f3-b341-38e87b7ed149",
+        "step_source_event_id": 27,
+        "text": "a\nb",
+        "version": 1
+      }
+    },
+    {
+      "stage": "after",
+      "task": "workflow consolidation",
+      "state": "complete",
+      "correct": true,
+      "seconds": 0.108513,
+      "tool_calls": 1,
+      "model_calls": 0,
+      "budget": {
+        "tools": 4,
+        "model": 0
+      },
+      "job_id": "e3e5dfcc-e37a-4b25-b9f1-b23bd3391559",
+      "result": {
+        "remote_allowed": true,
+        "skill_id": "text.clean",
+        "skill_invocation_id": "dfc9cf7b-60ee-43f7-bb71-2ab6743266cc",
+        "source_event_id": "model-draft-55334f27-9cba-40f3-b341-38e87b7ed149",
+        "step_source_event_id": 33,
+        "text": "a\nb",
+        "version": 1
+      }
+    },
+    {
+      "stage": "repeat",
+      "task": "owner correction",
+      "state": "complete",
+      "correct": true,
+      "seconds": 0.034879,
+      "tool_calls": 1,
+      "model_calls": 0,
+      "budget": {
+        "tools": 4,
+        "model": 0
+      },
+      "job_id": "121d5a4c-cff1-49f0-87fe-c331405b58a3",
+      "result": {
+        "memory_id": "3ee0eec9-d295-461f-9ece-5f4097f3660b",
+        "remote_allowed": false,
+        "source_event_id": "owner-ab701c06-2a8d-449a-8091-4c08630231d4",
+        "step_source_event_id": 39,
+        "text": "HELLO SIGHT"
+      }
+    },
+    {
+      "stage": "repeat",
+      "task": "missing skill",
+      "state": "complete",
+      "correct": true,
+      "seconds": 0.106621,
+      "tool_calls": 1,
+      "model_calls": 0,
+      "budget": {
+        "tools": 4,
+        "model": 0
+      },
+      "job_id": "aad5fc56-22f3-4ffd-a08e-82fff8a409ba",
+      "result": {
+        "remote_allowed": true,
+        "skill_id": "text.clean",
+        "skill_invocation_id": "1cc0da0c-000a-4d80-86d8-cd67aca4fb6d",
+        "source_event_id": "model-draft-55334f27-9cba-40f3-b341-38e87b7ed149",
+        "step_source_event_id": 44,
+        "text": "a\nb",
+        "version": 1
+      }
+    },
+    {
+      "stage": "repeat",
+      "task": "workflow consolidation",
+      "state": "complete",
+      "correct": true,
+      "seconds": 0.1228,
+      "tool_calls": 1,
+      "model_calls": 0,
+      "budget": {
+        "tools": 4,
+        "model": 0
+      },
+      "job_id": "00fc0099-18be-46f2-97e5-0d7c9b408aed",
+      "result": {
+        "remote_allowed": true,
+        "skill_id": "text.clean",
+        "skill_invocation_id": "50d068cb-e274-409a-8a39-e2af74afce7e",
+        "source_event_id": "model-draft-55334f27-9cba-40f3-b341-38e87b7ed149",
+        "step_source_event_id": 50,
+        "text": "a\nb",
+        "version": 1
+      }
+    },
+    {
+      "stage": "edited",
+      "task": "owner correction",
+      "state": "complete",
+      "correct": true,
+      "seconds": 0.032521,
+      "tool_calls": 1,
+      "model_calls": 0,
+      "budget": {
+        "tools": 4,
+        "model": 0
+      },
+      "job_id": "69d6080b-b034-4597-bf1e-8d5dbdb754f1",
+      "result": {
+        "memory_id": "3ee0eec9-d295-461f-9ece-5f4097f3660b",
+        "remote_allowed": false,
+        "source_event_id": "owner-6e851857-3cc7-44bf-b26f-5035a7913374",
+        "step_source_event_id": 57,
+        "text": "hello sight"
+      }
+    },
+    {
+      "stage": "forgotten",
+      "task": "owner correction",
+      "state": "complete",
+      "correct": true,
+      "seconds": 0.032256,
+      "tool_calls": 1,
+      "model_calls": 0,
+      "budget": {
+        "tools": 4,
+        "model": 0
+      },
+      "job_id": "bb40d703-3195-4d81-8dc4-b86fe1261bdf",
+      "result": {
+        "memory_id": null,
+        "remote_allowed": true,
+        "source_event_id": null,
+        "step_source_event_id": 64,
+        "text": "Hello SIGHT"
+      }
+    },
+    {
+      "stage": "forgotten",
+      "task": "missing skill",
+      "state": "failed",
+      "correct": false,
+      "seconds": 0.030603,
+      "tool_calls": 1,
+      "model_calls": 0,
+      "budget": {
+        "tools": 4,
+        "model": 0
+      },
+      "job_id": "09c4d10a-118d-4c0f-9d3c-5a75cc1cb676",
+      "result": null
+    }
+  ],
+  "curator_before_forget": {
+    "skills": [
+      {
+        "id": "text.clean",
+        "version": 1,
+        "invoked": 4,
+        "failed": 0,
+        "reused": 3,
+        "last_used": 1792577094.1175125,
+        "stale": false,
+        "archived": false,
+        "proposal": null
+      }
+    ],
+    "automatic_deletion": false,
+    "model_calls": 0
+  },
+  "promotion_origin": "model_generated",
+  "memory_export_before_delete": [
+    {
+      "id": "3ee0eec9-d295-461f-9ece-5f4097f3660b",
+      "owner_id": "4db0587e-34e6-4c16-bb43-f8ee6aba8aa3",
+      "project_id": "default",
+      "key": "text.case",
+      "content": "upper",
+      "created_at": 1792577092.0754604,
+      "last_confirmed_at": 1792577092.0754604,
+      "source_event_id": "owner-ab701c06-2a8d-449a-8091-4c08630231d4",
+      "source_uri": "synthetic benchmark owner confirmation",
+      "confidence": 1.0,
+      "expiry": null,
+      "privacy_scope": "local",
+      "revision": 1,
+      "store": "profile",
+      "source_link": "/api/learning/memory/3ee0eec9-d295-461f-9ece-5f4097f3660b"
+    }
+  ],
+  "summary": {
+    "baseline_correct": 1,
+    "after_correct": 3,
+    "repeat_correct": 3,
+    "total_tasks_per_stage": 3,
+    "cloud_requests": 0,
+    "memory_forgotten": true,
+    "skill_forgotten": true,
+    "forgotten_skill_execution_denied": true,
+    "workflow_tool_calls_before": 2,
+    "workflow_tool_calls_after": 1
+  },
+  "scope": "Three deterministic text tasks only. Elapsed times include SQLite and worker startup. Skill creation cost reported separately. Not evidence of general autonomous learning."
+}

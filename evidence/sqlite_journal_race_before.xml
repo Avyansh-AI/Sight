@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="2.477" timestamp="2026-10-20T12:26:08.728371+05:30" hostname="Avyansh-PC"><testcase classname="tests.test_phase4_hardening" name="test_sqlite_journal_creation_deletion_is_safe_during_path_validation" time="2.315"><failure message="AssertionError: ['ValueError', 'ValueError', 'ValueError', 'ValueError', 'FileNotFoundError', 'FileNotFoundError', ...]&#10;assert not ['ValueError', 'ValueError', 'ValueError', 'ValueError', 'FileNotFoundError', 'FileNotFoundError', ...]">tmp_path = WindowsPath('C:/Users/Dell/AppData/Local/Temp/pytest-of-Dell/pytest-50/test_sqlite_journal_creation_d0')
+
+    def test_sqlite_journal_creation_deletion_is_safe_during_path_validation(tmp_path):
+        import threading
+        from sight_core.security import safe_database
+        database = tmp_path/'sight.sqlite3'
+        database.write_bytes(b'synthetic main file')
+        journal = tmp_path/'sight.sqlite3-journal'
+        stop = threading.Event()
+        errors = []
+        def rotate():
+            while not stop.is_set():
+                journal.write_bytes(b'transient rollback journal')
+                journal.unlink()
+        worker = threading.Thread(target=rotate)
+        worker.start()
+        try:
+            for _ in range(500):
+                try:
+                    safe_database(database)
+                except (OSError, ValueError) as exc:
+                    errors.append(type(exc).__name__)
+        finally:
+            stop.set()
+            worker.join(3)
+        assert not worker.is_alive()
+&gt;       assert not errors, errors[:10]
+E       AssertionError: ['ValueError', 'ValueError', 'ValueError', 'ValueError', 'FileNotFoundError', 'FileNotFoundError', ...]
+E       assert not ['ValueError', 'ValueError', 'ValueError', 'ValueError', 'FileNotFoundError', 'FileNotFoundError', ...]
+
+tests\test_phase4_hardening.py:266: AssertionError</failure></testcase></testsuite></testsuites>

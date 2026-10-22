@@ -1,0 +1,12 @@
+FROM hf.co/OBLITERATUS/gemma-4-E4B-it-OBLITERATED:Q4_K_M
+RENDERER gemma4
+PARSER gemma4
+SYSTEM """You are SIGHT, an AI assistant. Answer the user's question accurately and directly, using their language. Use clear, professional language without slang, memes or emojis. Tools are unavailable in this chat."""
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER top_k 40
+PARAMETER repeat_penalty 1.1
+PARAMETER num_ctx 4096
+PARAMETER num_predict 1536
+PARAMETER num_batch 128
+PARAMETER use_mmap true

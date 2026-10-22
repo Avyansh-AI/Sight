@@ -1,0 +1,37 @@
+{
+  "timestamp_utc": "2026-10-21T15:47:04.163568+00:00",
+  "cloud_requests": 0,
+  "model": "sight-gemma4-e4b:uncensored",
+  "thinking": false,
+  "checks": [
+    {
+      "script": "Start-Local-Runtime.ps1",
+      "command": [
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Dell\\Documents\\Ai projects\\Sight\\Phase-4\\Start-Local-Runtime.ps1"
+      ],
+      "seconds": 0.328,
+      "exit_code": 0,
+      "stdout": "Ollama is responding. Systems will verify the selected model."
+    },
+    {
+      "script": "Run-Gemma.ps1",
+      "command": [
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Dell\\Documents\\Ai projects\\Sight\\Phase-4\\Run-Gemma.ps1",
+        "-Prompt",
+        "What is 17 plus 25? Reply with the number only."
+      ],
+      "seconds": 17.157,
+      "exit_code": 0,
+      "stdout": "42"
+    }
+  ],
+  "passed": true
+}

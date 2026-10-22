@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="10" skipped="0" tests="10" time="0.189" timestamp="2026-10-20T12:21:24.487272+05:30" hostname="Avyansh-PC"><testcase classname="tests.test_archive_security" name="test_windows_reserved_archive_paths_rejected[root/CON]" time="0.003"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">name = 'root/CON'
+
+    @pytest.mark.parametrize('name', ['root/CON', 'root/nul.txt', 'root/aux.log',
+                                      'root/COM1/data', 'root/lpt9.txt', 'root/com¹.txt',
+                                      'root/invalid?.txt', 'root/pipe|name', 'root/control\nname'])
+    def test_windows_reserved_archive_paths_rejected(name):
+        buffer = io.BytesIO()
+        with zipfile.ZipFile(buffer, 'w') as archive:
+            archive.writestr(name, b'never extract a Windows device path')
+&gt;       with zipfile.ZipFile(buffer) as archive, pytest.raises(ValueError):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\test_archive_security.py:38: Failed</failure></testcase><testcase classname="tests.test_archive_security" name="test_windows_reserved_archive_paths_rejected[root/nul.txt]" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">name = 'root/nul.txt'
+
+    @pytest.mark.parametrize('name', ['root/CON', 'root/nul.txt', 'root/aux.log',
+                                      'root/COM1/data', 'root/lpt9.txt', 'root/com¹.txt',
+                                      'root/invalid?.txt', 'root/pipe|name', 'root/control\nname'])
+    def test_windows_reserved_archive_paths_rejected(name):
+        buffer = io.BytesIO()
+        with zipfile.ZipFile(buffer, 'w') as archive:
+            archive.writestr(name, b'never extract a Windows device path')
+&gt;       with zipfile.ZipFile(buffer) as archive, pytest.raises(ValueError):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\test_archive_security.py:38: Failed</failure></testcase><testcase classname="tests.test_archive_security" name="test_windows_reserved_archive_paths_rejected[root/aux.log]" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">name = 'root/aux.log'
+
+    @pytest.mark.parametrize('name', ['root/CON', 'root/nul.txt', 'root/aux.log',
+                                      'root/COM1/data', 'root/lpt9.txt', 'root/com¹.txt',
+                                      'root/invalid?.txt', 'root/pipe|name', 'root/control\nname'])
+    def test_windows_reserved_archive_paths_rejected(name):
+        buffer = io.BytesIO()
+        with zipfile.ZipFile(buffer, 'w') as archive:
+            archive.writestr(name, b'never extract a Windows device path')
+&gt;       with zipfile.ZipFile(buffer) as archive, pytest.raises(ValueError):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\test_archive_security.py:38: Failed</failure></testcase><testcase classname="tests.test_archive_security" name="test_windows_reserved_archive_paths_rejected[root/COM1/data]" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">name = 'root/COM1/data'
+
+    @pytest.mark.parametrize('name', ['root/CON', 'root/nul.txt', 'root/aux.log',
+                                      'root/COM1/data', 'root/lpt9.txt', 'root/com¹.txt',
+                                      'root/invalid?.txt', 'root/pipe|name', 'root/control\nname'])
+    def test_windows_reserved_archive_paths_rejected(name):
+        buffer = io.BytesIO()
+        with zipfile.ZipFile(buffer, 'w') as archive:
+            archive.writestr(name, b'never extract a Windows device path')
+&gt;       with zipfile.ZipFile(buffer) as archive, pytest.raises(ValueError):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\test_archive_security.py:38: Failed</failure></testcase><testcase classname="tests.test_archive_security" name="test_windows_reserved_archive_paths_rejected[root/lpt9.txt]" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">name = 'root/lpt9.txt'
+
+    @pytest.mark.parametrize('name', ['root/CON', 'root/nul.txt', 'root/aux.log',
+                                      'root/COM1/data', 'root/lpt9.txt', 'root/com¹.txt',
+                                      'root/invalid?.txt', 'root/pipe|name', 'root/control\nname'])
+    def test_windows_reserved_archive_paths_rejected(name):
+        buffer = io.BytesIO()
+        with zipfile.ZipFile(buffer, 'w') as archive:
+            archive.writestr(name, b'never extract a Windows device path')
+&gt;       with zipfile.ZipFile(buffer) as archive, pytest.raises(ValueError):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\test_archive_security.py:38: Failed</failure></testcase><testcase classname="tests.test_archive_security" name="test_windows_reserved_archive_paths_rejected[root/com\xb9.txt]" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">name = 'root/com¹.txt'
+
+    @pytest.mark.parametrize('name', ['root/CON', 'root/nul.txt', 'root/aux.log',
+                                      'root/COM1/data', 'root/lpt9.txt', 'root/com¹.txt',
+                                      'root/invalid?.txt', 'root/pipe|name', 'root/control\nname'])
+    def test_windows_reserved_archive_paths_rejected(name):
+        buffer = io.BytesIO()
+        with zipfile.ZipFile(buffer, 'w') as archive:
+            archive.writestr(name, b'never extract a Windows device path')
+&gt;       with zipfile.ZipFile(buffer) as archive, pytest.raises(ValueError):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\test_archive_security.py:38: Failed</failure></testcase><testcase classname="tests.test_archive_security" name="test_windows_reserved_archive_paths_rejected[root/invalid?.txt]" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">name = 'root/invalid?.txt'
+
+    @pytest.mark.parametrize('name', ['root/CON', 'root/nul.txt', 'root/aux.log',
+                                      'root/COM1/data', 'root/lpt9.txt', 'root/com¹.txt',
+                                      'root/invalid?.txt', 'root/pipe|name', 'root/control\nname'])
+    def test_windows_reserved_archive_paths_rejected(name):
+        buffer = io.BytesIO()
+        with zipfile.ZipFile(buffer, 'w') as archive:
+            archive.writestr(name, b'never extract a Windows device path')
+&gt;       with zipfile.ZipFile(buffer) as archive, pytest.raises(ValueError):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\test_archive_security.py:38: Failed</failure></testcase><testcase classname="tests.test_archive_security" name="test_windows_reserved_archive_paths_rejected[root/pipe|name]" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">name = 'root/pipe|name'
+
+    @pytest.mark.parametrize('name', ['root/CON', 'root/nul.txt', 'root/aux.log',
+                                      'root/COM1/data', 'root/lpt9.txt', 'root/com¹.txt',
+                                      'root/invalid?.txt', 'root/pipe|name', 'root/control\nname'])
+    def test_windows_reserved_archive_paths_rejected(name):
+        buffer = io.BytesIO()
+        with zipfile.ZipFile(buffer, 'w') as archive:
+            archive.writestr(name, b'never extract a Windows device path')
+&gt;       with zipfile.ZipFile(buffer) as archive, pytest.raises(ValueError):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\test_archive_security.py:38: Failed</failure></testcase><testcase classname="tests.test_archive_security" name="test_windows_reserved_archive_paths_rejected[root/control\nname]" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">name = 'root/control\nname'
+
+    @pytest.mark.parametrize('name', ['root/CON', 'root/nul.txt', 'root/aux.log',
+                                      'root/COM1/data', 'root/lpt9.txt', 'root/com¹.txt',
+                                      'root/invalid?.txt', 'root/pipe|name', 'root/control\nname'])
+    def test_windows_reserved_archive_paths_rejected(name):
+        buffer = io.BytesIO()
+        with zipfile.ZipFile(buffer, 'w') as archive:
+            archive.writestr(name, b'never extract a Windows device path')
+&gt;       with zipfile.ZipFile(buffer) as archive, pytest.raises(ValueError):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\test_archive_security.py:38: Failed</failure></testcase><testcase classname="tests.test_archive_security" name="test_archive_nul_name_is_rejected_before_zipinfo_truncation" time="0.000"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">def test_archive_nul_name_is_rejected_before_zipinfo_truncation():
+        buffer = io.BytesIO()
+        with zipfile.ZipFile(buffer, 'w') as archive:
+            archive.writestr('root/nameX.txt', b'synthetic')
+        raw = buffer.getvalue().replace(b'root/nameX.txt', b'root/name\0.txt')
+&gt;       with zipfile.ZipFile(io.BytesIO(raw)) as archive, pytest.raises(ValueError):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\test_archive_security.py:47: Failed</failure></testcase></testsuite></testsuites>

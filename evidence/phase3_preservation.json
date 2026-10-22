@@ -1,0 +1,10 @@
+{
+  "phase3_baseline_files_unchanged": 96,
+  "earlier_packages": {
+    "Phase-1/SIGHT-Phase1-Repaired.zip": "f0c33426ca314a4b27557aeb00f7b62ff405626bc4bbf547a253ef17382f6f58",
+    "Phase-2/SIGHT-Phase2-Verified.zip": "6417bcd2856e947ae0213eba12f1522a6d450a0f36c44a411490debefcdf81ab",
+    "Phase-3/SIGHT-Phase3-Partial.zip": "ba6c6d8862d5622975e6541348cdf85723ce895fd72e5d100a004597cdf8f483"
+  },
+  "all_package_hashes_unchanged": true,
+  "phase4_ui_files_unchanged_from_phase3": 6
+}

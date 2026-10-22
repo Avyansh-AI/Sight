@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/NousResearch/hermes-agent",
+  "requested_ref": "main",
+  "commit": "ccc695635094d7615373db267b77f894d978b1a0",
+  "retrieved_via": "git clone --depth 1 --branch main",
+  "archive": "hermes-agent-main.zip generated from git archive HEAD; not the uploaded ZIP",
+  "original_uploaded_zip_identity_verified": false,
+  "comparison": "prior_manifest_differences.csv",
+  "reason": "Uploaded Hermes ZIP exceeds 32 MiB transfer limit; user authorized official Git main as replacement"
+}

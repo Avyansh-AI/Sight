@@ -1,0 +1,386 @@
+[
+  {
+    "path": "sight/apps/ui/capabilities.html",
+    "sha256": "7568d669423d7f8353fd9627754a1ad7d4fc60725b4b90b2c9784161f31c9d9d"
+  },
+  {
+    "path": "sight/apps/ui/index.html",
+    "sha256": "0883f953221ab94b0ecf21a7894ff1f5b2d650f14ccaf26b467365761cee01a6"
+  },
+  {
+    "path": "sight/apps/ui/learning.html",
+    "sha256": "1df2b6bddebc2410919b1f99f6a70b1b5d25761bbb515c8c715b8e584b33cda0"
+  },
+  {
+    "path": "sight/apps/ui/systems.html",
+    "sha256": "3d9b4528b18cb524916c34d8146e67cb3f7b92e82b45cb5a5a1bda1e44edf2c3"
+  },
+  {
+    "path": "sight/apps/ui/tasks.html",
+    "sha256": "24735dc59e928e0056eedfc036727067192028a84ff770659583cf8e3c44ab83"
+  },
+  {
+    "path": "sight/apps/ui/vision.html",
+    "sha256": "acf16546b60d2c0348c9e78834f5d98a450575470aaaa1937875e342b78231c5"
+  },
+  {
+    "path": "sight/sight_core/__init__.py",
+    "sha256": "618a9d817b5cdd4d3113c0521c789f3fb75d93c776b183a1e74c6ebc985de6a5"
+  },
+  {
+    "path": "sight/sight_core/api.py",
+    "sha256": "cf519bf871836cec3847b5d449d41450bcc5ad53b6c6eccc1c4231e82c931289"
+  },
+  {
+    "path": "sight/sight_core/artifacts.py",
+    "sha256": "63a3cda1a3aab2ec384cf976e13eabb3a94ee982db53e5cf63fad18fc9e763c6"
+  },
+  {
+    "path": "sight/sight_core/brain_store.py",
+    "sha256": "34c0d6687b75459e4f7a71ca6853dea620843a8bddcbeeb9cdd140434d6e96d9"
+  },
+  {
+    "path": "sight/sight_core/capabilities.py",
+    "sha256": "ea119ff951bf47d863033994ff6119bdb6a1bbb20288ce821da5d50d18aeddee"
+  },
+  {
+    "path": "sight/sight_core/capability_worker.py",
+    "sha256": "d033a1dd808df6977f91ca343ae164a4251a7880aa5999e215222192b3ab45b6"
+  },
+  {
+    "path": "sight/sight_core/chatgpt.py",
+    "sha256": "71d352e1bd876a1f789d0a069c8863400777f1c5acd0c23062d8fcc6b82c845b"
+  },
+  {
+    "path": "sight/sight_core/cli.py",
+    "sha256": "7f384bd732636f947c40b5b90ee04e022ec8b41667ec9916ca66f32cb8626046"
+  },
+  {
+    "path": "sight/sight_core/config.py",
+    "sha256": "f56ce87c2bc8696a5cbd53368e3ed6f15e3b3f2b25586304df57d1d35dd8c9e4"
+  },
+  {
+    "path": "sight/sight_core/connector_contracts.py",
+    "sha256": "be01f06176268207823c2187da324cbe4c76ec3e260012948d55935c99f1f143"
+  },
+  {
+    "path": "sight/sight_core/forge.py",
+    "sha256": "724409e815ebbe15e9fab01a52aa332c52389f67e3cc3b417c10a4be478a9bcf"
+  },
+  {
+    "path": "sight/sight_core/jobs.py",
+    "sha256": "28f02fb59809c6fd120f1b14ffda218a913ce9817ce3a5008e7ea4d7ffe69719"
+  },
+  {
+    "path": "sight/sight_core/learning_api.py",
+    "sha256": "f1f8cfcf64c25912066f082f1e5ecd04d21a54ac264f701c72ebed79904ba7b0"
+  },
+  {
+    "path": "sight/sight_core/local_adapters.py",
+    "sha256": "eae42f13db3415b19666d89ca8911808500eedb0819e79c74bef1d54601af52a"
+  },
+  {
+    "path": "sight/sight_core/mcp_bridge.py",
+    "sha256": "42321bd97604cab255084e587965bbbeea372a55b9ae6a9500c62ed10b71fd12"
+  },
+  {
+    "path": "sight/sight_core/memory.py",
+    "sha256": "13f8d865655ea0057886fa2b7e96fd9a730aa2e20dc9730af6e4a478d3d7ff4a"
+  },
+  {
+    "path": "sight/sight_core/models.py",
+    "sha256": "faee806bf7d90406860535659b4b4cbfdb8c93cdac1402c1b6f20007ef1ab81f"
+  },
+  {
+    "path": "sight/sight_core/proactive.py",
+    "sha256": "8a2862d1198608a1c90eda2ae983bdfe2dae3b7d7bbf1ca0dda0fdf3e7c375cf"
+  },
+  {
+    "path": "sight/sight_core/quotas.py",
+    "sha256": "2a674f9fa940a3a94a4a1988aeb78f66ccdaa39fce15268028ce070fbf2b1162"
+  },
+  {
+    "path": "sight/sight_core/releases.py",
+    "sha256": "4845bc1a1c0e61fe4eedc4e62702b3db2c836c16316a849cccdd291aeb607f55"
+  },
+  {
+    "path": "sight/sight_core/routing.py",
+    "sha256": "3bf5f0432ff2b000c636da4d7fd0c2ed4276db1f8c177e80c38ce8b4dd3553ca"
+  },
+  {
+    "path": "sight/sight_core/security.py",
+    "sha256": "adf619fcdcdbd40adbd926b872a28d74ce9aca4e5e10b3f1c3661db216517495"
+  },
+  {
+    "path": "sight/sight_core/skill_worker.py",
+    "sha256": "111825fb41aa4e9623e08a962457982ba446eeb1dfc2c13fbca4fc5777690eff"
+  },
+  {
+    "path": "sight/sight_core/store.py",
+    "sha256": "67673ebe94951124fc29a2856ee62231e408c12b6fb7e614f165057853f3e0d3"
+  },
+  {
+    "path": "sight/sight_core/tools.py",
+    "sha256": "44dbef9c6cac45c76409b2ceded7712f20ea39c22cac33eedbf04c134e1ea47a"
+  },
+  {
+    "path": "sight/tests/conftest.py",
+    "sha256": "e8906aadb2fb21cc8262510ac5a18cc1add117ff975587074814a258bf19245b"
+  },
+  {
+    "path": "sight/tests/fixtures/original.html",
+    "sha256": "3b5f03744446ebae2c85048a3f48df75987e3d338372ff18538f7e1033edb8db"
+  },
+  {
+    "path": "sight/tests/test_archive_security.py",
+    "sha256": "bfd900971149e207102a5c41b76a47f5a73a03cdedb290d80179b55b9c7f47d0"
+  },
+  {
+    "path": "sight/tests/test_browser.py",
+    "sha256": "5ed50e34592b87a361dd73ec9f43581bc590e40bcc81e4bcc594a98ba90e56f0"
+  },
+  {
+    "path": "sight/tests/test_capabilities.py",
+    "sha256": "586901033aef211b3bcfc790b698df0a2699dae1b5512f9907f785a02065c7e6"
+  },
+  {
+    "path": "sight/tests/test_chatgpt.py",
+    "sha256": "7cb4209f0c69b79ac13b47daf2471e0f17d7994859b7e8baec3ac3548d538a7f"
+  },
+  {
+    "path": "sight/tests/test_concurrency.py",
+    "sha256": "d4bf2e5e7bf1d321c46def3a67505a50d0cfb725eab0f89e6fff65147b1f68a0"
+  },
+  {
+    "path": "sight/tests/test_core.py",
+    "sha256": "20524f65c90ef1e5bdd7f3cbd400509a390478e1b0ba42e87f75f59b4a32447e"
+  },
+  {
+    "path": "sight/tests/test_gate_requirements.py",
+    "sha256": "e070e7ab0155d6e2b55cbd16aa01b7e245ac78a9808a97b56016a1bf9e43a26e"
+  },
+  {
+    "path": "sight/tests/test_learning.py",
+    "sha256": "76d98c20e5e57ec4a89743c6ac4f949554060ed188e7df2b594335f84a32b5ed"
+  },
+  {
+    "path": "sight/tests/test_provider_quotas.py",
+    "sha256": "8ca4ab41a4c9dd645842391b0740364a7442307b8bb638c6ada3759babac93eb"
+  },
+  {
+    "path": "sight/tests/test_repairs.py",
+    "sha256": "45fea2db882d72b68866e8fb72f32f817b14f6d166a71de4d8369c45c62aa545"
+  },
+  {
+    "path": "sight/tests/test_routing.py",
+    "sha256": "99f8b2b29115c342d0b3e5fe90b9182316cfa4513cef074c15ebdc1ea98dcfd8"
+  },
+  {
+    "path": "sight/scripts/audit_inputs.py",
+    "sha256": "d27dddc9dfa794825b284fc721ee1cf70fc723456f0d45264201b8fd2892f6cc"
+  },
+  {
+    "path": "sight/scripts/backup.ps1",
+    "sha256": "d43ebae189d801dafc10e16142ebab6e93106ad65984b126e01d836459c7ee32"
+  },
+  {
+    "path": "sight/scripts/check_phase2_handoff.py",
+    "sha256": "52fdee9eb4359048814b33278c83410a659ab09380a1e7a5c4f32c875d86d8fe"
+  },
+  {
+    "path": "sight/scripts/check_phase3_handoff.py",
+    "sha256": "7ac6b1102934862b8c3467fef0697969929476491e1c8d8a0b70dbe48f567b76"
+  },
+  {
+    "path": "sight/scripts/growth_benchmark.py",
+    "sha256": "117c333f02b2acb8c9f3dd9f8af588fea6cc71f1265b5ab4a664510e474ce22b"
+  },
+  {
+    "path": "sight/scripts/install.ps1",
+    "sha256": "125d900acdff36ea32cc8cc4654aee5309f69e00232c69d6361c2c8819eb7f45"
+  },
+  {
+    "path": "sight/scripts/install.sh",
+    "sha256": "076790fcccda25222c7606b45a0e30e6d76fba662c24370331df4545ff1877d1"
+  },
+  {
+    "path": "sight/scripts/inventory_phase3.py",
+    "sha256": "4f3ceca7a7fe7c6513699c78db352c3036995b4eb06288a427e9810c66a99cf9"
+  },
+  {
+    "path": "sight/scripts/launch.py",
+    "sha256": "49e1e6568e23624fbc5a42a822b66eadaeb78b85f2c9d7065c6c7c027cca3e49"
+  },
+  {
+    "path": "sight/scripts/package_handoff.py",
+    "sha256": "241d8cd3306de6f49b20ca80754f26ef6f240c91963202706f448e8fe36951b2"
+  },
+  {
+    "path": "sight/scripts/phase2_smoke.py",
+    "sha256": "ec6f4dade4f206f969fbbae6b70ff1df101e7948225573b4a7e5d8e3452122f0"
+  },
+  {
+    "path": "sight/scripts/phase3_smoke.py",
+    "sha256": "482d00c64fd1a065b649daf6b6ccc69413d3c73489327f38cfefbdd13ae5a159"
+  },
+  {
+    "path": "sight/scripts/provider_smoke.py",
+    "sha256": "7ec7a7a0f4b9f3b5b2218789b0be3ab8e1d34e4043b3c8b6ab5b0243737e0ab8"
+  },
+  {
+    "path": "sight/scripts/restore.ps1",
+    "sha256": "24255ef5efbed28bf43624b02db79e6338b63d069259f3cbce333d80719b8906"
+  },
+  {
+    "path": "sight/scripts/smoke.py",
+    "sha256": "577428efdecc52e255085db977b06322987e92f35ec96ec91ba7bdaaee53c105"
+  },
+  {
+    "path": "sight/scripts/start.ps1",
+    "sha256": "f2f5c801e66c8c89154fab8a7c4a962da81472f3bd5e5add4f859ee8f39fc1de"
+  },
+  {
+    "path": "sight/scripts/verify.ps1",
+    "sha256": "c0738dd1c15db1945d333857299d6b4f1b39f88ea952608bedb58eb1453e9b41"
+  },
+  {
+    "path": "sight/scripts/verify.py",
+    "sha256": "5ab6193393f2ae4da315381310aee55229deaafb3ebf078fe0f2726385c0355b"
+  },
+  {
+    "path": "sight/scripts/write_phase2_reports.py",
+    "sha256": "70806d088e6225514c9df76d37d52674c5be6505440173246f015897c7902f16"
+  },
+  {
+    "path": "sight/scripts/write_phase3_reports.py",
+    "sha256": "15754399b007c9a24ed62cb77990c9f30bccd199032d7923b779568e0acd98e6"
+  },
+  {
+    "path": "sight/docs/ARCHITECTURE.md",
+    "sha256": "f9b878797970e29c54d9874ffda0148603ce598d765246a42c90b44c3caf81b7"
+  },
+  {
+    "path": "sight/docs/MODEL_ROUTING_AND_BILLING.md",
+    "sha256": "40b0f5f8c4975f150dc9cae001e1af3f0c1e7c08e71f1572671dea4ae95c3ea1"
+  },
+  {
+    "path": "sight/docs/PHASE2_AUDIT.md",
+    "sha256": "e024eb108be1207d8c60d5612f7f85e8108a56375fcbe72d385dea5ec3a1c0fa"
+  },
+  {
+    "path": "sight/docs/PHASE2_BUG_FIXES.md",
+    "sha256": "580cea254b559ad1240e7f821b1ea76d978c686348a0a79c5e6866f65a460354"
+  },
+  {
+    "path": "sight/docs/PHASE2_READINESS.md",
+    "sha256": "5ea9041127701bd81b44fe69d0ebbdf93186b86f5396c72a3bf0bbe91f4a7544"
+  },
+  {
+    "path": "sight/docs/PHASE2_TEST_RESULTS.md",
+    "sha256": "e95807af3cf9173269d0004a1bd337bad83beae2bb7379ecb7bda36a4f60373c"
+  },
+  {
+    "path": "sight/docs/PHASE3_AUDIT.md",
+    "sha256": "81fb68118cacc7f46ca2b53f39fe34a2e402ce04b0f5bac4db6b517778e93d43"
+  },
+  {
+    "path": "sight/docs/PHASE3_BUG_FIXES.md",
+    "sha256": "45701e0858d63cab7b08d926bec7534d1ae1e5ead96ab442153d862bb7cfe985"
+  },
+  {
+    "path": "sight/docs/PHASE3_READINESS.md",
+    "sha256": "0beb710051fdc220992c0abdb9d8a8393e76c76c61db86fcac8c580eadf7ca9a"
+  },
+  {
+    "path": "sight/docs/PHASE3_TEST_RESULTS.md",
+    "sha256": "514f18b81c4a4269caf9dba5af82e58e00c7987cfae2924c8ea023132a55365e"
+  },
+  {
+    "path": "sight/docs/SECURITY_AND_RECOVERY.md",
+    "sha256": "7fedc729ed96ce2b45937852f443974d13a39b0654e21b11fbd51f4c4282a1f8"
+  },
+  {
+    "path": "sight/docs/START_HERE.md",
+    "sha256": "973b9a4d5d6fae4c69430965408e6e1aa044cedd7c929f308c73f07164eeab41"
+  },
+  {
+    "path": "sight/docs/VOICE_ENROLLMENT.md",
+    "sha256": "32dbbcc802dfe710a4c476ef1ea2e4bb443dff4b109bd34a33e725c79eb12f3a"
+  },
+  {
+    "path": "sight/docs/WINDOWS_PHASE_1.md",
+    "sha256": "1b2a28d8d5e1662cd70d09f8fa74f5ebe44bfab48c25e783f46e93a7a830f70e"
+  },
+  {
+    "path": "sight/reports/archive_entries.csv",
+    "sha256": "0440de4d012c6a20f7299b044f0335261314f87cb9fc9dee66c5096a209d9735"
+  },
+  {
+    "path": "sight/reports/capability_matrix.csv",
+    "sha256": "f4d1948d3eacb7bb4e7c6dd5d37893d879f9beb0d1130d2d1cfd652f6400e3e1"
+  },
+  {
+    "path": "sight/reports/file_dispositions.csv",
+    "sha256": "a69bb06ac9dae117d20bd8d6bdd33f03ab4190930bd7ecff524a3e5592f752b4"
+  },
+  {
+    "path": "sight/reports/growth_benchmark.json",
+    "sha256": "f14492ffd143a7419a0d005652fa2b8ac1d117ab92bb9b8b235fbd6b94ba20f1"
+  },
+  {
+    "path": "sight/reports/hermes_provenance.json",
+    "sha256": "ae2b0504551a65d594b5f64eeeda5b38b863d03351a96b260948b01c5c52d964"
+  },
+  {
+    "path": "sight/reports/hermes_skill_inventory.json",
+    "sha256": "e891f98a39ad05d68e196abd7d15d9230efa5531bca8b8ca17d22cd7197e0b4a"
+  },
+  {
+    "path": "sight/reports/input_manifest.csv",
+    "sha256": "a69bb06ac9dae117d20bd8d6bdd33f03ab4190930bd7ecff524a3e5592f752b4"
+  },
+  {
+    "path": "sight/reports/latest_test_run.json",
+    "sha256": "11e03dd2022213bac254e69e119662e61119ca0d6620d45c7c71c7fe8d40e41b"
+  },
+  {
+    "path": "sight/reports/live_phase3_latest.json",
+    "sha256": "fd4be480c84e3842e3993b77ccffb3cc1737fa82a71e03de9b76ff009576498a"
+  },
+  {
+    "path": "sight/reports/phase3_inventory.json",
+    "sha256": "f484726e3be36b872ec4bd3c7b159b0f7c6f415e7df43e04a87a13a7eb1cb5de"
+  },
+  {
+    "path": "sight/reports/phase3_readiness.json",
+    "sha256": "febffaaea65849bbe81518e17b2c26569a45605fcbed67aada3233c44ec78233"
+  },
+  {
+    "path": "sight/reports/reference_inventory_current.csv",
+    "sha256": "b4302ab8a12cfedd5f88d9bd2b89675a0972a6253d9ec59c82a740065416658d"
+  },
+  {
+    "path": "sight/reports/reference_reconciliation_current.json",
+    "sha256": "196790ac62eda8ce3868ab2d31d2c710b6545aa409a685dbba405f046a9ec257"
+  },
+  {
+    "path": "sight/reports/sbom.cdx.json",
+    "sha256": "86dd17f3469481b7f7071ea9a2c7ceda83e27693a0bc819a5872d642c1c49e5a"
+  },
+  {
+    "path": "sight/reports/skill_inventory.csv",
+    "sha256": "9aa0c3bda72bec3073a505874a7c5edf2caca54da540be9059c3bf84ea7e8c7a"
+  },
+  {
+    "path": "sight/reports/source_archives.json",
+    "sha256": "e72c6c5392f1852f508acb70fd46c969e0170294dc9ae5db38e06b15d5651dbb"
+  },
+  {
+    "path": "sight/reports/source_archives_current.json",
+    "sha256": "897d91fad7e45e468cefa4f1a3419ad62804423c96fa4dcf8e5bd918bae0387d"
+  },
+  {
+    "path": "sight/reports/source_inventory.csv",
+    "sha256": "badae102276dcb24c1315dfe733d4708c6ab4fa701a2a40baa7d56ad001df3fa"
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "timestamp_utc": "2026-10-22T10:04:55.812207+00:00",
+  "owner_direction": "ok use normal gemma then",
+  "previous_selection": {
+    "model": "sight-gemma4-e4b:uncensored",
+    "thinking": false
+  },
+  "selected": {
+    "model": "gemma4:e4b-it-qat",
+    "thinking": false
+  },
+  "settings_saved": true,
+  "cloud_inference_requests": 0,
+  "installed_download_record": "reports/gemma_official_install.json",
+  "files": [
+    {
+      "media_type": "application/vnd.docker.container.image.v1+json",
+      "bytes": 545,
+      "expected_sha256": "e3b14aa7ca020ed9ee88743916be4c028cc010b775d90487cd05a462f6b041ac",
+      "actual_sha256": "e3b14aa7ca020ed9ee88743916be4c028cc010b775d90487cd05a462f6b041ac",
+      "valid": true
+    },
+    {
+      "media_type": "application/vnd.ollama.image.projector",
+      "bytes": 991551904,
+      "expected_sha256": "c6398448d84a4836fdedf58f9775979e69ae0cc4dfdf4d697b5597693a555b12",
+      "actual_sha256": "c6398448d84a4836fdedf58f9775979e69ae0cc4dfdf4d697b5597693a555b12",
+      "valid": true
+    },
+    {
+      "media_type": "application/vnd.ollama.image.model",
+      "bytes": 5154939136,
+      "expected_sha256": "e8b6a059ba86947a44ace84d6e5679795bc41862c25c30513142588f0e9dba1d",
+      "actual_sha256": "e8b6a059ba86947a44ace84d6e5679795bc41862c25c30513142588f0e9dba1d",
+      "valid": true
+    },
+    {
+      "media_type": "application/vnd.ollama.image.license",
+      "bytes": 10174,
+      "expected_sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "actual_sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "valid": true
+    },
+    {
+      "media_type": "application/vnd.ollama.image.params",
+      "bytes": 42,
+      "expected_sha256": "56380ca2ab89f1f68c283f4d50863c0bcab52ae3f1b9a88e4ab5617b176f71a3",
+      "actual_sha256": "56380ca2ab89f1f68c283f4d50863c0bcab52ae3f1b9a88e4ab5617b176f71a3",
+      "valid": true
+    },
+    {
+      "media_type": "application/vnd.docker.distribution.manifest.v2+json",
+      "bytes": 900,
+      "expected_sha256": "ee665637121887cf3befff38abbb1be4ee117c7db867d97a67e29049ecd7e15f",
+      "actual_sha256": "ee665637121887cf3befff38abbb1be4ee117c7db867d97a67e29049ecd7e15f",
+      "valid": true
+    }
+  ],
+  "all_blob_hashes_valid": true,
+  "runtime_available": false,
+  "runtime_blocker": "Ollama executable is absent at the former per-user installation and was not found on PATH or in the searched alternate installation locations.",
+  "live_inference_verified": false,
+  "official_reasoning_quality": "UNVERIFIED",
+  "official_soak_qualified": false,
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 64,
+    "repeat_penalty": 1.0
+  },
+  "limits": {
+    "context_tokens": 4096,
+    "nonthinking_output_tokens": 512,
+    "parallel_requests": 1
+  },
+  "uncensored_weights_removed": false,
+  "official_source": "https://ollama.com/library/gemma4:e4b-it-qat"
+}

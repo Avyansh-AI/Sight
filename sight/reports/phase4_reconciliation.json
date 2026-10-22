@@ -1,0 +1,93 @@
+{
+  "timestamp_utc": "2026-10-19T14:09:50.230194+00:00",
+  "archives": [
+    {
+      "archive": "Ada-SI-main.zip",
+      "sha256": "fd89d6b13952444bfd90932e9fa2a4191be5210d82237a3aae51daa4dcb14eed",
+      "files": 322,
+      "directory_entries": 37,
+      "entries": 359,
+      "terms_files": 1
+    },
+    {
+      "archive": "Brahma-AI---Lite-main.zip",
+      "sha256": "2d0a11ec8482942bf1dcc06baea94403815c3e8f30c8af3829a78d13992b4f10",
+      "files": 81,
+      "directory_entries": 15,
+      "entries": 96,
+      "terms_files": 1
+    },
+    {
+      "archive": "Brahma-AI-main.zip",
+      "sha256": "8571c83e44fd9365a739b014dfbd194e25d57aee1007a54e04c62e65fe39f684",
+      "files": 121,
+      "directory_entries": 20,
+      "entries": 141,
+      "terms_files": 1
+    },
+    {
+      "archive": "Brahma-Ai-Evo-main.zip",
+      "sha256": "69b5b0180f7cca80f68c8ae8d58b1d773a69e63f011db0526f55be9799d98a0e",
+      "files": 283,
+      "directory_entries": 55,
+      "entries": 338,
+      "terms_files": 1
+    },
+    {
+      "archive": "Brahma-Echo-main.zip",
+      "sha256": "792b2562628a7ff9a1c23c381daccf51c7e65840e1ba463f8a39bc9c4f610878",
+      "files": 194,
+      "directory_entries": 45,
+      "entries": 239,
+      "terms_files": 1
+    },
+    {
+      "archive": "ada_local-main.zip",
+      "sha256": "db78d052395630a1a432265f0e49984d6ae3462c0434db37abc32dba6c420a38",
+      "files": 77,
+      "directory_entries": 8,
+      "entries": 85,
+      "terms_files": 0
+    },
+    {
+      "archive": "ada_v2-main.zip",
+      "sha256": "f70063f158315b99c276dcedcb32f684f4b15fac37c48bc8514c4db29cfa1a5f",
+      "files": 64,
+      "directory_entries": 7,
+      "entries": 71,
+      "terms_files": 1
+    },
+    {
+      "archive": "hermes-agent-main.zip",
+      "sha256": "be4e018694221e0ea96dc6788d3cee338ea3cff5421bcf229e2e2a08c61e309e",
+      "files": 20065,
+      "directory_entries": 1244,
+      "entries": 21309,
+      "terms_files": 23
+    }
+  ],
+  "file_entries": 21207,
+  "all_archive_entries": 22638,
+  "directory_entries": 1431,
+  "extracted_file_hash_matches": 21207,
+  "prior_file_hash_matches": 21207,
+  "per_file_license_rows": 21207,
+  "canonical_capability_rows": 120,
+  "capability_status_counts": {
+    "PARTIAL": 59,
+    "DISABLED_SECURITY": 12,
+    "REFERENCE_ONLY": 5,
+    "BLOCKED_HARDWARE": 16,
+    "IMPLEMENTED_BOUNDED": 25,
+    "BLOCKED_CREDENTIALS": 3
+  },
+  "reference_code_executed": false,
+  "complete_semantic_feature_coverage": false,
+  "limits": [
+    "Canonical matrix retains the explicitly mapped manual and local capability rows; it does not certify discovery of every unique feature in all eight repositories.",
+    "All 330340 historical symbol/manual candidates remain in source_symbol_candidates.csv; these include tests, vendors and lexical matches.",
+    "Nearest license and SPDX observations are evidence, not a blanket legal clearance. Restricted and unresolved sources are not imported.",
+    "Historical Phase 1 inventory uses a different Hermes provenance and remains separately named."
+  ],
+  "matrix_updated_utc": "2026-10-20T06:37:57.125344+00:00"
+}

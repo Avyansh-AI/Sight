@@ -1,0 +1,104 @@
+{
+  "timestamp_utc": "2026-10-19T13:49:49.853906+00:00",
+  "model": "sight-gemma4-e4b:balanced",
+  "profile": "thinking",
+  "cloud_requests": 0,
+  "rows": [
+    {
+      "case": "tone",
+      "prompt": "Explain in three sentences why my laptop gets slower when its RAM is full.",
+      "http_status": 200,
+      "seconds": 27.236,
+      "answer": "A small amount of memory is needed to keep all your open apps and tabs running so you can switch between them easily. When the RAM is full, the system automatically starts saving these extra things to the slower storage drive. This means your computer is running out of quick memory and has to wait for the whole process to finish, causing a major slowdown.",
+      "thinking_characters": 1306,
+      "done_reason": "stop",
+      "prompt_tokens": 128,
+      "generated_tokens": 439,
+      "error": null
+    },
+    {
+      "case": "arithmetic",
+      "prompt": "A shop reduces a price of 250 by 20%, then applies 10% tax to the reduced price. What is the final price? Give the number and one sentence.",
+      "http_status": 200,
+      "seconds": 3.615,
+      "answer": "220; The initial price is reduced by 20%, and then that amount is taxed by 10% to get the final cost.",
+      "thinking_characters": 395,
+      "done_reason": "stop",
+      "prompt_tokens": 153,
+      "generated_tokens": 193,
+      "error": null
+    },
+    {
+      "case": "logic",
+      "prompt": "All red blocks are heavy. Some heavy blocks are wooden. Does it follow that some red blocks are wooden? Explain briefly.",
+      "http_status": 200,
+      "seconds": 13.47,
+      "answer": "\u305d\u3046\u3044\u3046\u308f\u3051\u3060\u3068\u306f\u9650\u308a\u307e\u305b\u3093\u3002\n\n**\u7c21\u5358\u306a\u8aac\u660e\uff1a**\n\n*   \u3042\u308b\u3082\u306e\u5168\u90e8\u304c\u300c\u91cd\u3044\u300d\u3068\u3044\u3046\u30b0\u30eb\u30fc\u30d7\u306b\u305f\u307e\u3063\u3066\u3044\u307e\u3057\u305f\u3002\n*   \u305d\u3057\u3066\u3001\u305d\u306e\u300c\u91cd\u3044\u300d\u3082\u306e\u306e\u4e2d\u306b\u306f\u300c\u6728\u88fd\u300d\u306e\u3082\u306e\u304c\u6df7\u3056\u3063\u3066\u3044\u307e\u3057\u305f\u3002\n*   \u3067\u3082\u3001\u305d\u306e\u6df7\u3056\u3063\u3066\u3044\u308b\u6728\u88fd\u306e\u3082\u306e\u304c\u3001\u5168\u90e8\u306e\u300c\u8d64\u3044\u300d\u3082\u306e\u3068\u91cd\u306a\u308b\u3063\u3066\u308f\u3051\u3058\u3083\u306a\u3044\u3093\u3067\u3059\u3002\n\n\u3064\u307e\u308a\u3001\u8d64\u3044\u3082\u306e\u3060\u3051\u304c\u3001\u6728\u88fd\u306e\u3082\u306e\u306e\u30b0\u30eb\u30fc\u30d7\u3068\u91cd\u306a\u308b\u3063\u3066\u8a3c\u62e0\u306b\u306f\u306a\u308a\u307e\u305b\u3093\u3002",
+      "thinking_characters": 1627,
+      "done_reason": "stop",
+      "prompt_tokens": 138,
+      "generated_tokens": 797,
+      "error": null
+    },
+    {
+      "case": "planning",
+      "prompt": "I have 35 minutes. Downloading takes 10 minutes, installation takes 15 minutes after the download, and a test takes 12 minutes after installation. Can I finish everything? Explain briefly.",
+      "http_status": 200,
+      "seconds": 4.756,
+      "answer": " His time is 35 minutes. The longest time needed is 10 minutes for download, plus 15 minutes for installation, plus 12 minutes for the test, which totals 35 minutes.\n\n*   **Explanation:** Yes, you have just enough time to download, install, and test everything.",
+      "thinking_characters": 410,
+      "done_reason": "stop",
+      "prompt_tokens": 156,
+      "generated_tokens": 228,
+      "error": null
+    },
+    {
+      "case": "code",
+      "prompt": "In Python, why does items.sort() return None? Give a one-line way to get a sorted copy while keeping items unchanged.",
+      "http_status": 200,
+      "seconds": 22.126,
+      "answer": "*   **The \"Why\"**: `list.sort()` is an in-place operation, meaning it modifies the list that you are called on and also changes its value. If you want a sign that the list has changed, but don't need the new list, it can return `None`.\n\n*   **the \"How\"**: Use the built-in function `sorted()` instead. It takes any iterable (like your list), and returns a brand new sorted list, leaving the original list untouched.\n\n### Example\n\n```python\nmy_list = [3, 1, 2]\nnew_list = sorted(my_list)\n\n# print(new_list) # Output: [1, 2, 3]\n# print(my_list)  # Output: [3, 1, 2] (Original list is saved)\n```",
+      "thinking_characters": 1794,
+      "done_reason": "stop",
+      "prompt_tokens": 141,
+      "generated_tokens": 731,
+      "error": null
+    }
+  ],
+  "completed": true,
+  "metadata": {
+    "capabilities": [
+      "completion",
+      "vision",
+      "audio",
+      "tools",
+      "thinking"
+    ],
+    "thinking": {
+      "values": [
+        false,
+        true
+      ],
+      "default": true
+    },
+    "parameters": "num_batch                      128\nnum_ctx                        4096\nnum_predict                    1536\nstop                           \"<bos>\"\nstop                           \"<|turn>\"\nstop                           \"<turn|>\"\nstop                           \"<|turn>user\"\ntemperature                    0",
+    "details": {
+      "parent_model": "hf.co/OBLITERATUS/gemma-4-E4B-it-OBLITERATED:Q4_K_M",
+      "format": "gguf",
+      "family": "gemma4",
+      "families": [
+        "gemma4"
+      ],
+      "parameter_size": "7.52B",
+      "quantization_level": "Q4_K_M",
+      "runner": "llamacpp"
+    }
+  },
+  "resident_models": [
+    {
+      "name": "sight-gemma4-e4b:balanced",
+      "size_vram": 3179471174,
+      "context_length": 4096
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "timestamp_utc": "20261021T154307Z",
+  "repository": "OBLITERATUS/gemma-4-E4B-it-OBLITERATED",
+  "metadata_url": "https://huggingface.co/api/models/OBLITERATUS/gemma-4-E4B-it-OBLITERATED?blobs=true",
+  "mode": "Full streaming SHA-256; read-only local files; public publisher metadata",
+  "cloud_inference_requests": 0,
+  "downloaded_weight_bytes": 0,
+  "files": [
+    {
+      "publisher_file": "gemma-4-E4B-it-OBLITERATED-Q4_K_M.gguf",
+      "actual_sha256": "819372c2cd9e5aa62950f07db6c5e849769a2fd17f2f25d4932b6f2dd567d4e2",
+      "publisher_sha256": "819372c2cd9e5aa62950f07db6c5e849769a2fd17f2f25d4932b6f2dd567d4e2",
+      "manifest_digest": "sha256:819372c2cd9e5aa62950f07db6c5e849769a2fd17f2f25d4932b6f2dd567d4e2",
+      "actual_bytes": 5335289792,
+      "publisher_bytes": 5335289792,
+      "passed": true
+    },
+    {
+      "publisher_file": "gemma-4-E4B-it-OBLITERATED-mmproj-f16.gguf",
+      "actual_sha256": "b75adfbc8d804d782d935df4e59f8b559a6abefba47193d1591bd8fc38ea77e0",
+      "publisher_sha256": "b75adfbc8d804d782d935df4e59f8b559a6abefba47193d1591bd8fc38ea77e0",
+      "manifest_digest": "sha256:b75adfbc8d804d782d935df4e59f8b559a6abefba47193d1591bd8fc38ea77e0",
+      "actual_bytes": 990372288,
+      "publisher_bytes": 990372288,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "publisher_revision": "d8678bbb9e0d4f5729c115087485a4e25ba89d65",
+  "same_uncensored_blob_references": true,
+  "seconds": 9.063
+}

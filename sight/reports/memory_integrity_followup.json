@@ -1,0 +1,113 @@
+{
+  "timestamp_utc": "2026-10-21T16:15:15.299590+00:00",
+  "scope": "Memory compaction atomicity, filtered FTS retrieval and iterative provenance validation; no model/profile/UI changes",
+  "previous_verified_bundle_sha256": "8ad77af21c8c6dd368df756c4cd1bd0ac0beaccfea9d82104f5e7c4d62ff3ad8",
+  "previous_verified_bundle_snapshot": "previous-handoffs/SIGHT-Phase4-8ad77af21c8c.zip",
+  "bug_ids": [
+    "P4-20",
+    "P4-21",
+    "P4-22"
+  ],
+  "before": {
+    "cases": 11,
+    "failed": 9,
+    "passed": 2,
+    "artifact": "evidence/memory_integrity_before.xml"
+  },
+  "after": {
+    "cases": 39,
+    "failed": 0,
+    "passed": 39,
+    "artifact": "evidence/memory_integrity_after.xml"
+  },
+  "new_regression_cases": 14,
+  "new_test_durations_seconds": {
+    "test_duplicate_compaction_sources_rejected_without_mutation": 0.061,
+    "test_compaction_graph_failure_rolls_back_summary_fts_and_event": 0.067,
+    "test_process_crash_during_compaction_leaves_no_orphan": 0.479,
+    "test_compaction_is_not_visible_before_source_links_commit": 0.054,
+    "test_hidden_matches_do_not_consume_search_limit[expired]": 0.041,
+    "test_hidden_matches_do_not_consume_search_limit[private]": 0.039,
+    "test_hidden_matches_do_not_consume_search_limit[expired_ancestor]": 0.045,
+    "test_deep_summary_lineage_is_readable_and_forgettable": 0.806,
+    "test_cyclic_summary_lineage_is_unavailable_without_recursion_error": 0.043,
+    "test_compaction_privacy_and_transitive_expiry": 0.067,
+    "test_compaction_rejects_cross_project_without_mutation": 0.043,
+    "test_legacy_orphan_summary_is_preserved_but_not_retrieved": 0.048,
+    "test_concurrent_source_privacy_correction_removes_committed_summary": 0.075,
+    "test_compaction_api_approval_duplicates_and_forgetting": 0.471
+  },
+  "full_regression": {
+    "run_id": "20261021T161022Z-76d4e706",
+    "results": "C:\\Users\\Dell\\Documents\\Ai projects\\Sight\\Phase-4\\sight\\reports\\runs\\20261021T161022Z-76d4e706\\results.json",
+    "counts": {
+      "PASS": 310,
+      "FAIL": 0,
+      "SKIP": 0
+    },
+    "exit_code": 0,
+    "phase_gate": "WINDOWS_CORE_REGRESSION_CHECKS_PASS"
+  },
+  "live_memory_checks_passed": 8,
+  "live_memory_checks": [
+    "memory compaction needs approval",
+    "duplicate compaction rejected without orphan",
+    "compaction records source and privacy",
+    "compaction searchable",
+    "memory and provenance survive restart",
+    "correction invalidates summary after restart",
+    "old memory no longer retrieved",
+    "forget removes active memory export"
+  ],
+  "live_run_timestamp_utc": "20261021T161217Z",
+  "live_complete": true,
+  "live_passed": false,
+  "live_checks_passed": 56,
+  "live_checks_total": 57,
+  "live_quality_failures": [
+    {
+      "run": "20261021T161110Z",
+      "checks": [
+        {
+          "name": "live WebSocket Gemma",
+          "passed": false,
+          "detail": {
+            "seconds": 17.8911,
+            "answer": "29",
+            "offline": true
+          }
+        }
+      ]
+    },
+    {
+      "run": "20261021T161217Z",
+      "checks": [
+        {
+          "name": "live Gemma arithmetic quality",
+          "passed": false,
+          "detail": {
+            "prompt": "Reply only the number: 2 plus 2?",
+            "expected": "4",
+            "answer": "1ことがある"
+          }
+        }
+      ]
+    }
+  ],
+  "live_exit_code": 1,
+  "selected_model": {
+    "model": "sight-gemma4-e4b:uncensored",
+    "thinking": false
+  },
+  "model_profile_changed": false,
+  "cloud_inference_requests": 0,
+  "owner_data_mutated": false,
+  "new_one_hour_soak_run": false,
+  "memory_source_sha256": "2f0de18e51c9108668b8002ea41c03f80c683e62b09d59d2c4aceaf8fa2b3cee",
+  "limitations": [
+    "The previous one-hour soak covers earlier memory code; current runtime requires a new full-duration soak.",
+    "Old unlinked summaries are withheld from active retrieval; their bytes and independent backups/receipts are retained.",
+    "Gemma answer quality still fails; the extended smoke retains failures and returns a nonzero exit code.",
+    "Deep-lineage timing covers one synthetic 1,100-summary chain, not a general latency guarantee."
+  ]
+}

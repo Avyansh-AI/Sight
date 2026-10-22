@@ -1,0 +1,12 @@
+inputs/
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+sight/data/
+sight/reports/runs/
+sight/reports/ui_visual_diffs/
+.cache/
+owner-data/
+test-data/
+*.zip

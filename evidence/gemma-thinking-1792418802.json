@@ -1,0 +1,110 @@
+{
+  "timestamp_utc": "2026-10-19T14:06:42.673151+00:00",
+  "model": "sight-gemma4-e4b:balanced",
+  "profile": "thinking",
+  "temperature": 0.7,
+  "output_tokens": 1536,
+  "updated_prompt": false,
+  "minimal_prompt": true,
+  "repeat_penalty": 1.1,
+  "seed": 42,
+  "cloud_requests": 0,
+  "rows": [
+    {
+      "case": "tone",
+      "prompt": "Explain in three sentences why my laptop gets slower when its RAM is full.",
+      "http_status": 200,
+      "seconds": 6.176,
+      "answer": "A full memory space means your laptop can no longer quickly access all the tabs or apps you have open at once. Instead, it will save these things using a small, random area on the hard drive called \"virtual memory.\" This happens because the hard drive is much slower than any real RAM, causing everything to freeze and eventually stall.",
+      "thinking_characters": 966,
+      "done_reason": "stop",
+      "prompt_tokens": 73,
+      "generated_tokens": 335,
+      "error": null
+    },
+    {
+      "case": "arithmetic",
+      "prompt": "A shop reduces a price of 250 by 20%, then applies 10% tax to the reduced price. What is the final price? Give the number and one sentence.",
+      "http_status": 200,
+      "seconds": 5.915,
+      "answer": "275",
+      "thinking_characters": 805,
+      "done_reason": "stop",
+      "prompt_tokens": 98,
+      "generated_tokens": 338,
+      "error": null
+    },
+    {
+      "case": "logic",
+      "prompt": "All red blocks are heavy. Some heavy blocks are wooden. Does it follow that some red blocks are wooden? Explain briefly.",
+      "http_status": 200,
+      "seconds": 7.361,
+      "answer": "It does not follow once there are extra details.\n\nThis is called a feature called \"blood circularity.\" You know that all the red blocks are heavy, and some of the wooden blocks are also heavy. But this doesn't give you any information about whether the two groups (reds and woods) overlap by themselves. There might be other super-heavy things that are not wood or red.",
+      "thinking_characters": 1277,
+      "done_reason": "stop",
+      "prompt_tokens": 83,
+      "generated_tokens": 421,
+      "error": null
+    },
+    {
+      "case": "planning",
+      "prompt": "I have 35 minutes. Downloading takes 10 minutes, installation takes 15 minutes after the download, and a test takes 12 minutes after installation. Can I finish everything? Explain briefly.",
+      "http_status": 200,
+      "seconds": 10.67,
+      "answer": "No, you will not have enough time.\n\n**Explanation:**\nThe total time required is 37 minutes after adding up the individual periods:\n*   10 minutes (download) + 15 minutes (installation) + 12 minutes (test) = 37 minutes.\n*   This leaves you two minutes over the time you have available.",
+      "thinking_characters": 1628,
+      "done_reason": "stop",
+      "prompt_tokens": 101,
+      "generated_tokens": 603,
+      "error": null
+    },
+    {
+      "case": "code",
+      "prompt": "In Python, why does items.sort() return None? Give a one-line way to get a sorted copy while keeping items unchanged.",
+      "http_status": 200,
+      "seconds": 7.79,
+      "answer": "The list object has a method called `sort()` that modifies the list in place, so it doesn't provide an indication of its new state; instead, you get back nothing (`None`).\n\nHere is a one-line way to make a sorted copy and keep the original list unchanged:\n\n`sorted(items)`",
+      "thinking_characters": 1321,
+      "done_reason": "stop",
+      "prompt_tokens": 86,
+      "generated_tokens": 428,
+      "error": null
+    }
+  ],
+  "completed": true,
+  "metadata": {
+    "capabilities": [
+      "completion",
+      "vision",
+      "audio",
+      "tools",
+      "thinking"
+    ],
+    "thinking": {
+      "values": [
+        false,
+        true
+      ],
+      "default": true
+    },
+    "parameters": "num_batch                      128\nnum_ctx                        4096\nnum_predict                    1536\nstop                           \"<bos>\"\nstop                           \"<|turn>\"\nstop                           \"<turn|>\"\nstop                           \"<|turn>user\"\ntemperature                    0",
+    "details": {
+      "parent_model": "hf.co/OBLITERATUS/gemma-4-E4B-it-OBLITERATED:Q4_K_M",
+      "format": "gguf",
+      "family": "gemma4",
+      "families": [
+        "gemma4"
+      ],
+      "parameter_size": "7.52B",
+      "quantization_level": "Q4_K_M",
+      "runner": "llamacpp"
+    }
+  },
+  "resident_models": [
+    {
+      "name": "sight-gemma4-e4b:balanced",
+      "size_vram": 3179471174,
+      "context_length": 4096
+    }
+  ]
+}

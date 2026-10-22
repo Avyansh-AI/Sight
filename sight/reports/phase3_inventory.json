@@ -1,0 +1,28 @@
+{
+  "archive_count": 8,
+  "files": 21207,
+  "extracted_matches": 21207,
+  "manual_references": 77,
+  "manual_paths_found": 77,
+  "python_function_candidates": 137232,
+  "lexical_declarations": 177673,
+  "matrix_rows": 330340,
+  "duplicate_rows": 9522,
+  "hermes_catalogs": {
+    "optional": 153,
+    "plugin/other": 1,
+    "built-in": 58
+  },
+  "hermes_expected_211": true,
+  "additional_plugin_manifests": 1,
+  "python_parse_gaps": [],
+  "semantic_coverage_complete": false,
+  "executed_reference_code": false,
+  "limits": [
+    "Sensitive source is hashed/classified but not parsed into function names",
+    "Other-language method/function coverage is lexical and incomplete; every source file is retained with a reference-only disposition",
+    "All skill metadata is conservative static classification; no automatic installation/activation",
+    "Nine ZIP files exist in references/archives; rea-main.zip is outside the eight-repository manual and remains untouched",
+    "Historical hermes_provenance.json describes a prior clone, not this supplied archive audit"
+  ]
+}

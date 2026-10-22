@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.587" timestamp="2026-10-21T15:32:59.928366+05:30" hostname="Avyansh-PC"><testcase classname="tests.test_browser_sandbox" name="test_untrusted_html_browser_does_not_disable_native_sandbox" time="0.378"><failure message="AssertionError: assert (['C:\\Users\\Dell\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1248\\chrome-headless-shell-win64\\chrome-he...-disable-background-timer-throttling', '--disable-backgrounding-occluded-windows', '--disable-back-forward-cache', ...] and '--no-sandbox' not in ['C:\\Users\\Dell\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1248\\chrome-headless-shell-win64\\chrome-he...-disable-background-timer-throttling', '--disable-backgrounding-occluded-windows', '--disable-back-forward-cache', ...])">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000028C7509C500&gt;
+
+    def test_untrusted_html_browser_does_not_disable_native_sandbox(monkeypatch):
+        actual_launch = BrowserType.launch
+        observed = []
+    
+        def inspect_launch(self, **kwargs):
+            # Permit this read-only diagnostic CDP method; leave sandbox selection
+            # exactly as the production worker supplied it.
+            kwargs["args"] = [*kwargs.get("args", []), "--enable-automation"]
+            instance = actual_launch(self, **kwargs)
+            session = instance.new_browser_cdp_session()
+            try:
+                observed.extend(session.send("Browser.getBrowserCommandLine")["arguments"])
+                assert observed and "--no-sandbox" not in observed
+            except BaseException:
+                instance.close()
+                raise
+            finally:
+                if instance.is_connected():
+                    session.detach()
+            return instance
+    
+        monkeypatch.setattr(BrowserType, "launch", inspect_launch)
+&gt;       result = browser({"html": "&lt;title&gt;Sandbox check&lt;/title&gt;&lt;p&gt;Local synthetic HTML&lt;/p&gt;", "fields": {}})
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_browser_sandbox.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+sight_core\capability_worker.py:15: in browser
+    browser=p.chromium.launch(headless=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;BrowserType name=chromium executable_path=C:\Users\Dell\AppData\Local\ms-playwright\chromium-1248\chrome-win64\chrome.exe&gt;
+kwargs = {'args': ['--enable-automation'], 'headless': True}
+instance = &lt;Browser type=&lt;BrowserType name=chromium executable_path=C:\Users\Dell\AppData\Local\ms-playwright\chromium-1248\chrome-win64\chrome.exe&gt; version=156.0.8078.4&gt;
+session = &lt;playwright._impl._cdp_session.CDPSession object at 0x0000028C7509EBD0&gt;
+@py_assert1 = ["['C:\\\\Users\\\\Dell\\\\AppData\\\\Local\\\\ms-playwright\\\\chromium_headless_shell-1248\\\\chrome-headless-shell-...isable-background-timer-throttling', '--disable-backgrounding-occluded-windows', '--disable-back-forward-cache', ...]"]
+@py_assert0 = False, @py_assert4 = '--no-sandbox', @py_assert6 = False
+@py_format3 = "['C:\\\\Users\\\\Dell\\\\AppData\\\\Local\\\\ms-playwright\\\\chromium_headless_shell-1248\\\\chrome-headless-shell-w...disable-background-timer-throttling', '--disable-backgrounding-occluded-windows', '--disable-back-forward-cache', ...]"
+
+    def inspect_launch(self, **kwargs):
+        # Permit this read-only diagnostic CDP method; leave sandbox selection
+        # exactly as the production worker supplied it.
+        kwargs["args"] = [*kwargs.get("args", []), "--enable-automation"]
+        instance = actual_launch(self, **kwargs)
+        session = instance.new_browser_cdp_session()
+        try:
+            observed.extend(session.send("Browser.getBrowserCommandLine")["arguments"])
+&gt;           assert observed and "--no-sandbox" not in observed
+E           AssertionError: assert (['C:\\Users\\Dell\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1248\\chrome-headless-shell-win64\\chrome-he...-disable-background-timer-throttling', '--disable-backgrounding-occluded-windows', '--disable-back-forward-cache', ...] and '--no-sandbox' not in ['C:\\Users\\Dell\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1248\\chrome-headless-shell-win64\\chrome-he...-disable-background-timer-throttling', '--disable-backgrounding-occluded-windows', '--disable-back-forward-cache', ...])
+
+tests\test_browser_sandbox.py:19: AssertionError</failure></testcase></testsuite></testsuites>

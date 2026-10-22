@@ -1,0 +1,391 @@
+{
+  "timestamp_utc": "20261021T161217Z",
+  "model": "sight-gemma4-e4b:uncensored",
+  "thinking": false,
+  "cloud_requests": 0,
+  "checks": [
+    {
+      "name": "Phase 4 launcher local-only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "installed Gemma ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "memory compaction needs approval",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "duplicate compaction rejected without orphan",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compaction records source and privacy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compaction searchable",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0894
+      }
+    },
+    {
+      "name": "files.search",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0306
+      }
+    },
+    {
+      "name": "documents.docx",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0282
+      }
+    },
+    {
+      "name": "documents.docx artifact hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "documents.markdown",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0293
+      }
+    },
+    {
+      "name": "documents.markdown artifact hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "coding.inspect",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0301
+      }
+    },
+    {
+      "name": "coding.diff",
+      "passed": true,
+      "detail": {
+        "seconds": 0.029
+      }
+    },
+    {
+      "name": "coding.site",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0284
+      }
+    },
+    {
+      "name": "coding.site artifact hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calendar.export",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0289
+      }
+    },
+    {
+      "name": "calendar.export artifact hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cad.box",
+      "passed": true,
+      "detail": {
+        "seconds": 0.027
+      }
+    },
+    {
+      "name": "cad.box artifact hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "circuit.ohm",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0294
+      }
+    },
+    {
+      "name": "geo.distance",
+      "passed": true,
+      "detail": {
+        "seconds": 0.029
+      }
+    },
+    {
+      "name": "vision.landmarks",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0285
+      }
+    },
+    {
+      "name": "windows.info",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0274
+      }
+    },
+    {
+      "name": "speech.render",
+      "passed": true,
+      "detail": {
+        "seconds": 0.5574
+      }
+    },
+    {
+      "name": "speech.render artifact hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "browser.inspect",
+      "passed": true,
+      "detail": {
+        "seconds": 1.0453
+      }
+    },
+    {
+      "name": "browser.inspect artifact hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "isolated browser observed text",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reminders.add",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0719
+      }
+    },
+    {
+      "name": "monitor.configure",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0599
+      }
+    },
+    {
+      "name": "briefing.local",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0487
+      }
+    },
+    {
+      "name": "mcp.local",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0424
+      }
+    },
+    {
+      "name": "contracts.simulate",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0421
+      }
+    },
+    {
+      "name": "home simulated only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "contracts.simulate",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0398
+      }
+    },
+    {
+      "name": "android simulated only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "contracts.simulate",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0328
+      }
+    },
+    {
+      "name": "printer simulated only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "contracts.simulate",
+      "passed": true,
+      "detail": {
+        "seconds": 0.036
+      }
+    },
+    {
+      "name": "camera simulated only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "contracts.simulate",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0485
+      }
+    },
+    {
+      "name": "call simulated only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "contracts.simulate",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0374
+      }
+    },
+    {
+      "name": "mcp simulated only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "live WebSocket Gemma transport",
+      "passed": true,
+      "detail": {
+        "seconds": 0.8837,
+        "answer": "1\u3053\u3068\u304c\u3042\u308b",
+        "offline": true
+      }
+    },
+    {
+      "name": "live Gemma arithmetic quality",
+      "passed": false,
+      "detail": {
+        "prompt": "Reply only the number: 2 plus 2?",
+        "expected": "4",
+        "answer": "1\u3053\u3068\u304c\u3042\u308b"
+      }
+    },
+    {
+      "name": "live reminder delivery",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unchanged original home response",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "memory and provenance survive restart",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "correction invalidates summary after restart",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "old memory no longer retrieved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "forget removes active memory export",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restart without duplicate reminder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "immutable artifact survives restart",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reminders.cancel",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0282
+      }
+    },
+    {
+      "name": "skill index survives restart",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local-only policy survives restart",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "complete": true,
+  "launcher": "Phase-4/Start-SIGHT.ps1",
+  "test_data": "C:\\Users\\Dell\\Documents\\Ai projects\\Sight\\Phase-4\\test-data\\live-phase4-20261021T161217Z",
+  "source_hashes": {
+    "sight_core/__init__.py": "ba90670254fe47f418ab14be3b3be9504f17d926353794588fc52ee42faa745d",
+    "sight_core/api.py": "fbe04062a624d4e9a9fdd68cfe2a42a8b4f68f4d4fd38435fe8c1002d96bd0dc",
+    "sight_core/artifacts.py": "63a3cda1a3aab2ec384cf976e13eabb3a94ee982db53e5cf63fad18fc9e763c6",
+    "sight_core/brain_store.py": "fcaa29228b8986e8aa86fac9bcf069a1561b4e85f1217936dd79d07db407f5ff",
+    "sight_core/capabilities.py": "ea119ff951bf47d863033994ff6119bdb6a1bbb20288ce821da5d50d18aeddee",
+    "sight_core/capability_worker.py": "9153358ea1ae4145c00e18aba87fed95177a9abc56745e0e69963e7558043451",
+    "sight_core/chatgpt.py": "71d352e1bd876a1f789d0a069c8863400777f1c5acd0c23062d8fcc6b82c845b",
+    "sight_core/cli.py": "61a701c56a9e513a0100379c6c546f2e3a474714bb754f18b15898b745c752e8",
+    "sight_core/config.py": "8f130850712c01a2a5c731cc7e538d55c71600d45f1db36c39eab0e068238d7a",
+    "sight_core/connector_contracts.py": "be01f06176268207823c2187da324cbe4c76ec3e260012948d55935c99f1f143",
+    "sight_core/forge.py": "724409e815ebbe15e9fab01a52aa332c52389f67e3cc3b417c10a4be478a9bcf",
+    "sight_core/jobs.py": "28f02fb59809c6fd120f1b14ffda218a913ce9817ce3a5008e7ea4d7ffe69719",
+    "sight_core/learning_api.py": "d0c7c2f37fb10d211e3f8cfdde8c9ab8a4f9da329c22de0bbeba985f22b06336",
+    "sight_core/local_adapters.py": "eae42f13db3415b19666d89ca8911808500eedb0819e79c74bef1d54601af52a",
+    "sight_core/mcp_bridge.py": "49d6c1e6e9e326dc4188ec81c976ca62ba1d260918dc59a53b98d9e28ef69460",
+    "sight_core/memory.py": "2f0de18e51c9108668b8002ea41c03f80c683e62b09d59d2c4aceaf8fa2b3cee",
+    "sight_core/models.py": "8a96ae9e3cf8272d86efbfdfdc8c1f90ce30fbd0dd6b00fccd920c5ce489c25b",
+    "sight_core/proactive.py": "8a2862d1198608a1c90eda2ae983bdfe2dae3b7d7bbf1ca0dda0fdf3e7c375cf",
+    "sight_core/quotas.py": "2a674f9fa940a3a94a4a1988aeb78f66ccdaa39fce15268028ce070fbf2b1162",
+    "sight_core/recovery.py": "90031d470fe5759074210f1ce4a7965ae131a0777c1858079e2f92f68f2ea9bf",
+    "sight_core/releases.py": "fffc22da8bf3596c1d9f3e116b9e253573c0e106042a74a36afb1066880503c6",
+    "sight_core/routing.py": "4e27f6a0f66a19974f717c825b5adf8b9ef93036478fe4635eb68ca1e6b84759",
+    "sight_core/security.py": "1b2eeb4442fae466f87ca2a94c1705b69d7577f269f1f28fe24403a302712ec3",
+    "sight_core/skill_worker.py": "111825fb41aa4e9623e08a962457982ba446eeb1dfc2c13fbca4fc5777690eff",
+    "sight_core/store.py": "6e89a62392497bbaf6a2618aa1154c82309b6a68a375867f8066cf95f089c9ab",
+    "sight_core/tools.py": "44dbef9c6cac45c76409b2ceded7712f20ea39c22cac33eedbf04c134e1ea47a",
+    "apps/ui/capabilities.html": "7568d669423d7f8353fd9627754a1ad7d4fc60725b4b90b2c9784161f31c9d9d",
+    "apps/ui/index.html": "0883f953221ab94b0ecf21a7894ff1f5b2d650f14ccaf26b467365761cee01a6",
+    "apps/ui/learning.html": "1df2b6bddebc2410919b1f99f6a70b1b5d25761bbb515c8c715b8e584b33cda0",
+    "apps/ui/systems.html": "3d9b4528b18cb524916c34d8146e67cb3f7b92e82b45cb5a5a1bda1e44edf2c3",
+    "apps/ui/tasks.html": "24735dc59e928e0056eedfc036727067192028a84ff770659583cf8e3c44ab83",
+    "apps/ui/vision.html": "acf16546b60d2c0348c9e78834f5d98a450575470aaaa1937875e342b78231c5"
+  },
+  "passed": false
+}

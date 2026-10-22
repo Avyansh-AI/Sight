@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.378" timestamp="2026-10-20T11:49:17.487084+05:30" hostname="Avyansh-PC"><testcase classname="tests.test_phase4_hardening" name="test_uvicorn_websocket_log_redacts_ticket_even_without_access_log" time="0.179"><failure message="assert 'synthetic-private-ticket' not in '127.0.0.1:1...&quot; [accepted]'&#10;  &#10;  'synthetic-private-ticket' is contained here:&#10;    pp?ticket=synthetic-private-ticket&amp;state=ok&quot; [accepted]">app = &lt;fastapi.applications.FastAPI object at 0x000002ABA8C3C560&gt;
+
+    def test_uvicorn_websocket_log_redacts_ticket_even_without_access_log(app):
+        import logging
+        logger = logging.getLogger('uvicorn.error')
+        record = logging.LogRecord(logger.name, logging.INFO, __file__, 1,
+                                   '%s - "WebSocket %s" [accepted]',
+                                   ('127.0.0.1:1234', '/ws/app?ticket=synthetic-private-ticket&amp;state=ok'), None)
+        assert logger.filter(record)
+&gt;       assert 'synthetic-private-ticket' not in record.getMessage()
+E       assert 'synthetic-private-ticket' not in '127.0.0.1:1..." [accepted]'
+E         
+E         'synthetic-private-ticket' is contained here:
+E           pp?ticket=synthetic-private-ticket&amp;state=ok" [accepted]
+
+tests\test_phase4_hardening.py:176: AssertionError</failure></testcase></testsuite></testsuites>

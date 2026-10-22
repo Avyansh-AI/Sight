@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="9" skipped="0" tests="11" time="2.414" timestamp="2026-10-19T14:47:31.118282+05:30" hostname="Avyansh-PC"><testcase classname="tests.test_phase4_hardening" name="test_launch_token_hardlink_does_not_truncate_other_file" time="0.147"><failure message="AssertionError: assert 'lMu8scpUP1rr...Xdc3Eg4Dnaulw' == 'preserve owner data'&#10;  &#10;  - preserve owner data&#10;  + lMu8scpUP1rra2C3wecry0DfhcxQs8Xdc3Eg4Dnaulw">tests\test_phase4_hardening.py:27: in test_launch_token_hardlink_does_not_truncate_other_file
+    with pytest.raises(ValueError, match='link'):
+E   Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+During handling of the above exception, another exception occurred:
+tests\test_phase4_hardening.py:30: in test_launch_token_hardlink_does_not_truncate_other_file
+    assert sentinel.read_text() == 'preserve owner data'
+E   AssertionError: assert 'lMu8scpUP1rr...Xdc3Eg4Dnaulw' == 'preserve owner data'
+E     
+E     - preserve owner data
+E     + lMu8scpUP1rra2C3wecry0DfhcxQs8Xdc3Eg4Dnaulw</failure></testcase><testcase classname="tests.test_phase4_hardening" name="test_database_hardlink_rejected_before_migration[Store-sight.sqlite3]" time="0.015"><failure message="AssertionError: assert 'b7ba2e9927b1...69abff08734c1' == '3083fcebaecb...891e2a068e781'&#10;  &#10;  - 3083fcebaecbb71bba22993eb4f4200e493facb3da62e07b3f7891e2a068e781&#10;  + b7ba2e9927b1ded64ee2153ceeef781f5d2dbe00f3be62c3b7169abff08734c1">tests\test_phase4_hardening.py:43: in test_database_hardlink_rejected_before_migration
+    with pytest.raises(ValueError, match='link'):
+E   Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+During handling of the above exception, another exception occurred:
+tests\test_phase4_hardening.py:46: in test_database_hardlink_rejected_before_migration
+    assert hashlib.sha256(sentinel.read_bytes()).hexdigest() == before
+E   AssertionError: assert 'b7ba2e9927b1...69abff08734c1' == '3083fcebaecb...891e2a068e781'
+E     
+E     - 3083fcebaecbb71bba22993eb4f4200e493facb3da62e07b3f7891e2a068e781
+E     + b7ba2e9927b1ded64ee2153ceeef781f5d2dbe00f3be62c3b7169abff08734c1</failure></testcase><testcase classname="tests.test_phase4_hardening" name="test_database_hardlink_rejected_before_migration[BrainStore-brain.sqlite3]" time="0.014"><failure message="AssertionError: assert '8e6f39dbbc17...a8a77170efb7b' == '3083fcebaecb...891e2a068e781'&#10;  &#10;  - 3083fcebaecbb71bba22993eb4f4200e493facb3da62e07b3f7891e2a068e781&#10;  + 8e6f39dbbc17dd138bab3058e67485146167b1a2906d75a3751a8a77170efb7b">tests\test_phase4_hardening.py:43: in test_database_hardlink_rejected_before_migration
+    with pytest.raises(ValueError, match='link'):
+E   Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+During handling of the above exception, another exception occurred:
+tests\test_phase4_hardening.py:46: in test_database_hardlink_rejected_before_migration
+    assert hashlib.sha256(sentinel.read_bytes()).hexdigest() == before
+E   AssertionError: assert '8e6f39dbbc17...a8a77170efb7b' == '3083fcebaecb...891e2a068e781'
+E     
+E     - 3083fcebaecbb71bba22993eb4f4200e493facb3da62e07b3f7891e2a068e781
+E     + 8e6f39dbbc17dd138bab3058e67485146167b1a2906d75a3751a8a77170efb7b</failure></testcase><testcase classname="tests.test_phase4_hardening" name="test_release_rejects_unmanifested_bytecode" time="1.876"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">tests\test_phase4_hardening.py:55: in test_release_rejects_unmanifested_bytecode
+    with pytest.raises(ValueError, match='unmanifested|bytecode'):
+E   Failed: DID NOT RAISE &lt;class 'ValueError'&gt;</failure></testcase><testcase classname="tests.test_phase4_hardening" name="test_release_invalid_manifest_is_controlled[payload0]" time="0.032"><failure message="AttributeError: 'list' object has no attribute 'get'">tests\test_phase4_hardening.py:65: in test_release_invalid_manifest_is_controlled
+    releases.verify(snapshot['id'])
+sight_core\releases.py:40: in verify
+    if manifest.get('id')!=identifier or not isinstance(manifest.get('files'),dict):raise ValueError('Invalid release manifest')
+       ^^^^^^^^^^^^
+E   AttributeError: 'list' object has no attribute 'get'</failure></testcase><testcase classname="tests.test_phase4_hardening" name="test_release_invalid_manifest_is_controlled[None]" time="0.028"><failure message="AttributeError: 'NoneType' object has no attribute 'get'">tests\test_phase4_hardening.py:65: in test_release_invalid_manifest_is_controlled
+    releases.verify(snapshot['id'])
+sight_core\releases.py:40: in verify
+    if manifest.get('id')!=identifier or not isinstance(manifest.get('files'),dict):raise ValueError('Invalid release manifest')
+       ^^^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'get'</failure></testcase><testcase classname="tests.test_phase4_hardening" name="test_release_invalid_manifest_is_controlled[payload2]" time="0.042" /><testcase classname="tests.test_phase4_hardening" name="test_release_invalid_manifest_is_controlled[payload3]" time="0.040" /><testcase classname="tests.test_phase4_hardening" name="test_local_runtime_response_read_is_bounded[/api/tags]" time="0.011"><failure message="AssertionError: Read continued beyond the 1 MiB response bound&#10;assert 40 &lt;= 17&#10; +  where 40 = len([0, 1, 2, 3, 4, 5, ...])">tests\test_phase4_hardening.py:85: in test_local_runtime_response_read_is_bounded
+    assert len(consumed) &lt;= 17, 'Read continued beyond the 1 MiB response bound'
+E   AssertionError: Read continued beyond the 1 MiB response bound
+E   assert 40 &lt;= 17
+E    +  where 40 = len([0, 1, 2, 3, 4, 5, ...])</failure></testcase><testcase classname="tests.test_phase4_hardening" name="test_local_runtime_response_read_is_bounded[/api/show]" time="0.029"><failure message="AssertionError: Read continued beyond the 1 MiB response bound&#10;assert 40 &lt;= 17&#10; +  where 40 = len([0, 1, 2, 3, 4, 5, ...])">tests\test_phase4_hardening.py:85: in test_local_runtime_response_read_is_bounded
+    assert len(consumed) &lt;= 17, 'Read continued beyond the 1 MiB response bound'
+E   AssertionError: Read continued beyond the 1 MiB response bound
+E   assert 40 &lt;= 17
+E    +  where 40 = len([0, 1, 2, 3, 4, 5, ...])</failure></testcase><testcase classname="tests.test_phase4_hardening" name="test_local_runtime_response_read_is_bounded[/api/chat]" time="0.010"><failure message="AssertionError: Read continued beyond the 1 MiB response bound&#10;assert 40 &lt;= 17&#10; +  where 40 = len([0, 1, 2, 3, 4, 5, ...])">tests\test_phase4_hardening.py:85: in test_local_runtime_response_read_is_bounded
+    assert len(consumed) &lt;= 17, 'Read continued beyond the 1 MiB response bound'
+E   AssertionError: Read continued beyond the 1 MiB response bound
+E   assert 40 &lt;= 17
+E    +  where 40 = len([0, 1, 2, 3, 4, 5, ...])</failure></testcase></testsuite></testsuites>

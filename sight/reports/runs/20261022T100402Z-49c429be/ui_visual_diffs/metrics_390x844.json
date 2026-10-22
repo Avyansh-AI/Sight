@@ -1,0 +1,82 @@
+[
+  {
+    "state": "standby",
+    "viewport": [
+      390,
+      844
+    ],
+    "changed_pixels": 0,
+    "baseline_sha256": "16a2bb372bd04015a8c3d808f8b85ad92e1fce8c5830aba7b2f35a905c2f5875",
+    "actual_sha256": "16a2bb372bd04015a8c3d808f8b85ad92e1fce8c5830aba7b2f35a905c2f5875"
+  },
+  {
+    "state": "listening",
+    "viewport": [
+      390,
+      844
+    ],
+    "changed_pixels": 0,
+    "baseline_sha256": "81077e8c3dc96ec29676ce4a6886a95f4502db4d93188b94dd9723958a11c276",
+    "actual_sha256": "81077e8c3dc96ec29676ce4a6886a95f4502db4d93188b94dd9723958a11c276"
+  },
+  {
+    "state": "thinking",
+    "viewport": [
+      390,
+      844
+    ],
+    "changed_pixels": 0,
+    "baseline_sha256": "7b4080eb4798920facd39aab1587158e773b859409ec9984d4583d54a2e4cfdd",
+    "actual_sha256": "7b4080eb4798920facd39aab1587158e773b859409ec9984d4583d54a2e4cfdd"
+  },
+  {
+    "state": "speaking",
+    "viewport": [
+      390,
+      844
+    ],
+    "changed_pixels": 0,
+    "baseline_sha256": "a867d5af953d34c6e1fccc404db9ba1814cf088941e90f3593aad9f1902ba214",
+    "actual_sha256": "a867d5af953d34c6e1fccc404db9ba1814cf088941e90f3593aad9f1902ba214"
+  },
+  {
+    "state": "vision",
+    "viewport": [
+      390,
+      844
+    ],
+    "changed_pixels": 0,
+    "baseline_sha256": "9b1d2bdcfef9a43f1565e3fbfee4d89731367e708dedabc896ac7be716dc9eec",
+    "actual_sha256": "9b1d2bdcfef9a43f1565e3fbfee4d89731367e708dedabc896ac7be716dc9eec"
+  },
+  {
+    "state": "alert",
+    "viewport": [
+      390,
+      844
+    ],
+    "changed_pixels": 0,
+    "baseline_sha256": "1942c26c8f4d54440b43fe9d2d8a67d851871fbaaf898f96f519f917efc14dec",
+    "actual_sha256": "1942c26c8f4d54440b43fe9d2d8a67d851871fbaaf898f96f519f917efc14dec"
+  },
+  {
+    "state": "offline",
+    "viewport": [
+      390,
+      844
+    ],
+    "changed_pixels": 0,
+    "baseline_sha256": "b39d93108a859e9c6edb54ae4133b21034263128bdda98e4466212055a1c9172",
+    "actual_sha256": "b39d93108a859e9c6edb54ae4133b21034263128bdda98e4466212055a1c9172"
+  },
+  {
+    "state": "error",
+    "viewport": [
+      390,
+      844
+    ],
+    "changed_pixels": 0,
+    "baseline_sha256": "8b6f41e6c790232c1acf130dede83ba00c6032f22be9ccb9beb51fc3685bdb4e",
+    "actual_sha256": "8b6f41e6c790232c1acf130dede83ba00c6032f22be9ccb9beb51fc3685bdb4e"
+  }
+]

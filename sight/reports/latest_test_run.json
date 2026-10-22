@@ -1,0 +1,11 @@
+{
+  "run_id": "20261022T100402Z-49c429be",
+  "results": "C:\\Users\\Dell\\Documents\\Ai projects\\Sight\\Phase-4\\sight\\reports\\runs\\20261022T100402Z-49c429be\\results.json",
+  "counts": {
+    "PASS": 314,
+    "FAIL": 0,
+    "SKIP": 0
+  },
+  "exit_code": 0,
+  "phase_gate": "WINDOWS_CORE_REGRESSION_CHECKS_PASS"
+}

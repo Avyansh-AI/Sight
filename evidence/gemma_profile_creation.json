@@ -1,0 +1,54 @@
+{
+  "source_model": "hf.co/OBLITERATUS/gemma-4-E4B-it-OBLITERATED:Q4_K_M",
+  "profile_model": "sight-gemma4-e4b:balanced",
+  "request": {
+    "model": "sight-gemma4-e4b:balanced",
+    "from": "hf.co/OBLITERATUS/gemma-4-E4B-it-OBLITERATED:Q4_K_M",
+    "stream": false,
+    "renderer": "gemma4",
+    "parser": "gemma4",
+    "system": "You are SIGHT, a calm and capable assistant. Use clear, natural, professional language. Avoid slang, memes, emojis, hype and exaggerated praise unless the user requests that style. Answer the actual question. Check arithmetic, logic and assumptions before answering. For difficult questions, reason carefully and give the conclusion with a brief useful explanation. If information is missing or uncertain, say so instead of inventing facts. Do not claim to browse, run code or perform actions you have not performed.",
+    "parameters": {
+      "temperature": 0,
+      "num_ctx": 4096,
+      "num_predict": 1536,
+      "num_batch": 128
+    }
+  },
+  "response": {
+    "status": "success"
+  },
+  "source_metadata": {
+    "capabilities": [
+      "tools",
+      "completion",
+      "vision",
+      "audio"
+    ],
+    "thinking": null,
+    "renderer": null,
+    "parser": null,
+    "parameters": "stop                           \"<bos>\"\nstop                           \"<|turn>\"\nstop                           \"<turn|>\"\nstop                           \"<|turn>user\""
+  },
+  "profile_metadata": {
+    "capabilities": [
+      "completion",
+      "vision",
+      "audio",
+      "tools",
+      "thinking"
+    ],
+    "thinking": {
+      "values": [
+        false,
+        true
+      ],
+      "default": true
+    },
+    "renderer": null,
+    "parser": null,
+    "parameters": "num_batch                      128\nnum_ctx                        4096\nnum_predict                    1536\nstop                           \"<bos>\"\nstop                           \"<|turn>\"\nstop                           \"<turn|>\"\nstop                           \"<|turn>user\"\ntemperature                    0"
+  },
+  "weights_downloaded": false,
+  "original_model_modified": false
+}

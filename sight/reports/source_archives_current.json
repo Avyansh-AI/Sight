@@ -1,0 +1,42 @@
+[
+  {
+    "archive": "Ada-SI-main.zip",
+    "sha256": "fd89d6b13952444bfd90932e9fa2a4191be5210d82237a3aae51daa4dcb14eed",
+    "files": 322
+  },
+  {
+    "archive": "Brahma-AI---Lite-main.zip",
+    "sha256": "2d0a11ec8482942bf1dcc06baea94403815c3e8f30c8af3829a78d13992b4f10",
+    "files": 81
+  },
+  {
+    "archive": "Brahma-AI-main.zip",
+    "sha256": "8571c83e44fd9365a739b014dfbd194e25d57aee1007a54e04c62e65fe39f684",
+    "files": 121
+  },
+  {
+    "archive": "Brahma-Ai-Evo-main.zip",
+    "sha256": "69b5b0180f7cca80f68c8ae8d58b1d773a69e63f011db0526f55be9799d98a0e",
+    "files": 283
+  },
+  {
+    "archive": "Brahma-Echo-main.zip",
+    "sha256": "792b2562628a7ff9a1c23c381daccf51c7e65840e1ba463f8a39bc9c4f610878",
+    "files": 194
+  },
+  {
+    "archive": "ada_local-main.zip",
+    "sha256": "db78d052395630a1a432265f0e49984d6ae3462c0434db37abc32dba6c420a38",
+    "files": 77
+  },
+  {
+    "archive": "ada_v2-main.zip",
+    "sha256": "f70063f158315b99c276dcedcb32f684f4b15fac37c48bc8514c4db29cfa1a5f",
+    "files": 64
+  },
+  {
+    "archive": "hermes-agent-main.zip",
+    "sha256": "be4e018694221e0ea96dc6788d3cee338ea3cff5421bcf229e2e2a08c61e309e",
+    "files": 20065
+  }
+]

@@ -1,0 +1,1019 @@
+{
+  "started_utc": "2026-10-20T06:36:18.074313+00:00",
+  "requested_seconds": 3600,
+  "model": "sight-gemma4-e4b:uncensored",
+  "data_dir": "C:\\Users\\Dell\\Documents\\Ai projects\\Sight\\Phase-4\\test-data\\soak-20261020T063618Z-1f15c7",
+  "checks": [
+    {
+      "name": "home HTML exact bytes",
+      "passed": true,
+      "elapsed_seconds": 2.344,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 2.406,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 2.469,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 2.515,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 2.547,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 2.562,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 2.578,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 2.703,
+      "detail": null
+    },
+    {
+      "name": "real Gemma inference completes",
+      "passed": true,
+      "elapsed_seconds": 35.047,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 63.078,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 63.125,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 63.125,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 63.156,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 63.172,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 63.172,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 63.281,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 123.328,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 123.406,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 123.406,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 123.469,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 123.469,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 123.484,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 123.734,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 183.765,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 183.844,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 183.844,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 183.906,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 183.906,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 183.922,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 184.125,
+      "detail": null
+    },
+    {
+      "name": "injected runtime outage fails locally",
+      "passed": true,
+      "elapsed_seconds": 184.547,
+      "detail": null
+    },
+    {
+      "name": "UI survives unavailable runtime",
+      "passed": true,
+      "elapsed_seconds": 184.562,
+      "detail": null
+    },
+    {
+      "name": "runtime metadata reconnects",
+      "passed": true,
+      "elapsed_seconds": 185.203,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 244.25,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 244.281,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 244.297,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 244.328,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 244.328,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 244.328,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 244.406,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 304.453,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 304.531,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 304.531,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 304.547,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 304.547,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 304.547,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 304.64,
+      "detail": null
+    },
+    {
+      "name": "real Gemma inference completes",
+      "passed": true,
+      "elapsed_seconds": 314.203,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 365.25,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 365.281,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 365.281,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 365.312,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 365.312,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 365.312,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 365.406,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 425.453,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 425.484,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 425.484,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 425.515,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 425.515,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 425.515,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 425.594,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 485.64,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 485.656,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 485.672,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 485.719,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 485.719,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 485.719,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 485.797,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 545.844,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 545.875,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 545.875,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 545.89,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 545.906,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 545.906,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 546.0,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 606.047,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 606.078,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 606.078,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 606.094,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 606.094,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 606.109,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 606.187,
+      "detail": null
+    },
+    {
+      "name": "real Gemma inference completes",
+      "passed": true,
+      "elapsed_seconds": 630.656,
+      "detail": null
+    },
+    {
+      "name": "durable model step running before crash",
+      "passed": true,
+      "elapsed_seconds": 630.922,
+      "detail": null
+    },
+    {
+      "name": "interrupted model task not replayed",
+      "passed": true,
+      "elapsed_seconds": 632.484,
+      "detail": null
+    },
+    {
+      "name": "completed task survives process crash",
+      "passed": true,
+      "elapsed_seconds": 632.484,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 666.515,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 666.547,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 666.547,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 666.562,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 666.578,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 666.578,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 666.656,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 726.703,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 726.734,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 726.734,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 726.75,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 726.75,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 726.765,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 726.844,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 786.89,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 786.922,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 786.937,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 786.953,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 786.953,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 786.953,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 787.031,
+      "detail": null
+    },
+    {
+      "name": "injected runtime outage fails locally",
+      "passed": true,
+      "elapsed_seconds": 787.297,
+      "detail": null
+    },
+    {
+      "name": "UI survives unavailable runtime",
+      "passed": true,
+      "elapsed_seconds": 787.297,
+      "detail": null
+    },
+    {
+      "name": "runtime metadata reconnects",
+      "passed": true,
+      "elapsed_seconds": 787.703,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 847.765,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 847.781,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 847.797,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 847.812,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 847.812,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 847.812,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 847.906,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 907.953,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 907.984,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 907.984,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 908.0,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 908.015,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 908.015,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 908.094,
+      "detail": null
+    },
+    {
+      "name": "real Gemma inference completes",
+      "passed": true,
+      "elapsed_seconds": 913.875,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 968.922,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 968.953,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 968.953,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 968.969,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 968.969,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 968.984,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 969.078,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 1029.125,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 1029.156,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 1029.156,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 1029.187,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 1029.187,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 1029.187,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 1029.297,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 1089.328,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 1089.359,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 1089.359,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 1089.375,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 1089.375,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 1089.375,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 1089.453,
+      "detail": null
+    },
+    {
+      "name": "core healthy and cloud disabled",
+      "passed": true,
+      "elapsed_seconds": 1149.5,
+      "detail": null
+    },
+    {
+      "name": "approved local tool",
+      "passed": true,
+      "elapsed_seconds": 1149.531,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 1149.531,
+      "detail": null
+    },
+    {
+      "name": "socket response received",
+      "passed": true,
+      "elapsed_seconds": 1149.547,
+      "detail": null
+    },
+    {
+      "name": "authenticated WebSocket reconnect",
+      "passed": true,
+      "elapsed_seconds": 1149.547,
+      "detail": null
+    },
+    {
+      "name": "socket retry is idempotent",
+      "passed": true,
+      "elapsed_seconds": 1149.562,
+      "detail": null
+    },
+    {
+      "name": "durable task completes once",
+      "passed": true,
+      "elapsed_seconds": 1149.64,
+      "detail": null
+    }
+  ],
+  "cloud_requests": 0,
+  "fault_scope": "Test-process loopback model transport; host network unchanged",
+  "source_hashes": {
+    "sight_core/__init__.py": "ba90670254fe47f418ab14be3b3be9504f17d926353794588fc52ee42faa745d",
+    "sight_core/api.py": "fbe04062a624d4e9a9fdd68cfe2a42a8b4f68f4d4fd38435fe8c1002d96bd0dc",
+    "sight_core/artifacts.py": "63a3cda1a3aab2ec384cf976e13eabb3a94ee982db53e5cf63fad18fc9e763c6",
+    "sight_core/brain_store.py": "fcaa29228b8986e8aa86fac9bcf069a1561b4e85f1217936dd79d07db407f5ff",
+    "sight_core/capabilities.py": "ea119ff951bf47d863033994ff6119bdb6a1bbb20288ce821da5d50d18aeddee",
+    "sight_core/capability_worker.py": "d033a1dd808df6977f91ca343ae164a4251a7880aa5999e215222192b3ab45b6",
+    "sight_core/chatgpt.py": "71d352e1bd876a1f789d0a069c8863400777f1c5acd0c23062d8fcc6b82c845b",
+    "sight_core/cli.py": "61a701c56a9e513a0100379c6c546f2e3a474714bb754f18b15898b745c752e8",
+    "sight_core/config.py": "8f130850712c01a2a5c731cc7e538d55c71600d45f1db36c39eab0e068238d7a",
+    "sight_core/connector_contracts.py": "be01f06176268207823c2187da324cbe4c76ec3e260012948d55935c99f1f143",
+    "sight_core/forge.py": "724409e815ebbe15e9fab01a52aa332c52389f67e3cc3b417c10a4be478a9bcf",
+    "sight_core/jobs.py": "28f02fb59809c6fd120f1b14ffda218a913ce9817ce3a5008e7ea4d7ffe69719",
+    "sight_core/learning_api.py": "d0c7c2f37fb10d211e3f8cfdde8c9ab8a4f9da329c22de0bbeba985f22b06336",
+    "sight_core/local_adapters.py": "eae42f13db3415b19666d89ca8911808500eedb0819e79c74bef1d54601af52a",
+    "sight_core/mcp_bridge.py": "49d6c1e6e9e326dc4188ec81c976ca62ba1d260918dc59a53b98d9e28ef69460",
+    "sight_core/memory.py": "13f8d865655ea0057886fa2b7e96fd9a730aa2e20dc9730af6e4a478d3d7ff4a",
+    "sight_core/models.py": "8a96ae9e3cf8272d86efbfdfdc8c1f90ce30fbd0dd6b00fccd920c5ce489c25b",
+    "sight_core/proactive.py": "8a2862d1198608a1c90eda2ae983bdfe2dae3b7d7bbf1ca0dda0fdf3e7c375cf",
+    "sight_core/quotas.py": "2a674f9fa940a3a94a4a1988aeb78f66ccdaa39fce15268028ce070fbf2b1162",
+    "sight_core/recovery.py": "90031d470fe5759074210f1ce4a7965ae131a0777c1858079e2f92f68f2ea9bf",
+    "sight_core/releases.py": "fffc22da8bf3596c1d9f3e116b9e253573c0e106042a74a36afb1066880503c6",
+    "sight_core/routing.py": "4e27f6a0f66a19974f717c825b5adf8b9ef93036478fe4635eb68ca1e6b84759",
+    "sight_core/security.py": "b1c476196c1309f1e118821e6d4b846ece84e6d9d39efe9ce0f54e33840a14f4",
+    "sight_core/skill_worker.py": "111825fb41aa4e9623e08a962457982ba446eeb1dfc2c13fbca4fc5777690eff",
+    "sight_core/store.py": "6e89a62392497bbaf6a2618aa1154c82309b6a68a375867f8066cf95f089c9ab",
+    "sight_core/tools.py": "44dbef9c6cac45c76409b2ceded7712f20ea39c22cac33eedbf04c134e1ea47a",
+    "apps/ui/capabilities.html": "7568d669423d7f8353fd9627754a1ad7d4fc60725b4b90b2c9784161f31c9d9d",
+    "apps/ui/index.html": "0883f953221ab94b0ecf21a7894ff1f5b2d650f14ccaf26b467365761cee01a6",
+    "apps/ui/learning.html": "1df2b6bddebc2410919b1f99f6a70b1b5d25761bbb515c8c715b8e584b33cda0",
+    "apps/ui/systems.html": "3d9b4528b18cb524916c34d8146e67cb3f7b92e82b45cb5a5a1bda1e44edf2c3",
+    "apps/ui/tasks.html": "24735dc59e928e0056eedfc036727067192028a84ff770659583cf8e3c44ab83",
+    "apps/ui/vision.html": "acf16546b60d2c0348c9e78834f5d98a450575470aaaa1937875e342b78231c5"
+  },
+  "complete": false,
+  "cycles": 20,
+  "model_calls": [
+    {
+      "cycle": 0,
+      "seconds": 32.344,
+      "status": "ok",
+      "answer": "37",
+      "expected_answer": "42",
+      "answer_correct": false,
+      "recovery": null,
+      "local_inference_requests": 1
+    },
+    {
+      "cycle": 5,
+      "seconds": 9.563,
+      "status": "ok",
+      "answer": "42",
+      "expected_answer": "42",
+      "answer_correct": true,
+      "recovery": null,
+      "local_inference_requests": 1
+    },
+    {
+      "cycle": 10,
+      "seconds": 24.469,
+      "status": "ok",
+      "answer": "72",
+      "expected_answer": "42",
+      "answer_correct": false,
+      "recovery": null,
+      "local_inference_requests": 1
+    },
+    {
+      "cycle": 15,
+      "seconds": 5.781,
+      "status": "ok",
+      "answer": "42",
+      "expected_answer": "42",
+      "answer_correct": true,
+      "recovery": "empty_thinking_answer",
+      "local_inference_requests": 2
+    }
+  ],
+  "planned_server_crashes": 1,
+  "unplanned_server_exits": 0,
+  "elapsed_seconds": 1149.64,
+  "one_hour_qualified": false,
+  "aborted_utc": "2026-10-20T06:55:32.615372+00:00",
+  "aborted_by_audit": true,
+  "abort_reason": "New full-suite concurrency failure in SQLite journal validation requires a runtime repair and fresh full-duration soak. Only the owned soak process tree was stopped."
+}

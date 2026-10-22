@@ -1,0 +1,26 @@
+{
+  "timestamp_utc": "20261021T100457Z",
+  "command": [
+    "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "C:\\Users\\Dell\\Documents\\Ai projects\\Sight\\Phase-4\\test-data\\offline-install-20261021T100457Z\\sight\\scripts\\install.ps1",
+    "-Offline",
+    "-Wheelhouse",
+    "C:\\Users\\Dell\\Documents\\Ai projects\\Sight\\Phase-4\\offline\\wheels"
+  ],
+  "exit_code": 0,
+  "seconds": 88.25,
+  "fresh_virtual_environment": true,
+  "fresh_windows_account": false,
+  "package_network_disabled": true,
+  "browser": "Existing provisioned cache; no download",
+  "wheel_count": 39,
+  "data_outside_install": true,
+  "runtime_check": {
+    "exit_code": 0,
+    "output": "{\"ui\": true, \"owner_session\": true, \"local_only\": true, \"missing_model_explicit\": true, \"chromium_offline\": true, \"skill_index\": 212}"
+  },
+  "complete": true
+}

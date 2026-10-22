@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="0.163" timestamp="2026-10-20T11:53:22.479901+05:30" hostname="Avyansh-PC"><testcase classname="tests.test_phase4_hardening" name="test_gemma_thinking_only_stop_gets_one_bounded_same_model_retry[42-ok]" time="0.009"><failure message="AssertionError: assert ('model_error' == 'ok'&#10;  &#10;  - ok&#10;  + model_error)">tmp_path = WindowsPath('C:/Users/Dell/AppData/Local/Temp/pytest-of-Dell/pytest-45/test_gemma_thinking_only_stop_0')
+second_answer = '42', expected = 'ok'
+
+    @pytest.mark.parametrize('second_answer,expected', [('42', 'ok'), ('', 'model_error')])
+    def test_gemma_thinking_only_stop_gets_one_bounded_same_model_retry(tmp_path, second_answer, expected):
+        from sight_core.models import ModelStatus
+        requests = []
+        def respond(request):
+            requests.append(json.loads(request.content))
+            return httpx.Response(200, json={'message': {
+                'content': '' if len(requests) == 1 else second_answer,
+                'thinking': 'private synthetic reasoning' if len(requests) == 1 else ''},
+                'done': True, 'done_reason': 'stop', 'prompt_eval_count': 20, 'eval_count': 10})
+        provider = OllamaProvider(Config(tmp_path, model='uncensored'), transport=httpx.MockTransport(respond))
+        async def health(): return ModelStatus('ready', 'fixture', supports_thinking=True)
+        provider._metadata_health = health
+        result = asyncio.run(provider.generate('17 plus 25'))
+&gt;       assert result['status'] == expected and len(requests) == 2
+E       AssertionError: assert ('model_error' == 'ok'
+E         
+E         - ok
+E         + model_error)
+
+tests\test_phase4_hardening.py:194: AssertionError</failure></testcase><testcase classname="tests.test_phase4_hardening" name="test_gemma_thinking_only_stop_gets_one_bounded_same_model_retry[-model_error]" time="0.003"><failure message="assert ('model_error' == 'model_error'&#10;  &#10;    model_error and 1 == 2)&#10; +  where 1 = len([{'keep_alive': '5m', 'messages': [{'content': &quot;You are SIGHT, an AI assistant. Answer the user's question accurately ...': 'uncensored', 'options': {'num_batch': 128, 'num_ctx': 4096, 'num_predict': 1536, 'repeat_penalty': 1.1, ...}, ...}])">tmp_path = WindowsPath('C:/Users/Dell/AppData/Local/Temp/pytest-of-Dell/pytest-45/test_gemma_thinking_only_stop_1')
+second_answer = '', expected = 'model_error'
+
+    @pytest.mark.parametrize('second_answer,expected', [('42', 'ok'), ('', 'model_error')])
+    def test_gemma_thinking_only_stop_gets_one_bounded_same_model_retry(tmp_path, second_answer, expected):
+        from sight_core.models import ModelStatus
+        requests = []
+        def respond(request):
+            requests.append(json.loads(request.content))
+            return httpx.Response(200, json={'message': {
+                'content': '' if len(requests) == 1 else second_answer,
+                'thinking': 'private synthetic reasoning' if len(requests) == 1 else ''},
+                'done': True, 'done_reason': 'stop', 'prompt_eval_count': 20, 'eval_count': 10})
+        provider = OllamaProvider(Config(tmp_path, model='uncensored'), transport=httpx.MockTransport(respond))
+        async def health(): return ModelStatus('ready', 'fixture', supports_thinking=True)
+        provider._metadata_health = health
+        result = asyncio.run(provider.generate('17 plus 25'))
+&gt;       assert result['status'] == expected and len(requests) == 2
+E       assert ('model_error' == 'model_error'
+E         
+E           model_error and 1 == 2)
+E        +  where 1 = len([{'keep_alive': '5m', 'messages': [{'content': "You are SIGHT, an AI assistant. Answer the user's question accurately ...': 'uncensored', 'options': {'num_batch': 128, 'num_ctx': 4096, 'num_predict': 1536, 'repeat_penalty': 1.1, ...}, ...}])
+
+tests\test_phase4_hardening.py:194: AssertionError</failure></testcase></testsuite></testsuites>

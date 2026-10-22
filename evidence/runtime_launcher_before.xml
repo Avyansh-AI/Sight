@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="4" time="2.865" timestamp="2026-10-20T18:14:37.141627+05:30" hostname="Avyansh-PC"><testcase classname="tests.test_runtime_launcher" name="test_runtime_launcher_reports_readiness_not_process_creation[delayed]" time="0.768"><failure message="AssertionError: Started local-only Ollama with the existing model directory (PID 987654). Allow GPU discovery to finish before opening SIGHT.&#10;  C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-54\test_runtime_launcher_reports_0\exercise.ps1 : No readiness &#10;  verification&#10;  At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-54\test_runtime_launcher_reports_0\exercise.ps1:33 char:9&#10;  +         Write-Error $_&#10;  +         ~~~~~~~~~~~~~~&#10;      + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException&#10;      + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,exercise.ps1&#10;   &#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...riteErrorException\n    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,exercise.ps1\n \n').returncode">tmp_path = WindowsPath('C:/Users/Dell/AppData/Local/Temp/pytest-of-Dell/pytest-54/test_runtime_launcher_reports_0')
+scenario = 'delayed'
+
+    @pytest.mark.parametrize("scenario", ["delayed", "exited", "existing", "ready"])
+    def test_runtime_launcher_reports_readiness_not_process_creation(tmp_path, scenario):
+        if os.name != "nt":
+            pytest.skip("Windows PowerShell launcher")
+        launcher = str(ROOT / "Start-Local-Runtime.ps1").replace("'", "''")
+        wrapper = tmp_path / "exercise.ps1"
+        wrapper.write_text(
+            f"""
+    $ErrorActionPreference = 'Stop'
+    $script:attempts = 0
+    $script:spawned = 0
+    function Test-Path {{ return $true }}
+    function Resolve-Path {{ return [pscustomobject]@{{Path='D:\\Synthetic Models'}} }}
+    function Start-Sleep {{}}
+    function Get-NetTCPConnection {{
+        if ('{scenario}' -eq 'existing') {{ return [pscustomobject]@{{LocalPort=11434}} }}
+    }}
+    function Invoke-RestMethod {{
+        $script:attempts++
+        if ('{scenario}' -eq 'ready' -or ('{scenario}' -ne 'exited' -and $script:attempts -ge 3)) {{
+            return [pscustomobject]@{{version='synthetic'}}
+        }}
+        throw 'Synthetic runtime still discovering GPUs'
+    }}
+    function Start-Process {{
+        $script:spawned++
+        return [pscustomobject]@{{Id=987654;HasExited=('{scenario}' -eq 'exited');ExitCode=23}}
+    }}
+    try {{
+        &amp; '{launcher}'
+        if ('{scenario}' -eq 'exited') {{ throw 'Launcher claimed success after the child exited' }}
+        if ($script:attempts -lt 3 -and '{scenario}' -ne 'ready') {{ throw 'No readiness verification' }}
+        $expected = if ('{scenario}' -eq 'delayed') {{ 1 }} else {{ 0 }}
+        if ($script:spawned -ne $expected) {{ throw 'Unexpected runtime spawned' }}
+        Write-Output 'READINESS_CHECK_PASS'
+    }} catch {{
+        if ('{scenario}' -eq 'exited' -and $_.Exception.Message -like '*exited*23*') {{
+            Write-Output 'READINESS_CHECK_PASS'
+        }} else {{
+            Write-Error $_
+            exit 1
+        }}
+    }}
+    """, encoding="utf-8")
+        powershell = Path(os.environ["SystemRoot"]) / "System32/WindowsPowerShell/v1.0/powershell.exe"
+        result = subprocess.run([str(powershell), "-NoProfile", "-NonInteractive", "-File", str(wrapper)],
+                                capture_output=True, text=True, timeout=20, creationflags=0x08000000)
+&gt;       assert result.returncode == 0, result.stdout + result.stderr
+E       AssertionError: Started local-only Ollama with the existing model directory (PID 987654). Allow GPU discovery to finish before opening SIGHT.
+E         C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-54\test_runtime_launcher_reports_0\exercise.ps1 : No readiness 
+E         verification
+E         At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-54\test_runtime_launcher_reports_0\exercise.ps1:33 char:9
+E         +         Write-Error $_
+E         +         ~~~~~~~~~~~~~~
+E             + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+E             + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,exercise.ps1
+E          
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...riteErrorException\n    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,exercise.ps1\n \n').returncode
+
+tests\test_runtime_launcher.py:59: AssertionError</failure></testcase><testcase classname="tests.test_runtime_launcher" name="test_runtime_launcher_reports_readiness_not_process_creation[exited]" time="0.691"><failure message="AssertionError: Started local-only Ollama with the existing model directory (PID 987654). Allow GPU discovery to finish before opening SIGHT.&#10;  C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-54\test_runtime_launcher_reports_1\exercise.ps1 : Launcher &#10;  claimed success after the child exited&#10;  At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-54\test_runtime_launcher_reports_1\exercise.ps1:33 char:9&#10;  +         Write-Error $_&#10;  +         ~~~~~~~~~~~~~~&#10;      + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException&#10;      + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,exercise.ps1&#10;   &#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...riteErrorException\n    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,exercise.ps1\n \n').returncode">tmp_path = WindowsPath('C:/Users/Dell/AppData/Local/Temp/pytest-of-Dell/pytest-54/test_runtime_launcher_reports_1')
+scenario = 'exited'
+
+    @pytest.mark.parametrize("scenario", ["delayed", "exited", "existing", "ready"])
+    def test_runtime_launcher_reports_readiness_not_process_creation(tmp_path, scenario):
+        if os.name != "nt":
+            pytest.skip("Windows PowerShell launcher")
+        launcher = str(ROOT / "Start-Local-Runtime.ps1").replace("'", "''")
+        wrapper = tmp_path / "exercise.ps1"
+        wrapper.write_text(
+            f"""
+    $ErrorActionPreference = 'Stop'
+    $script:attempts = 0
+    $script:spawned = 0
+    function Test-Path {{ return $true }}
+    function Resolve-Path {{ return [pscustomobject]@{{Path='D:\\Synthetic Models'}} }}
+    function Start-Sleep {{}}
+    function Get-NetTCPConnection {{
+        if ('{scenario}' -eq 'existing') {{ return [pscustomobject]@{{LocalPort=11434}} }}
+    }}
+    function Invoke-RestMethod {{
+        $script:attempts++
+        if ('{scenario}' -eq 'ready' -or ('{scenario}' -ne 'exited' -and $script:attempts -ge 3)) {{
+            return [pscustomobject]@{{version='synthetic'}}
+        }}
+        throw 'Synthetic runtime still discovering GPUs'
+    }}
+    function Start-Process {{
+        $script:spawned++
+        return [pscustomobject]@{{Id=987654;HasExited=('{scenario}' -eq 'exited');ExitCode=23}}
+    }}
+    try {{
+        &amp; '{launcher}'
+        if ('{scenario}' -eq 'exited') {{ throw 'Launcher claimed success after the child exited' }}
+        if ($script:attempts -lt 3 -and '{scenario}' -ne 'ready') {{ throw 'No readiness verification' }}
+        $expected = if ('{scenario}' -eq 'delayed') {{ 1 }} else {{ 0 }}
+        if ($script:spawned -ne $expected) {{ throw 'Unexpected runtime spawned' }}
+        Write-Output 'READINESS_CHECK_PASS'
+    }} catch {{
+        if ('{scenario}' -eq 'exited' -and $_.Exception.Message -like '*exited*23*') {{
+            Write-Output 'READINESS_CHECK_PASS'
+        }} else {{
+            Write-Error $_
+            exit 1
+        }}
+    }}
+    """, encoding="utf-8")
+        powershell = Path(os.environ["SystemRoot"]) / "System32/WindowsPowerShell/v1.0/powershell.exe"
+        result = subprocess.run([str(powershell), "-NoProfile", "-NonInteractive", "-File", str(wrapper)],
+                                capture_output=True, text=True, timeout=20, creationflags=0x08000000)
+&gt;       assert result.returncode == 0, result.stdout + result.stderr
+E       AssertionError: Started local-only Ollama with the existing model directory (PID 987654). Allow GPU discovery to finish before opening SIGHT.
+E         C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-54\test_runtime_launcher_reports_1\exercise.ps1 : Launcher 
+E         claimed success after the child exited
+E         At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-54\test_runtime_launcher_reports_1\exercise.ps1:33 char:9
+E         +         Write-Error $_
+E         +         ~~~~~~~~~~~~~~
+E             + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+E             + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,exercise.ps1
+E          
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...riteErrorException\n    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,exercise.ps1\n \n').returncode
+
+tests\test_runtime_launcher.py:59: AssertionError</failure></testcase><testcase classname="tests.test_runtime_launcher" name="test_runtime_launcher_reports_readiness_not_process_creation[existing]" time="0.638"><failure message="AssertionError: Started local-only Ollama with the existing model directory (PID 987654). Allow GPU discovery to finish before opening SIGHT.&#10;  C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-54\test_runtime_launcher_reports_2\exercise.ps1 : No readiness &#10;  verification&#10;  At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-54\test_runtime_launcher_reports_2\exercise.ps1:33 char:9&#10;  +         Write-Error $_&#10;  +         ~~~~~~~~~~~~~~&#10;      + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException&#10;      + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,exercise.ps1&#10;   &#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...riteErrorException\n    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,exercise.ps1\n \n').returncode">tmp_path = WindowsPath('C:/Users/Dell/AppData/Local/Temp/pytest-of-Dell/pytest-54/test_runtime_launcher_reports_2')
+scenario = 'existing'
+
+    @pytest.mark.parametrize("scenario", ["delayed", "exited", "existing", "ready"])
+    def test_runtime_launcher_reports_readiness_not_process_creation(tmp_path, scenario):
+        if os.name != "nt":
+            pytest.skip("Windows PowerShell launcher")
+        launcher = str(ROOT / "Start-Local-Runtime.ps1").replace("'", "''")
+        wrapper = tmp_path / "exercise.ps1"
+        wrapper.write_text(
+            f"""
+    $ErrorActionPreference = 'Stop'
+    $script:attempts = 0
+    $script:spawned = 0
+    function Test-Path {{ return $true }}
+    function Resolve-Path {{ return [pscustomobject]@{{Path='D:\\Synthetic Models'}} }}
+    function Start-Sleep {{}}
+    function Get-NetTCPConnection {{
+        if ('{scenario}' -eq 'existing') {{ return [pscustomobject]@{{LocalPort=11434}} }}
+    }}
+    function Invoke-RestMethod {{
+        $script:attempts++
+        if ('{scenario}' -eq 'ready' -or ('{scenario}' -ne 'exited' -and $script:attempts -ge 3)) {{
+            return [pscustomobject]@{{version='synthetic'}}
+        }}
+        throw 'Synthetic runtime still discovering GPUs'
+    }}
+    function Start-Process {{
+        $script:spawned++
+        return [pscustomobject]@{{Id=987654;HasExited=('{scenario}' -eq 'exited');ExitCode=23}}
+    }}
+    try {{
+        &amp; '{launcher}'
+        if ('{scenario}' -eq 'exited') {{ throw 'Launcher claimed success after the child exited' }}
+        if ($script:attempts -lt 3 -and '{scenario}' -ne 'ready') {{ throw 'No readiness verification' }}
+        $expected = if ('{scenario}' -eq 'delayed') {{ 1 }} else {{ 0 }}
+        if ($script:spawned -ne $expected) {{ throw 'Unexpected runtime spawned' }}
+        Write-Output 'READINESS_CHECK_PASS'
+    }} catch {{
+        if ('{scenario}' -eq 'exited' -and $_.Exception.Message -like '*exited*23*') {{
+            Write-Output 'READINESS_CHECK_PASS'
+        }} else {{
+            Write-Error $_
+            exit 1
+        }}
+    }}
+    """, encoding="utf-8")
+        powershell = Path(os.environ["SystemRoot"]) / "System32/WindowsPowerShell/v1.0/powershell.exe"
+        result = subprocess.run([str(powershell), "-NoProfile", "-NonInteractive", "-File", str(wrapper)],
+                                capture_output=True, text=True, timeout=20, creationflags=0x08000000)
+&gt;       assert result.returncode == 0, result.stdout + result.stderr
+E       AssertionError: Started local-only Ollama with the existing model directory (PID 987654). Allow GPU discovery to finish before opening SIGHT.
+E         C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-54\test_runtime_launcher_reports_2\exercise.ps1 : No readiness 
+E         verification
+E         At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-54\test_runtime_launcher_reports_2\exercise.ps1:33 char:9
+E         +         Write-Error $_
+E         +         ~~~~~~~~~~~~~~
+E             + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+E             + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,exercise.ps1
+E          
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...riteErrorException\n    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,exercise.ps1\n \n').returncode
+
+tests\test_runtime_launcher.py:59: AssertionError</failure></testcase><testcase classname="tests.test_runtime_launcher" name="test_runtime_launcher_reports_readiness_not_process_creation[ready]" time="0.521" /></testsuite></testsuites>

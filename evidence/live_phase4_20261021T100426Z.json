@@ -1,0 +1,306 @@
+{
+  "timestamp_utc": "20261021T100426Z",
+  "model": "sight-gemma4-e4b:uncensored",
+  "thinking": false,
+  "cloud_requests": 0,
+  "checks": [
+    {
+      "name": "Phase 4 launcher local-only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "installed Gemma ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "files.search",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0257
+      }
+    },
+    {
+      "name": "documents.docx",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0267
+      }
+    },
+    {
+      "name": "documents.docx artifact hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "documents.markdown",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0241
+      }
+    },
+    {
+      "name": "documents.markdown artifact hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "coding.inspect",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0253
+      }
+    },
+    {
+      "name": "coding.diff",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0237
+      }
+    },
+    {
+      "name": "coding.site",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0238
+      }
+    },
+    {
+      "name": "coding.site artifact hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calendar.export",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0245
+      }
+    },
+    {
+      "name": "calendar.export artifact hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cad.box",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0239
+      }
+    },
+    {
+      "name": "cad.box artifact hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "circuit.ohm",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0239
+      }
+    },
+    {
+      "name": "geo.distance",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0226
+      }
+    },
+    {
+      "name": "vision.landmarks",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0231
+      }
+    },
+    {
+      "name": "windows.info",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0233
+      }
+    },
+    {
+      "name": "speech.render",
+      "passed": true,
+      "detail": {
+        "seconds": 0.477
+      }
+    },
+    {
+      "name": "speech.render artifact hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "browser.inspect",
+      "passed": true,
+      "detail": {
+        "seconds": 0.872
+      }
+    },
+    {
+      "name": "browser.inspect artifact hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "isolated browser observed text",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reminders.add",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0429
+      }
+    },
+    {
+      "name": "monitor.configure",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0428
+      }
+    },
+    {
+      "name": "briefing.local",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0274
+      }
+    },
+    {
+      "name": "mcp.local",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0405
+      }
+    },
+    {
+      "name": "contracts.simulate",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0333
+      }
+    },
+    {
+      "name": "home simulated only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "contracts.simulate",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0359
+      }
+    },
+    {
+      "name": "android simulated only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "contracts.simulate",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0353
+      }
+    },
+    {
+      "name": "printer simulated only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "contracts.simulate",
+      "passed": true,
+      "detail": {
+        "seconds": 0.042
+      }
+    },
+    {
+      "name": "camera simulated only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "contracts.simulate",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0429
+      }
+    },
+    {
+      "name": "call simulated only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "contracts.simulate",
+      "passed": true,
+      "detail": {
+        "seconds": 0.046
+      }
+    },
+    {
+      "name": "mcp simulated only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "live WebSocket Gemma",
+      "passed": true,
+      "detail": {
+        "seconds": 16.9288,
+        "answer": "4",
+        "offline": true
+      }
+    },
+    {
+      "name": "live reminder delivery",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unchanged original home response",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restart without duplicate reminder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "immutable artifact survives restart",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reminders.cancel",
+      "passed": true,
+      "detail": {
+        "seconds": 0.0374
+      }
+    },
+    {
+      "name": "skill index survives restart",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local-only policy survives restart",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "complete": true,
+  "launcher": "Phase-4/Start-SIGHT.ps1",
+  "test_data": "C:\\Users\\Dell\\Documents\\Ai projects\\Sight\\Phase-4\\test-data\\live-phase4-20261021T100426Z",
+  "passed": true
+}

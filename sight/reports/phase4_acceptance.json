@@ -1,0 +1,309 @@
+{
+  "updated_utc": "2026-10-22T10:07:08.589814+00:00",
+  "phase": 4,
+  "verdict": "PARTIAL",
+  "regression_run": "20261022T100402Z-49c429be",
+  "checks": [
+    {
+      "id": "test_ui_visual_parity",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_ui_visual_parity"
+      ],
+      "limit": "Eight frozen animation states, two viewports; not every animation frame."
+    },
+    {
+      "id": "test_html_route_compatibility",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_html_route_compatibility"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "test_local_first_boot",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_local_first_boot"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "test_model_router_failover",
+      "status": "PASS_FIXTURES",
+      "evidence": [
+        "test_explicit_fallback_preserves_failures_and_stops_on_success",
+        "test_no_plaintext_vault_fallback",
+        "test_readiness_tracks_verified_cloud_fallback",
+        "test_stream_requires_completed_and_no_paid_fallback[None-provider_error]",
+        "test_stream_requires_completed_and_no_paid_fallback[response.completed-ok]",
+        "test_stream_requires_completed_and_no_paid_fallback[response.failed-provider_error]",
+        "test_stream_requires_completed_and_no_paid_fallback[response.incomplete-provider_error]"
+      ],
+      "limit": "No new cloud inference. Optional live ChatGPT sign-in is unverified."
+    },
+    {
+      "id": "test_kanban_restart_exactly_once",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_task_dag_budgets_idempotency_and_receipts",
+        "test_file_crash_recovery_real_process"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "test_memory_search_source_links",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_memory_provenance_project_privacy_and_forgetting"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "test_memory_delete_propagation",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_memory_correction_changes_task_then_forget_removes_effect"
+      ],
+      "limit": "Active retrieval and derived summaries only; independent historical task records/backups are not erased."
+    },
+    {
+      "id": "test_memory_atomic_compaction",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_compaction_graph_failure_rolls_back_summary_fts_and_event",
+        "test_process_crash_during_compaction_leaves_no_orphan",
+        "test_compaction_is_not_visible_before_source_links_commit",
+        "test_concurrent_source_privacy_correction_removes_committed_summary"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "test_memory_filtered_search_and_lineage",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_hidden_matches_do_not_consume_search_limit",
+        "test_deep_summary_lineage_is_readable_and_forgettable",
+        "test_cyclic_summary_lineage_is_unavailable_without_recursion_error",
+        "test_legacy_orphan_summary_is_preserved_but_not_retrieved"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "test_background_review_audit",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_skill_curator_archive_restore_and_owner_delete"
+      ],
+      "limit": "Explicit curator review; not a general autonomous learning auditor."
+    },
+    {
+      "id": "test_skill_curator_archive_restore",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_skill_curator_archive_restore_and_owner_delete"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "test_forge_missing_skill",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_forge_promote_reuse_failed_candidate_rollback_forget"
+      ],
+      "limit": "Declarative text skills only; fresh live generation quality is recorded separately."
+    },
+    {
+      "id": "test_forge_rollback_unsafe_update",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_forge_promote_reuse_failed_candidate_rollback_forget",
+        "test_sandbox_rejects_authority_escalation"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "test_growth_before_after",
+      "status": "HISTORICAL_OTHER_MODEL",
+      "evidence": [
+        "reports/growth_benchmark.json"
+      ],
+      "limit": "Three deterministic text tasks; authored fallback is distinguished from model generation."
+    },
+    {
+      "id": "live_forge_generation",
+      "status": "HISTORICAL_OTHER_MODEL",
+      "evidence": [
+        "reports/growth_benchmark.json"
+      ],
+      "limit": "One model-generated declarative text skill; not general code generation."
+    },
+    {
+      "id": "test_tool_search_resolution",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_progressive_discovery_and_skills"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "test_remote_pair_revoke",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_device_trust_scopes_expiry_replay_and_revoke"
+      ],
+      "limit": "Contract simulation only; no remote device transport."
+    },
+    {
+      "id": "test_printer_adapter_negotiation",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_printer_profile_build_volume_and_home_revision_guard"
+      ],
+      "limit": "Analytical contract only; no slicing or printing."
+    },
+    {
+      "id": "test_sentinel_defence_only",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_quiet_hours_defer_and_health_change_dedup"
+      ],
+      "limit": "Local disk-health observations only; no broader defensive sentinel."
+    },
+    {
+      "id": "test_voice_consent_toggle",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_voice_consent_toggle"
+      ],
+      "limit": "Consent-state and unavailable-backend behavior; microphone/STT remains absent."
+    },
+    {
+      "id": "test_wake_enrollment_calibration",
+      "status": "BLOCKED",
+      "evidence": [],
+      "limit": "No enrollment; voice backend and owner-specific enrollment gate are absent."
+    },
+    {
+      "id": "test_memory_backup_restore",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_memory_backup_restore_full_data_and_safe_start"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "test_untrusted_content_is_data",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_zip_readme_and_python_top_level_never_execute_during_inventory",
+        "test_model_echo_of_untrusted_instructions_grants_no_tool_authority",
+        "test_terminal_arguments_cannot_enter_allowlisted_desktop_action"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "test_runtime_launcher_readiness",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_runtime_launcher_reports_readiness_not_process_creation"
+      ],
+      "limit": "Delayed readiness, early exit and existing-listener decisions use PowerShell fixtures; direct Ollama execution is separate live evidence."
+    },
+    {
+      "id": "test_runtime_portable_paths",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_runtime_portable_paths_and_parent_environment"
+      ],
+      "limit": "Nine PowerShell fixture scenarios; live existing-runtime and direct CLI checked separately. Not a fresh-account installation."
+    },
+    {
+      "id": "uncensored_weight_integrity",
+      "status": "PASS",
+      "evidence": [
+        "reports/gemma_weight_integrity.json"
+      ],
+      "limit": "Full model/projector hashes match the recorded publisher revision; no quality certification."
+    },
+    {
+      "id": "official_model_sampling_and_launcher",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_official_model_does_not_inherit_derivative_sampling",
+        "test_direct_helper_selects_normal_gemma"
+      ],
+      "limit": "Provider HTTP and PowerShell fixtures only; official live inference is pending."
+    },
+    {
+      "id": "official_model_file_integrity",
+      "status": "PASS",
+      "evidence": [
+        "reports/official_model_switch.json"
+      ],
+      "limit": "Complete local blob hashes; no inference-quality certification."
+    },
+    {
+      "id": "test_sandbox_exfiltration_denial",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_sandbox_rejects_authority_escalation",
+        "test_forge_manifest_rejects_dependencies_network",
+        "test_browser_real_chromium_blocks_network_scripts_and_recovers"
+      ],
+      "limit": "Bounded interpreter and isolated offline browser; no arbitrary-code OS sandbox claim."
+    },
+    {
+      "id": "test_browser_native_sandbox_enabled",
+      "status": "PASS_BOUNDED",
+      "evidence": [
+        "test_untrusted_html_browser_does_not_disable_native_sandbox"
+      ],
+      "limit": "Real Chromium command-line check and HTML rendering; not a sandbox-escape assessment."
+    },
+    {
+      "id": "one_hour_soak",
+      "status": "REVALIDATION_REQUIRED",
+      "evidence": [
+        "reports/soak_latest.json",
+        "reports/soak_current_scope.json"
+      ],
+      "limit": "A historical completed hour qualifies the current runtime only when all covered source hashes and dependency versions still match. Reasoning is a separate gate."
+    },
+    {
+      "id": "local_model_reasoning_quality",
+      "status": "UNVERIFIED",
+      "evidence": [
+        "docs/OFFICIAL_GEMMA.md"
+      ],
+      "limit": "The official model is selected but could not be tested live because Ollama is absent. The prior uncensored quality failures remain historical."
+    },
+    {
+      "id": "fresh_windows_account_install",
+      "status": "UNVERIFIED",
+      "evidence": [
+        "reports/offline_install_latest.json"
+      ],
+      "limit": "Fresh directory/venv on the current account, preinstalled Python and provisioned browser cache."
+    },
+    {
+      "id": "complete_semantic_source_coverage",
+      "status": "INCOMPLETE",
+      "evidence": [
+        "reports/phase4_reconciliation.json"
+      ],
+      "limit": "All files reconciled; full cross-language unique-feature review is not complete."
+    },
+    {
+      "id": "external_binary_advisory_coverage",
+      "status": "INCOMPLETE",
+      "evidence": [
+        "reports/runtime_inventory.json"
+      ],
+      "limit": "PyPI OSV scan does not cover every OS/browser/CUDA/runtime binary."
+    }
+  ],
+  "final_release_tag_created": false,
+  "owner_enrollment_started": false,
+  "cloud_inference_requests_in_phase4": 0
+}

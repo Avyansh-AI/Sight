@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="8" skipped="0" tests="9" time="5.652" timestamp="2026-10-21T21:13:09.814034+05:30" hostname="Avyansh-PC"><testcase classname="tests.test_runtime_portability" name="test_runtime_portable_paths_and_parent_environment[ready_without_install]" time="0.900"><failure message="AssertionError: Install Ollama or update the runtime path in this helper.&#10;  At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-61\test_runtime_portable_paths_an0\portable.ps1:81 char:25&#10;  +     if ($sightCaught) { throw $sightCaught }&#10;  +                         ~~~~~~~~~~~~~~~~~~&#10;      + CategoryInfo          : OperationStopped: (Install Ollama ...in this helper.:String) [], RuntimeException&#10;      + FullyQualifiedErrorId : Install Ollama or update the runtime path in this helper.&#10;   &#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...g) [], RuntimeException\n    + FullyQualifiedErrorId : Install Ollama or update the runtime path in this helper.\n \n').returncode">tmp_path = WindowsPath('C:/Users/Dell/AppData/Local/Temp/pytest-of-Dell/pytest-61/test_runtime_portable_paths_an0')
+scenario = 'ready_without_install'
+
+    @pytest.mark.parametrize('scenario', SCENARIOS)
+    def test_runtime_portable_paths_and_parent_environment(tmp_path, scenario):
+        if os.name != 'nt':
+            pytest.skip('Windows runtime launcher')
+        launcher = str(Path(__file__).resolve().parents[2] / 'Start-Local-Runtime.ps1').replace("'", "''")
+        wrapper = tmp_path / 'portable.ps1'
+        wrapper.write_text(r'''
+    $ErrorActionPreference = 'Stop'
+    $global:sightScenario = 'SCENARIO'
+    $global:sightCalls = 0
+    $global:sightSpawned = 0
+    $global:sightSelectedStore = $null
+    $global:sightSelectedExe = $null
+    $global:sightPerUserExe = Join-Path $env:LOCALAPPDATA 'Programs\Ollama\ollama.exe'
+    $global:sightPathExe = Join-Path $env:TEMP 'Synthetic App\ollama.exe'
+    $global:sightEnvironmentStore = Join-Path $env:TEMP 'Synthetic Env Models'
+    $global:sightExplicitStore = Join-Path $env:TEMP 'Synthetic Explicit Models'
+    $global:sightDefaultStore = Join-Path $env:USERPROFILE '.ollama\models'
+    $global:sightExpectedStore = switch ($global:sightScenario) {
+        'environment_store' { $global:sightEnvironmentStore }
+        'explicit_store' { $global:sightExplicitStore }
+        'legacy_store' { 'D:\Ollama Models' }
+        default { $global:sightDefaultStore }
+    }
+    $sightNames = @('OLLAMA_MODELS','OLLAMA_HOST','OLLAMA_NO_CLOUD','CUDA_MODULE_LOADING',
+                    'OLLAMA_NUM_PARALLEL','OLLAMA_MAX_LOADED_MODELS','OLLAMA_CONTEXT_LENGTH')
+    foreach ($sightName in $sightNames) { [Environment]::SetEnvironmentVariable($sightName, $null, 'Process') }
+    $env:OLLAMA_HOST = '127.0.0.1:9999'
+    $env:OLLAMA_NUM_PARALLEL = '3'
+    if ($global:sightScenario -in @('environment_store','explicit_store','missing_explicit_store')) {
+        $env:OLLAMA_MODELS = $global:sightEnvironmentStore
+    }
+    $sightBefore = @{}
+    foreach ($sightName in $sightNames) { $sightBefore[$sightName] = [Environment]::GetEnvironmentVariable($sightName,'Process') }
+    function Test-Path {
+        param([string]$LiteralPath, [string]$PathType)
+        if ($global:sightScenario -in @('ready_without_install','initializing_without_install')) { return $false }
+        if ($LiteralPath -eq $global:sightPerUserExe) { return ($global:sightScenario -ne 'path_executable') }
+        if ($LiteralPath -eq $global:sightPathExe) { return $true }
+        if ($global:sightScenario -eq 'missing_explicit_store') { return ($LiteralPath -eq $global:sightEnvironmentStore) }
+        return ($LiteralPath -eq $global:sightExpectedStore)
+    }
+    function Resolve-Path { param([string]$LiteralPath) return [pscustomobject]@{Path=$LiteralPath} }
+    function Get-Command {
+        param($Name,$CommandType,$ErrorAction)
+        if ($global:sightScenario -eq 'path_executable') { return [pscustomobject]@{Source=$global:sightPathExe} }
+    }
+    function Get-NetTCPConnection {
+        if ($global:sightScenario -eq 'initializing_without_install') { return [pscustomobject]@{LocalPort=11434} }
+    }
+    function Invoke-RestMethod {
+        $global:sightCalls++
+        if ($global:sightScenario -eq 'ready_without_install' -or $global:sightCalls -ge 3) {
+            return [pscustomobject]@{version='synthetic'}
+        }
+        throw 'Synthetic startup in progress'
+    }
+    function Start-Sleep {}
+    function Start-Process {
+        param($FilePath,$ArgumentList,$WindowStyle,[switch]$PassThru)
+        $global:sightSpawned++
+        if ($WindowStyle -ne 'Hidden' -or $ArgumentList -ne 'serve') { throw 'Unsafe launch contract' }
+        if ($env:OLLAMA_HOST -ne '127.0.0.1:11434' -or $env:OLLAMA_NO_CLOUD -ne 'true' -or
+            $env:CUDA_MODULE_LOADING -ne 'EAGER' -or $env:OLLAMA_NUM_PARALLEL -ne '1' -or
+            $env:OLLAMA_MAX_LOADED_MODELS -ne '1' -or $env:OLLAMA_CONTEXT_LENGTH -ne '4096') { throw 'Incorrect child configuration' }
+        $global:sightSelectedStore = $env:OLLAMA_MODELS
+        $global:sightSelectedExe = $FilePath
+        if ($global:sightScenario -eq 'spawn_failure') { throw 'Synthetic process creation failure' }
+        return [pscustomobject]@{HasExited=$false;ExitCode=$null}
+    }
+    $sightCaught = $null
+    try {
+        if ($global:sightScenario -in @('explicit_store','missing_explicit_store')) {
+            &amp; 'LAUNCHER' -ModelsDirectory $global:sightExplicitStore
+        } else { &amp; 'LAUNCHER' }
+    } catch { $sightCaught = $_.Exception.Message }
+    foreach ($sightName in $sightNames) {
+        if ([Environment]::GetEnvironmentVariable($sightName,'Process') -cne $sightBefore[$sightName]) {
+            throw "Launcher changed caller environment: $sightName"
+        }
+    }
+    if ($global:sightScenario -eq 'missing_explicit_store') {
+        if ($global:sightSpawned -ne 0 -or $sightCaught -notlike '*model directory*') { throw 'Explicit invalid directory was silently replaced' }
+    } elseif ($global:sightScenario -eq 'spawn_failure') {
+        if ($sightCaught -ne 'Synthetic process creation failure') { throw 'Expected spawn failure was not preserved' }
+    } else {
+        if ($sightCaught) { throw $sightCaught }
+        $sightExpectedSpawn = if ($global:sightScenario -in @('ready_without_install','initializing_without_install')) { 0 } else { 1 }
+        if ($global:sightSpawned -ne $sightExpectedSpawn) { throw 'Unexpected spawn count' }
+        if ($sightExpectedSpawn) {
+            if ($global:sightSelectedStore -ne $global:sightExpectedStore) { throw 'Wrong existing model directory selected' }
+            $sightExpectedExe = if ($global:sightScenario -eq 'path_executable') { $global:sightPathExe } else { $global:sightPerUserExe }
+            if ($global:sightSelectedExe -ne $sightExpectedExe) { throw 'Wrong executable selected' }
+        }
+    }
+    Write-Output 'PORTABILITY_CHECK_PASS'
+    '''.replace('SCENARIO', scenario).replace('LAUNCHER', launcher), encoding='utf-8')
+        executable = Path(os.environ['SystemRoot']) / 'System32/WindowsPowerShell/v1.0/powershell.exe'
+        result = subprocess.run([str(executable), '-NoProfile', '-NonInteractive', '-File', str(wrapper)],
+                                capture_output=True, text=True, timeout=15, creationflags=0x08000000)
+&gt;       assert result.returncode == 0, result.stdout + result.stderr
+E       AssertionError: Install Ollama or update the runtime path in this helper.
+E         At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-61\test_runtime_portable_paths_an0\portable.ps1:81 char:25
+E         +     if ($sightCaught) { throw $sightCaught }
+E         +                         ~~~~~~~~~~~~~~~~~~
+E             + CategoryInfo          : OperationStopped: (Install Ollama ...in this helper.:String) [], RuntimeException
+E             + FullyQualifiedErrorId : Install Ollama or update the runtime path in this helper.
+E          
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...g) [], RuntimeException\n    + FullyQualifiedErrorId : Install Ollama or update the runtime path in this helper.\n \n').returncode
+
+tests\test_runtime_portability.py:114: AssertionError</failure></testcase><testcase classname="tests.test_runtime_portability" name="test_runtime_portable_paths_and_parent_environment[initializing_without_install]" time="0.489"><failure message="AssertionError: Install Ollama or update the runtime path in this helper.&#10;  At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-61\test_runtime_portable_paths_an1\portable.ps1:81 char:25&#10;  +     if ($sightCaught) { throw $sightCaught }&#10;  +                         ~~~~~~~~~~~~~~~~~~&#10;      + CategoryInfo          : OperationStopped: (Install Ollama ...in this helper.:String) [], RuntimeException&#10;      + FullyQualifiedErrorId : Install Ollama or update the runtime path in this helper.&#10;   &#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...g) [], RuntimeException\n    + FullyQualifiedErrorId : Install Ollama or update the runtime path in this helper.\n \n').returncode">tmp_path = WindowsPath('C:/Users/Dell/AppData/Local/Temp/pytest-of-Dell/pytest-61/test_runtime_portable_paths_an1')
+scenario = 'initializing_without_install'
+
+    @pytest.mark.parametrize('scenario', SCENARIOS)
+    def test_runtime_portable_paths_and_parent_environment(tmp_path, scenario):
+        if os.name != 'nt':
+            pytest.skip('Windows runtime launcher')
+        launcher = str(Path(__file__).resolve().parents[2] / 'Start-Local-Runtime.ps1').replace("'", "''")
+        wrapper = tmp_path / 'portable.ps1'
+        wrapper.write_text(r'''
+    $ErrorActionPreference = 'Stop'
+    $global:sightScenario = 'SCENARIO'
+    $global:sightCalls = 0
+    $global:sightSpawned = 0
+    $global:sightSelectedStore = $null
+    $global:sightSelectedExe = $null
+    $global:sightPerUserExe = Join-Path $env:LOCALAPPDATA 'Programs\Ollama\ollama.exe'
+    $global:sightPathExe = Join-Path $env:TEMP 'Synthetic App\ollama.exe'
+    $global:sightEnvironmentStore = Join-Path $env:TEMP 'Synthetic Env Models'
+    $global:sightExplicitStore = Join-Path $env:TEMP 'Synthetic Explicit Models'
+    $global:sightDefaultStore = Join-Path $env:USERPROFILE '.ollama\models'
+    $global:sightExpectedStore = switch ($global:sightScenario) {
+        'environment_store' { $global:sightEnvironmentStore }
+        'explicit_store' { $global:sightExplicitStore }
+        'legacy_store' { 'D:\Ollama Models' }
+        default { $global:sightDefaultStore }
+    }
+    $sightNames = @('OLLAMA_MODELS','OLLAMA_HOST','OLLAMA_NO_CLOUD','CUDA_MODULE_LOADING',
+                    'OLLAMA_NUM_PARALLEL','OLLAMA_MAX_LOADED_MODELS','OLLAMA_CONTEXT_LENGTH')
+    foreach ($sightName in $sightNames) { [Environment]::SetEnvironmentVariable($sightName, $null, 'Process') }
+    $env:OLLAMA_HOST = '127.0.0.1:9999'
+    $env:OLLAMA_NUM_PARALLEL = '3'
+    if ($global:sightScenario -in @('environment_store','explicit_store','missing_explicit_store')) {
+        $env:OLLAMA_MODELS = $global:sightEnvironmentStore
+    }
+    $sightBefore = @{}
+    foreach ($sightName in $sightNames) { $sightBefore[$sightName] = [Environment]::GetEnvironmentVariable($sightName,'Process') }
+    function Test-Path {
+        param([string]$LiteralPath, [string]$PathType)
+        if ($global:sightScenario -in @('ready_without_install','initializing_without_install')) { return $false }
+        if ($LiteralPath -eq $global:sightPerUserExe) { return ($global:sightScenario -ne 'path_executable') }
+        if ($LiteralPath -eq $global:sightPathExe) { return $true }
+        if ($global:sightScenario -eq 'missing_explicit_store') { return ($LiteralPath -eq $global:sightEnvironmentStore) }
+        return ($LiteralPath -eq $global:sightExpectedStore)
+    }
+    function Resolve-Path { param([string]$LiteralPath) return [pscustomobject]@{Path=$LiteralPath} }
+    function Get-Command {
+        param($Name,$CommandType,$ErrorAction)
+        if ($global:sightScenario -eq 'path_executable') { return [pscustomobject]@{Source=$global:sightPathExe} }
+    }
+    function Get-NetTCPConnection {
+        if ($global:sightScenario -eq 'initializing_without_install') { return [pscustomobject]@{LocalPort=11434} }
+    }
+    function Invoke-RestMethod {
+        $global:sightCalls++
+        if ($global:sightScenario -eq 'ready_without_install' -or $global:sightCalls -ge 3) {
+            return [pscustomobject]@{version='synthetic'}
+        }
+        throw 'Synthetic startup in progress'
+    }
+    function Start-Sleep {}
+    function Start-Process {
+        param($FilePath,$ArgumentList,$WindowStyle,[switch]$PassThru)
+        $global:sightSpawned++
+        if ($WindowStyle -ne 'Hidden' -or $ArgumentList -ne 'serve') { throw 'Unsafe launch contract' }
+        if ($env:OLLAMA_HOST -ne '127.0.0.1:11434' -or $env:OLLAMA_NO_CLOUD -ne 'true' -or
+            $env:CUDA_MODULE_LOADING -ne 'EAGER' -or $env:OLLAMA_NUM_PARALLEL -ne '1' -or
+            $env:OLLAMA_MAX_LOADED_MODELS -ne '1' -or $env:OLLAMA_CONTEXT_LENGTH -ne '4096') { throw 'Incorrect child configuration' }
+        $global:sightSelectedStore = $env:OLLAMA_MODELS
+        $global:sightSelectedExe = $FilePath
+        if ($global:sightScenario -eq 'spawn_failure') { throw 'Synthetic process creation failure' }
+        return [pscustomobject]@{HasExited=$false;ExitCode=$null}
+    }
+    $sightCaught = $null
+    try {
+        if ($global:sightScenario -in @('explicit_store','missing_explicit_store')) {
+            &amp; 'LAUNCHER' -ModelsDirectory $global:sightExplicitStore
+        } else { &amp; 'LAUNCHER' }
+    } catch { $sightCaught = $_.Exception.Message }
+    foreach ($sightName in $sightNames) {
+        if ([Environment]::GetEnvironmentVariable($sightName,'Process') -cne $sightBefore[$sightName]) {
+            throw "Launcher changed caller environment: $sightName"
+        }
+    }
+    if ($global:sightScenario -eq 'missing_explicit_store') {
+        if ($global:sightSpawned -ne 0 -or $sightCaught -notlike '*model directory*') { throw 'Explicit invalid directory was silently replaced' }
+    } elseif ($global:sightScenario -eq 'spawn_failure') {
+        if ($sightCaught -ne 'Synthetic process creation failure') { throw 'Expected spawn failure was not preserved' }
+    } else {
+        if ($sightCaught) { throw $sightCaught }
+        $sightExpectedSpawn = if ($global:sightScenario -in @('ready_without_install','initializing_without_install')) { 0 } else { 1 }
+        if ($global:sightSpawned -ne $sightExpectedSpawn) { throw 'Unexpected spawn count' }
+        if ($sightExpectedSpawn) {
+            if ($global:sightSelectedStore -ne $global:sightExpectedStore) { throw 'Wrong existing model directory selected' }
+            $sightExpectedExe = if ($global:sightScenario -eq 'path_executable') { $global:sightPathExe } else { $global:sightPerUserExe }
+            if ($global:sightSelectedExe -ne $sightExpectedExe) { throw 'Wrong executable selected' }
+        }
+    }
+    Write-Output 'PORTABILITY_CHECK_PASS'
+    '''.replace('SCENARIO', scenario).replace('LAUNCHER', launcher), encoding='utf-8')
+        executable = Path(os.environ['SystemRoot']) / 'System32/WindowsPowerShell/v1.0/powershell.exe'
+        result = subprocess.run([str(executable), '-NoProfile', '-NonInteractive', '-File', str(wrapper)],
+                                capture_output=True, text=True, timeout=15, creationflags=0x08000000)
+&gt;       assert result.returncode == 0, result.stdout + result.stderr
+E       AssertionError: Install Ollama or update the runtime path in this helper.
+E         At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-61\test_runtime_portable_paths_an1\portable.ps1:81 char:25
+E         +     if ($sightCaught) { throw $sightCaught }
+E         +                         ~~~~~~~~~~~~~~~~~~
+E             + CategoryInfo          : OperationStopped: (Install Ollama ...in this helper.:String) [], RuntimeException
+E             + FullyQualifiedErrorId : Install Ollama or update the runtime path in this helper.
+E          
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...g) [], RuntimeException\n    + FullyQualifiedErrorId : Install Ollama or update the runtime path in this helper.\n \n').returncode
+
+tests\test_runtime_portability.py:114: AssertionError</failure></testcase><testcase classname="tests.test_runtime_portability" name="test_runtime_portable_paths_and_parent_environment[environment_store]" time="0.558"><failure message="AssertionError: Select the existing Ollama model directory. This helper does not download weights.&#10;  At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-61\test_runtime_portable_paths_an2\portable.ps1:81 char:25&#10;  +     if ($sightCaught) { throw $sightCaught }&#10;  +                         ~~~~~~~~~~~~~~~~~~&#10;      + CategoryInfo          : OperationStopped: (Select the exis...wnload weights.:String) [], RuntimeException&#10;      + FullyQualifiedErrorId : Select the existing Ollama model directory. This helper does not download weights.&#10;   &#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...    + FullyQualifiedErrorId : Select the existing Ollama model directory. This helper does not download weights.\n \n').returncode">tmp_path = WindowsPath('C:/Users/Dell/AppData/Local/Temp/pytest-of-Dell/pytest-61/test_runtime_portable_paths_an2')
+scenario = 'environment_store'
+
+    @pytest.mark.parametrize('scenario', SCENARIOS)
+    def test_runtime_portable_paths_and_parent_environment(tmp_path, scenario):
+        if os.name != 'nt':
+            pytest.skip('Windows runtime launcher')
+        launcher = str(Path(__file__).resolve().parents[2] / 'Start-Local-Runtime.ps1').replace("'", "''")
+        wrapper = tmp_path / 'portable.ps1'
+        wrapper.write_text(r'''
+    $ErrorActionPreference = 'Stop'
+    $global:sightScenario = 'SCENARIO'
+    $global:sightCalls = 0
+    $global:sightSpawned = 0
+    $global:sightSelectedStore = $null
+    $global:sightSelectedExe = $null
+    $global:sightPerUserExe = Join-Path $env:LOCALAPPDATA 'Programs\Ollama\ollama.exe'
+    $global:sightPathExe = Join-Path $env:TEMP 'Synthetic App\ollama.exe'
+    $global:sightEnvironmentStore = Join-Path $env:TEMP 'Synthetic Env Models'
+    $global:sightExplicitStore = Join-Path $env:TEMP 'Synthetic Explicit Models'
+    $global:sightDefaultStore = Join-Path $env:USERPROFILE '.ollama\models'
+    $global:sightExpectedStore = switch ($global:sightScenario) {
+        'environment_store' { $global:sightEnvironmentStore }
+        'explicit_store' { $global:sightExplicitStore }
+        'legacy_store' { 'D:\Ollama Models' }
+        default { $global:sightDefaultStore }
+    }
+    $sightNames = @('OLLAMA_MODELS','OLLAMA_HOST','OLLAMA_NO_CLOUD','CUDA_MODULE_LOADING',
+                    'OLLAMA_NUM_PARALLEL','OLLAMA_MAX_LOADED_MODELS','OLLAMA_CONTEXT_LENGTH')
+    foreach ($sightName in $sightNames) { [Environment]::SetEnvironmentVariable($sightName, $null, 'Process') }
+    $env:OLLAMA_HOST = '127.0.0.1:9999'
+    $env:OLLAMA_NUM_PARALLEL = '3'
+    if ($global:sightScenario -in @('environment_store','explicit_store','missing_explicit_store')) {
+        $env:OLLAMA_MODELS = $global:sightEnvironmentStore
+    }
+    $sightBefore = @{}
+    foreach ($sightName in $sightNames) { $sightBefore[$sightName] = [Environment]::GetEnvironmentVariable($sightName,'Process') }
+    function Test-Path {
+        param([string]$LiteralPath, [string]$PathType)
+        if ($global:sightScenario -in @('ready_without_install','initializing_without_install')) { return $false }
+        if ($LiteralPath -eq $global:sightPerUserExe) { return ($global:sightScenario -ne 'path_executable') }
+        if ($LiteralPath -eq $global:sightPathExe) { return $true }
+        if ($global:sightScenario -eq 'missing_explicit_store') { return ($LiteralPath -eq $global:sightEnvironmentStore) }
+        return ($LiteralPath -eq $global:sightExpectedStore)
+    }
+    function Resolve-Path { param([string]$LiteralPath) return [pscustomobject]@{Path=$LiteralPath} }
+    function Get-Command {
+        param($Name,$CommandType,$ErrorAction)
+        if ($global:sightScenario -eq 'path_executable') { return [pscustomobject]@{Source=$global:sightPathExe} }
+    }
+    function Get-NetTCPConnection {
+        if ($global:sightScenario -eq 'initializing_without_install') { return [pscustomobject]@{LocalPort=11434} }
+    }
+    function Invoke-RestMethod {
+        $global:sightCalls++
+        if ($global:sightScenario -eq 'ready_without_install' -or $global:sightCalls -ge 3) {
+            return [pscustomobject]@{version='synthetic'}
+        }
+        throw 'Synthetic startup in progress'
+    }
+    function Start-Sleep {}
+    function Start-Process {
+        param($FilePath,$ArgumentList,$WindowStyle,[switch]$PassThru)
+        $global:sightSpawned++
+        if ($WindowStyle -ne 'Hidden' -or $ArgumentList -ne 'serve') { throw 'Unsafe launch contract' }
+        if ($env:OLLAMA_HOST -ne '127.0.0.1:11434' -or $env:OLLAMA_NO_CLOUD -ne 'true' -or
+            $env:CUDA_MODULE_LOADING -ne 'EAGER' -or $env:OLLAMA_NUM_PARALLEL -ne '1' -or
+            $env:OLLAMA_MAX_LOADED_MODELS -ne '1' -or $env:OLLAMA_CONTEXT_LENGTH -ne '4096') { throw 'Incorrect child configuration' }
+        $global:sightSelectedStore = $env:OLLAMA_MODELS
+        $global:sightSelectedExe = $FilePath
+        if ($global:sightScenario -eq 'spawn_failure') { throw 'Synthetic process creation failure' }
+        return [pscustomobject]@{HasExited=$false;ExitCode=$null}
+    }
+    $sightCaught = $null
+    try {
+        if ($global:sightScenario -in @('explicit_store','missing_explicit_store')) {
+            &amp; 'LAUNCHER' -ModelsDirectory $global:sightExplicitStore
+        } else { &amp; 'LAUNCHER' }
+    } catch { $sightCaught = $_.Exception.Message }
+    foreach ($sightName in $sightNames) {
+        if ([Environment]::GetEnvironmentVariable($sightName,'Process') -cne $sightBefore[$sightName]) {
+            throw "Launcher changed caller environment: $sightName"
+        }
+    }
+    if ($global:sightScenario -eq 'missing_explicit_store') {
+        if ($global:sightSpawned -ne 0 -or $sightCaught -notlike '*model directory*') { throw 'Explicit invalid directory was silently replaced' }
+    } elseif ($global:sightScenario -eq 'spawn_failure') {
+        if ($sightCaught -ne 'Synthetic process creation failure') { throw 'Expected spawn failure was not preserved' }
+    } else {
+        if ($sightCaught) { throw $sightCaught }
+        $sightExpectedSpawn = if ($global:sightScenario -in @('ready_without_install','initializing_without_install')) { 0 } else { 1 }
+        if ($global:sightSpawned -ne $sightExpectedSpawn) { throw 'Unexpected spawn count' }
+        if ($sightExpectedSpawn) {
+            if ($global:sightSelectedStore -ne $global:sightExpectedStore) { throw 'Wrong existing model directory selected' }
+            $sightExpectedExe = if ($global:sightScenario -eq 'path_executable') { $global:sightPathExe } else { $global:sightPerUserExe }
+            if ($global:sightSelectedExe -ne $sightExpectedExe) { throw 'Wrong executable selected' }
+        }
+    }
+    Write-Output 'PORTABILITY_CHECK_PASS'
+    '''.replace('SCENARIO', scenario).replace('LAUNCHER', launcher), encoding='utf-8')
+        executable = Path(os.environ['SystemRoot']) / 'System32/WindowsPowerShell/v1.0/powershell.exe'
+        result = subprocess.run([str(executable), '-NoProfile', '-NonInteractive', '-File', str(wrapper)],
+                                capture_output=True, text=True, timeout=15, creationflags=0x08000000)
+&gt;       assert result.returncode == 0, result.stdout + result.stderr
+E       AssertionError: Select the existing Ollama model directory. This helper does not download weights.
+E         At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-61\test_runtime_portable_paths_an2\portable.ps1:81 char:25
+E         +     if ($sightCaught) { throw $sightCaught }
+E         +                         ~~~~~~~~~~~~~~~~~~
+E             + CategoryInfo          : OperationStopped: (Select the exis...wnload weights.:String) [], RuntimeException
+E             + FullyQualifiedErrorId : Select the existing Ollama model directory. This helper does not download weights.
+E          
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...    + FullyQualifiedErrorId : Select the existing Ollama model directory. This helper does not download weights.\n \n').returncode
+
+tests\test_runtime_portability.py:114: AssertionError</failure></testcase><testcase classname="tests.test_runtime_portability" name="test_runtime_portable_paths_and_parent_environment[default_store]" time="0.511"><failure message="AssertionError: Select the existing Ollama model directory. This helper does not download weights.&#10;  At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-61\test_runtime_portable_paths_an3\portable.ps1:81 char:25&#10;  +     if ($sightCaught) { throw $sightCaught }&#10;  +                         ~~~~~~~~~~~~~~~~~~&#10;      + CategoryInfo          : OperationStopped: (Select the exis...wnload weights.:String) [], RuntimeException&#10;      + FullyQualifiedErrorId : Select the existing Ollama model directory. This helper does not download weights.&#10;   &#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...    + FullyQualifiedErrorId : Select the existing Ollama model directory. This helper does not download weights.\n \n').returncode">tmp_path = WindowsPath('C:/Users/Dell/AppData/Local/Temp/pytest-of-Dell/pytest-61/test_runtime_portable_paths_an3')
+scenario = 'default_store'
+
+    @pytest.mark.parametrize('scenario', SCENARIOS)
+    def test_runtime_portable_paths_and_parent_environment(tmp_path, scenario):
+        if os.name != 'nt':
+            pytest.skip('Windows runtime launcher')
+        launcher = str(Path(__file__).resolve().parents[2] / 'Start-Local-Runtime.ps1').replace("'", "''")
+        wrapper = tmp_path / 'portable.ps1'
+        wrapper.write_text(r'''
+    $ErrorActionPreference = 'Stop'
+    $global:sightScenario = 'SCENARIO'
+    $global:sightCalls = 0
+    $global:sightSpawned = 0
+    $global:sightSelectedStore = $null
+    $global:sightSelectedExe = $null
+    $global:sightPerUserExe = Join-Path $env:LOCALAPPDATA 'Programs\Ollama\ollama.exe'
+    $global:sightPathExe = Join-Path $env:TEMP 'Synthetic App\ollama.exe'
+    $global:sightEnvironmentStore = Join-Path $env:TEMP 'Synthetic Env Models'
+    $global:sightExplicitStore = Join-Path $env:TEMP 'Synthetic Explicit Models'
+    $global:sightDefaultStore = Join-Path $env:USERPROFILE '.ollama\models'
+    $global:sightExpectedStore = switch ($global:sightScenario) {
+        'environment_store' { $global:sightEnvironmentStore }
+        'explicit_store' { $global:sightExplicitStore }
+        'legacy_store' { 'D:\Ollama Models' }
+        default { $global:sightDefaultStore }
+    }
+    $sightNames = @('OLLAMA_MODELS','OLLAMA_HOST','OLLAMA_NO_CLOUD','CUDA_MODULE_LOADING',
+                    'OLLAMA_NUM_PARALLEL','OLLAMA_MAX_LOADED_MODELS','OLLAMA_CONTEXT_LENGTH')
+    foreach ($sightName in $sightNames) { [Environment]::SetEnvironmentVariable($sightName, $null, 'Process') }
+    $env:OLLAMA_HOST = '127.0.0.1:9999'
+    $env:OLLAMA_NUM_PARALLEL = '3'
+    if ($global:sightScenario -in @('environment_store','explicit_store','missing_explicit_store')) {
+        $env:OLLAMA_MODELS = $global:sightEnvironmentStore
+    }
+    $sightBefore = @{}
+    foreach ($sightName in $sightNames) { $sightBefore[$sightName] = [Environment]::GetEnvironmentVariable($sightName,'Process') }
+    function Test-Path {
+        param([string]$LiteralPath, [string]$PathType)
+        if ($global:sightScenario -in @('ready_without_install','initializing_without_install')) { return $false }
+        if ($LiteralPath -eq $global:sightPerUserExe) { return ($global:sightScenario -ne 'path_executable') }
+        if ($LiteralPath -eq $global:sightPathExe) { return $true }
+        if ($global:sightScenario -eq 'missing_explicit_store') { return ($LiteralPath -eq $global:sightEnvironmentStore) }
+        return ($LiteralPath -eq $global:sightExpectedStore)
+    }
+    function Resolve-Path { param([string]$LiteralPath) return [pscustomobject]@{Path=$LiteralPath} }
+    function Get-Command {
+        param($Name,$CommandType,$ErrorAction)
+        if ($global:sightScenario -eq 'path_executable') { return [pscustomobject]@{Source=$global:sightPathExe} }
+    }
+    function Get-NetTCPConnection {
+        if ($global:sightScenario -eq 'initializing_without_install') { return [pscustomobject]@{LocalPort=11434} }
+    }
+    function Invoke-RestMethod {
+        $global:sightCalls++
+        if ($global:sightScenario -eq 'ready_without_install' -or $global:sightCalls -ge 3) {
+            return [pscustomobject]@{version='synthetic'}
+        }
+        throw 'Synthetic startup in progress'
+    }
+    function Start-Sleep {}
+    function Start-Process {
+        param($FilePath,$ArgumentList,$WindowStyle,[switch]$PassThru)
+        $global:sightSpawned++
+        if ($WindowStyle -ne 'Hidden' -or $ArgumentList -ne 'serve') { throw 'Unsafe launch contract' }
+        if ($env:OLLAMA_HOST -ne '127.0.0.1:11434' -or $env:OLLAMA_NO_CLOUD -ne 'true' -or
+            $env:CUDA_MODULE_LOADING -ne 'EAGER' -or $env:OLLAMA_NUM_PARALLEL -ne '1' -or
+            $env:OLLAMA_MAX_LOADED_MODELS -ne '1' -or $env:OLLAMA_CONTEXT_LENGTH -ne '4096') { throw 'Incorrect child configuration' }
+        $global:sightSelectedStore = $env:OLLAMA_MODELS
+        $global:sightSelectedExe = $FilePath
+        if ($global:sightScenario -eq 'spawn_failure') { throw 'Synthetic process creation failure' }
+        return [pscustomobject]@{HasExited=$false;ExitCode=$null}
+    }
+    $sightCaught = $null
+    try {
+        if ($global:sightScenario -in @('explicit_store','missing_explicit_store')) {
+            &amp; 'LAUNCHER' -ModelsDirectory $global:sightExplicitStore
+        } else { &amp; 'LAUNCHER' }
+    } catch { $sightCaught = $_.Exception.Message }
+    foreach ($sightName in $sightNames) {
+        if ([Environment]::GetEnvironmentVariable($sightName,'Process') -cne $sightBefore[$sightName]) {
+            throw "Launcher changed caller environment: $sightName"
+        }
+    }
+    if ($global:sightScenario -eq 'missing_explicit_store') {
+        if ($global:sightSpawned -ne 0 -or $sightCaught -notlike '*model directory*') { throw 'Explicit invalid directory was silently replaced' }
+    } elseif ($global:sightScenario -eq 'spawn_failure') {
+        if ($sightCaught -ne 'Synthetic process creation failure') { throw 'Expected spawn failure was not preserved' }
+    } else {
+        if ($sightCaught) { throw $sightCaught }
+        $sightExpectedSpawn = if ($global:sightScenario -in @('ready_without_install','initializing_without_install')) { 0 } else { 1 }
+        if ($global:sightSpawned -ne $sightExpectedSpawn) { throw 'Unexpected spawn count' }
+        if ($sightExpectedSpawn) {
+            if ($global:sightSelectedStore -ne $global:sightExpectedStore) { throw 'Wrong existing model directory selected' }
+            $sightExpectedExe = if ($global:sightScenario -eq 'path_executable') { $global:sightPathExe } else { $global:sightPerUserExe }
+            if ($global:sightSelectedExe -ne $sightExpectedExe) { throw 'Wrong executable selected' }
+        }
+    }
+    Write-Output 'PORTABILITY_CHECK_PASS'
+    '''.replace('SCENARIO', scenario).replace('LAUNCHER', launcher), encoding='utf-8')
+        executable = Path(os.environ['SystemRoot']) / 'System32/WindowsPowerShell/v1.0/powershell.exe'
+        result = subprocess.run([str(executable), '-NoProfile', '-NonInteractive', '-File', str(wrapper)],
+                                capture_output=True, text=True, timeout=15, creationflags=0x08000000)
+&gt;       assert result.returncode == 0, result.stdout + result.stderr
+E       AssertionError: Select the existing Ollama model directory. This helper does not download weights.
+E         At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-61\test_runtime_portable_paths_an3\portable.ps1:81 char:25
+E         +     if ($sightCaught) { throw $sightCaught }
+E         +                         ~~~~~~~~~~~~~~~~~~
+E             + CategoryInfo          : OperationStopped: (Select the exis...wnload weights.:String) [], RuntimeException
+E             + FullyQualifiedErrorId : Select the existing Ollama model directory. This helper does not download weights.
+E          
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...    + FullyQualifiedErrorId : Select the existing Ollama model directory. This helper does not download weights.\n \n').returncode
+
+tests\test_runtime_portability.py:114: AssertionError</failure></testcase><testcase classname="tests.test_runtime_portability" name="test_runtime_portable_paths_and_parent_environment[legacy_store]" time="0.609"><failure message="AssertionError: Waiting for local Ollama to finish startup and respond...&#10;  Local Ollama is responding on 127.0.0.1:11434. Systems will verify the selected model.&#10;  Launcher changed caller environment: OLLAMA_MODELS&#10;  At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-61\test_runtime_portable_paths_an4\portable.ps1:73 char:9&#10;  +         throw &quot;Launcher changed caller environment: $sightName&quot;&#10;  +         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&#10;      + CategoryInfo          : OperationStopped: (Launcher change...: OLLAMA_MODELS:String) [], RuntimeException&#10;      + FullyQualifiedErrorId : Launcher changed caller environment: OLLAMA_MODELS&#10;   &#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...S:String) [], RuntimeException\n    + FullyQualifiedErrorId : Launcher changed caller environment: OLLAMA_MODELS\n \n').returncode">tmp_path = WindowsPath('C:/Users/Dell/AppData/Local/Temp/pytest-of-Dell/pytest-61/test_runtime_portable_paths_an4')
+scenario = 'legacy_store'
+
+    @pytest.mark.parametrize('scenario', SCENARIOS)
+    def test_runtime_portable_paths_and_parent_environment(tmp_path, scenario):
+        if os.name != 'nt':
+            pytest.skip('Windows runtime launcher')
+        launcher = str(Path(__file__).resolve().parents[2] / 'Start-Local-Runtime.ps1').replace("'", "''")
+        wrapper = tmp_path / 'portable.ps1'
+        wrapper.write_text(r'''
+    $ErrorActionPreference = 'Stop'
+    $global:sightScenario = 'SCENARIO'
+    $global:sightCalls = 0
+    $global:sightSpawned = 0
+    $global:sightSelectedStore = $null
+    $global:sightSelectedExe = $null
+    $global:sightPerUserExe = Join-Path $env:LOCALAPPDATA 'Programs\Ollama\ollama.exe'
+    $global:sightPathExe = Join-Path $env:TEMP 'Synthetic App\ollama.exe'
+    $global:sightEnvironmentStore = Join-Path $env:TEMP 'Synthetic Env Models'
+    $global:sightExplicitStore = Join-Path $env:TEMP 'Synthetic Explicit Models'
+    $global:sightDefaultStore = Join-Path $env:USERPROFILE '.ollama\models'
+    $global:sightExpectedStore = switch ($global:sightScenario) {
+        'environment_store' { $global:sightEnvironmentStore }
+        'explicit_store' { $global:sightExplicitStore }
+        'legacy_store' { 'D:\Ollama Models' }
+        default { $global:sightDefaultStore }
+    }
+    $sightNames = @('OLLAMA_MODELS','OLLAMA_HOST','OLLAMA_NO_CLOUD','CUDA_MODULE_LOADING',
+                    'OLLAMA_NUM_PARALLEL','OLLAMA_MAX_LOADED_MODELS','OLLAMA_CONTEXT_LENGTH')
+    foreach ($sightName in $sightNames) { [Environment]::SetEnvironmentVariable($sightName, $null, 'Process') }
+    $env:OLLAMA_HOST = '127.0.0.1:9999'
+    $env:OLLAMA_NUM_PARALLEL = '3'
+    if ($global:sightScenario -in @('environment_store','explicit_store','missing_explicit_store')) {
+        $env:OLLAMA_MODELS = $global:sightEnvironmentStore
+    }
+    $sightBefore = @{}
+    foreach ($sightName in $sightNames) { $sightBefore[$sightName] = [Environment]::GetEnvironmentVariable($sightName,'Process') }
+    function Test-Path {
+        param([string]$LiteralPath, [string]$PathType)
+        if ($global:sightScenario -in @('ready_without_install','initializing_without_install')) { return $false }
+        if ($LiteralPath -eq $global:sightPerUserExe) { return ($global:sightScenario -ne 'path_executable') }
+        if ($LiteralPath -eq $global:sightPathExe) { return $true }
+        if ($global:sightScenario -eq 'missing_explicit_store') { return ($LiteralPath -eq $global:sightEnvironmentStore) }
+        return ($LiteralPath -eq $global:sightExpectedStore)
+    }
+    function Resolve-Path { param([string]$LiteralPath) return [pscustomobject]@{Path=$LiteralPath} }
+    function Get-Command {
+        param($Name,$CommandType,$ErrorAction)
+        if ($global:sightScenario -eq 'path_executable') { return [pscustomobject]@{Source=$global:sightPathExe} }
+    }
+    function Get-NetTCPConnection {
+        if ($global:sightScenario -eq 'initializing_without_install') { return [pscustomobject]@{LocalPort=11434} }
+    }
+    function Invoke-RestMethod {
+        $global:sightCalls++
+        if ($global:sightScenario -eq 'ready_without_install' -or $global:sightCalls -ge 3) {
+            return [pscustomobject]@{version='synthetic'}
+        }
+        throw 'Synthetic startup in progress'
+    }
+    function Start-Sleep {}
+    function Start-Process {
+        param($FilePath,$ArgumentList,$WindowStyle,[switch]$PassThru)
+        $global:sightSpawned++
+        if ($WindowStyle -ne 'Hidden' -or $ArgumentList -ne 'serve') { throw 'Unsafe launch contract' }
+        if ($env:OLLAMA_HOST -ne '127.0.0.1:11434' -or $env:OLLAMA_NO_CLOUD -ne 'true' -or
+            $env:CUDA_MODULE_LOADING -ne 'EAGER' -or $env:OLLAMA_NUM_PARALLEL -ne '1' -or
+            $env:OLLAMA_MAX_LOADED_MODELS -ne '1' -or $env:OLLAMA_CONTEXT_LENGTH -ne '4096') { throw 'Incorrect child configuration' }
+        $global:sightSelectedStore = $env:OLLAMA_MODELS
+        $global:sightSelectedExe = $FilePath
+        if ($global:sightScenario -eq 'spawn_failure') { throw 'Synthetic process creation failure' }
+        return [pscustomobject]@{HasExited=$false;ExitCode=$null}
+    }
+    $sightCaught = $null
+    try {
+        if ($global:sightScenario -in @('explicit_store','missing_explicit_store')) {
+            &amp; 'LAUNCHER' -ModelsDirectory $global:sightExplicitStore
+        } else { &amp; 'LAUNCHER' }
+    } catch { $sightCaught = $_.Exception.Message }
+    foreach ($sightName in $sightNames) {
+        if ([Environment]::GetEnvironmentVariable($sightName,'Process') -cne $sightBefore[$sightName]) {
+            throw "Launcher changed caller environment: $sightName"
+        }
+    }
+    if ($global:sightScenario -eq 'missing_explicit_store') {
+        if ($global:sightSpawned -ne 0 -or $sightCaught -notlike '*model directory*') { throw 'Explicit invalid directory was silently replaced' }
+    } elseif ($global:sightScenario -eq 'spawn_failure') {
+        if ($sightCaught -ne 'Synthetic process creation failure') { throw 'Expected spawn failure was not preserved' }
+    } else {
+        if ($sightCaught) { throw $sightCaught }
+        $sightExpectedSpawn = if ($global:sightScenario -in @('ready_without_install','initializing_without_install')) { 0 } else { 1 }
+        if ($global:sightSpawned -ne $sightExpectedSpawn) { throw 'Unexpected spawn count' }
+        if ($sightExpectedSpawn) {
+            if ($global:sightSelectedStore -ne $global:sightExpectedStore) { throw 'Wrong existing model directory selected' }
+            $sightExpectedExe = if ($global:sightScenario -eq 'path_executable') { $global:sightPathExe } else { $global:sightPerUserExe }
+            if ($global:sightSelectedExe -ne $sightExpectedExe) { throw 'Wrong executable selected' }
+        }
+    }
+    Write-Output 'PORTABILITY_CHECK_PASS'
+    '''.replace('SCENARIO', scenario).replace('LAUNCHER', launcher), encoding='utf-8')
+        executable = Path(os.environ['SystemRoot']) / 'System32/WindowsPowerShell/v1.0/powershell.exe'
+        result = subprocess.run([str(executable), '-NoProfile', '-NonInteractive', '-File', str(wrapper)],
+                                capture_output=True, text=True, timeout=15, creationflags=0x08000000)
+&gt;       assert result.returncode == 0, result.stdout + result.stderr
+E       AssertionError: Waiting for local Ollama to finish startup and respond...
+E         Local Ollama is responding on 127.0.0.1:11434. Systems will verify the selected model.
+E         Launcher changed caller environment: OLLAMA_MODELS
+E         At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-61\test_runtime_portable_paths_an4\portable.ps1:73 char:9
+E         +         throw "Launcher changed caller environment: $sightName"
+E         +         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+E             + CategoryInfo          : OperationStopped: (Launcher change...: OLLAMA_MODELS:String) [], RuntimeException
+E             + FullyQualifiedErrorId : Launcher changed caller environment: OLLAMA_MODELS
+E          
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...S:String) [], RuntimeException\n    + FullyQualifiedErrorId : Launcher changed caller environment: OLLAMA_MODELS\n \n').returncode
+
+tests\test_runtime_portability.py:114: AssertionError</failure></testcase><testcase classname="tests.test_runtime_portability" name="test_runtime_portable_paths_and_parent_environment[explicit_store]" time="0.552"><failure message="AssertionError: Waiting for local Ollama to finish startup and respond...&#10;  Local Ollama is responding on 127.0.0.1:11434. Systems will verify the selected model.&#10;  Launcher changed caller environment: OLLAMA_MODELS&#10;  At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-61\test_runtime_portable_paths_an5\portable.ps1:73 char:9&#10;  +         throw &quot;Launcher changed caller environment: $sightName&quot;&#10;  +         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&#10;      + CategoryInfo          : OperationStopped: (Launcher change...: OLLAMA_MODELS:String) [], RuntimeException&#10;      + FullyQualifiedErrorId : Launcher changed caller environment: OLLAMA_MODELS&#10;   &#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...S:String) [], RuntimeException\n    + FullyQualifiedErrorId : Launcher changed caller environment: OLLAMA_MODELS\n \n').returncode">tmp_path = WindowsPath('C:/Users/Dell/AppData/Local/Temp/pytest-of-Dell/pytest-61/test_runtime_portable_paths_an5')
+scenario = 'explicit_store'
+
+    @pytest.mark.parametrize('scenario', SCENARIOS)
+    def test_runtime_portable_paths_and_parent_environment(tmp_path, scenario):
+        if os.name != 'nt':
+            pytest.skip('Windows runtime launcher')
+        launcher = str(Path(__file__).resolve().parents[2] / 'Start-Local-Runtime.ps1').replace("'", "''")
+        wrapper = tmp_path / 'portable.ps1'
+        wrapper.write_text(r'''
+    $ErrorActionPreference = 'Stop'
+    $global:sightScenario = 'SCENARIO'
+    $global:sightCalls = 0
+    $global:sightSpawned = 0
+    $global:sightSelectedStore = $null
+    $global:sightSelectedExe = $null
+    $global:sightPerUserExe = Join-Path $env:LOCALAPPDATA 'Programs\Ollama\ollama.exe'
+    $global:sightPathExe = Join-Path $env:TEMP 'Synthetic App\ollama.exe'
+    $global:sightEnvironmentStore = Join-Path $env:TEMP 'Synthetic Env Models'
+    $global:sightExplicitStore = Join-Path $env:TEMP 'Synthetic Explicit Models'
+    $global:sightDefaultStore = Join-Path $env:USERPROFILE '.ollama\models'
+    $global:sightExpectedStore = switch ($global:sightScenario) {
+        'environment_store' { $global:sightEnvironmentStore }
+        'explicit_store' { $global:sightExplicitStore }
+        'legacy_store' { 'D:\Ollama Models' }
+        default { $global:sightDefaultStore }
+    }
+    $sightNames = @('OLLAMA_MODELS','OLLAMA_HOST','OLLAMA_NO_CLOUD','CUDA_MODULE_LOADING',
+                    'OLLAMA_NUM_PARALLEL','OLLAMA_MAX_LOADED_MODELS','OLLAMA_CONTEXT_LENGTH')
+    foreach ($sightName in $sightNames) { [Environment]::SetEnvironmentVariable($sightName, $null, 'Process') }
+    $env:OLLAMA_HOST = '127.0.0.1:9999'
+    $env:OLLAMA_NUM_PARALLEL = '3'
+    if ($global:sightScenario -in @('environment_store','explicit_store','missing_explicit_store')) {
+        $env:OLLAMA_MODELS = $global:sightEnvironmentStore
+    }
+    $sightBefore = @{}
+    foreach ($sightName in $sightNames) { $sightBefore[$sightName] = [Environment]::GetEnvironmentVariable($sightName,'Process') }
+    function Test-Path {
+        param([string]$LiteralPath, [string]$PathType)
+        if ($global:sightScenario -in @('ready_without_install','initializing_without_install')) { return $false }
+        if ($LiteralPath -eq $global:sightPerUserExe) { return ($global:sightScenario -ne 'path_executable') }
+        if ($LiteralPath -eq $global:sightPathExe) { return $true }
+        if ($global:sightScenario -eq 'missing_explicit_store') { return ($LiteralPath -eq $global:sightEnvironmentStore) }
+        return ($LiteralPath -eq $global:sightExpectedStore)
+    }
+    function Resolve-Path { param([string]$LiteralPath) return [pscustomobject]@{Path=$LiteralPath} }
+    function Get-Command {
+        param($Name,$CommandType,$ErrorAction)
+        if ($global:sightScenario -eq 'path_executable') { return [pscustomobject]@{Source=$global:sightPathExe} }
+    }
+    function Get-NetTCPConnection {
+        if ($global:sightScenario -eq 'initializing_without_install') { return [pscustomobject]@{LocalPort=11434} }
+    }
+    function Invoke-RestMethod {
+        $global:sightCalls++
+        if ($global:sightScenario -eq 'ready_without_install' -or $global:sightCalls -ge 3) {
+            return [pscustomobject]@{version='synthetic'}
+        }
+        throw 'Synthetic startup in progress'
+    }
+    function Start-Sleep {}
+    function Start-Process {
+        param($FilePath,$ArgumentList,$WindowStyle,[switch]$PassThru)
+        $global:sightSpawned++
+        if ($WindowStyle -ne 'Hidden' -or $ArgumentList -ne 'serve') { throw 'Unsafe launch contract' }
+        if ($env:OLLAMA_HOST -ne '127.0.0.1:11434' -or $env:OLLAMA_NO_CLOUD -ne 'true' -or
+            $env:CUDA_MODULE_LOADING -ne 'EAGER' -or $env:OLLAMA_NUM_PARALLEL -ne '1' -or
+            $env:OLLAMA_MAX_LOADED_MODELS -ne '1' -or $env:OLLAMA_CONTEXT_LENGTH -ne '4096') { throw 'Incorrect child configuration' }
+        $global:sightSelectedStore = $env:OLLAMA_MODELS
+        $global:sightSelectedExe = $FilePath
+        if ($global:sightScenario -eq 'spawn_failure') { throw 'Synthetic process creation failure' }
+        return [pscustomobject]@{HasExited=$false;ExitCode=$null}
+    }
+    $sightCaught = $null
+    try {
+        if ($global:sightScenario -in @('explicit_store','missing_explicit_store')) {
+            &amp; 'LAUNCHER' -ModelsDirectory $global:sightExplicitStore
+        } else { &amp; 'LAUNCHER' }
+    } catch { $sightCaught = $_.Exception.Message }
+    foreach ($sightName in $sightNames) {
+        if ([Environment]::GetEnvironmentVariable($sightName,'Process') -cne $sightBefore[$sightName]) {
+            throw "Launcher changed caller environment: $sightName"
+        }
+    }
+    if ($global:sightScenario -eq 'missing_explicit_store') {
+        if ($global:sightSpawned -ne 0 -or $sightCaught -notlike '*model directory*') { throw 'Explicit invalid directory was silently replaced' }
+    } elseif ($global:sightScenario -eq 'spawn_failure') {
+        if ($sightCaught -ne 'Synthetic process creation failure') { throw 'Expected spawn failure was not preserved' }
+    } else {
+        if ($sightCaught) { throw $sightCaught }
+        $sightExpectedSpawn = if ($global:sightScenario -in @('ready_without_install','initializing_without_install')) { 0 } else { 1 }
+        if ($global:sightSpawned -ne $sightExpectedSpawn) { throw 'Unexpected spawn count' }
+        if ($sightExpectedSpawn) {
+            if ($global:sightSelectedStore -ne $global:sightExpectedStore) { throw 'Wrong existing model directory selected' }
+            $sightExpectedExe = if ($global:sightScenario -eq 'path_executable') { $global:sightPathExe } else { $global:sightPerUserExe }
+            if ($global:sightSelectedExe -ne $sightExpectedExe) { throw 'Wrong executable selected' }
+        }
+    }
+    Write-Output 'PORTABILITY_CHECK_PASS'
+    '''.replace('SCENARIO', scenario).replace('LAUNCHER', launcher), encoding='utf-8')
+        executable = Path(os.environ['SystemRoot']) / 'System32/WindowsPowerShell/v1.0/powershell.exe'
+        result = subprocess.run([str(executable), '-NoProfile', '-NonInteractive', '-File', str(wrapper)],
+                                capture_output=True, text=True, timeout=15, creationflags=0x08000000)
+&gt;       assert result.returncode == 0, result.stdout + result.stderr
+E       AssertionError: Waiting for local Ollama to finish startup and respond...
+E         Local Ollama is responding on 127.0.0.1:11434. Systems will verify the selected model.
+E         Launcher changed caller environment: OLLAMA_MODELS
+E         At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-61\test_runtime_portable_paths_an5\portable.ps1:73 char:9
+E         +         throw "Launcher changed caller environment: $sightName"
+E         +         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+E             + CategoryInfo          : OperationStopped: (Launcher change...: OLLAMA_MODELS:String) [], RuntimeException
+E             + FullyQualifiedErrorId : Launcher changed caller environment: OLLAMA_MODELS
+E          
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...S:String) [], RuntimeException\n    + FullyQualifiedErrorId : Launcher changed caller environment: OLLAMA_MODELS\n \n').returncode
+
+tests\test_runtime_portability.py:114: AssertionError</failure></testcase><testcase classname="tests.test_runtime_portability" name="test_runtime_portable_paths_and_parent_environment[missing_explicit_store]" time="0.519" /><testcase classname="tests.test_runtime_portability" name="test_runtime_portable_paths_and_parent_environment[path_executable]" time="0.529"><failure message="AssertionError: Install Ollama or update the runtime path in this helper.&#10;  At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-61\test_runtime_portable_paths_an7\portable.ps1:81 char:25&#10;  +     if ($sightCaught) { throw $sightCaught }&#10;  +                         ~~~~~~~~~~~~~~~~~~&#10;      + CategoryInfo          : OperationStopped: (Install Ollama ...in this helper.:String) [], RuntimeException&#10;      + FullyQualifiedErrorId : Install Ollama or update the runtime path in this helper.&#10;   &#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...g) [], RuntimeException\n    + FullyQualifiedErrorId : Install Ollama or update the runtime path in this helper.\n \n').returncode">tmp_path = WindowsPath('C:/Users/Dell/AppData/Local/Temp/pytest-of-Dell/pytest-61/test_runtime_portable_paths_an7')
+scenario = 'path_executable'
+
+    @pytest.mark.parametrize('scenario', SCENARIOS)
+    def test_runtime_portable_paths_and_parent_environment(tmp_path, scenario):
+        if os.name != 'nt':
+            pytest.skip('Windows runtime launcher')
+        launcher = str(Path(__file__).resolve().parents[2] / 'Start-Local-Runtime.ps1').replace("'", "''")
+        wrapper = tmp_path / 'portable.ps1'
+        wrapper.write_text(r'''
+    $ErrorActionPreference = 'Stop'
+    $global:sightScenario = 'SCENARIO'
+    $global:sightCalls = 0
+    $global:sightSpawned = 0
+    $global:sightSelectedStore = $null
+    $global:sightSelectedExe = $null
+    $global:sightPerUserExe = Join-Path $env:LOCALAPPDATA 'Programs\Ollama\ollama.exe'
+    $global:sightPathExe = Join-Path $env:TEMP 'Synthetic App\ollama.exe'
+    $global:sightEnvironmentStore = Join-Path $env:TEMP 'Synthetic Env Models'
+    $global:sightExplicitStore = Join-Path $env:TEMP 'Synthetic Explicit Models'
+    $global:sightDefaultStore = Join-Path $env:USERPROFILE '.ollama\models'
+    $global:sightExpectedStore = switch ($global:sightScenario) {
+        'environment_store' { $global:sightEnvironmentStore }
+        'explicit_store' { $global:sightExplicitStore }
+        'legacy_store' { 'D:\Ollama Models' }
+        default { $global:sightDefaultStore }
+    }
+    $sightNames = @('OLLAMA_MODELS','OLLAMA_HOST','OLLAMA_NO_CLOUD','CUDA_MODULE_LOADING',
+                    'OLLAMA_NUM_PARALLEL','OLLAMA_MAX_LOADED_MODELS','OLLAMA_CONTEXT_LENGTH')
+    foreach ($sightName in $sightNames) { [Environment]::SetEnvironmentVariable($sightName, $null, 'Process') }
+    $env:OLLAMA_HOST = '127.0.0.1:9999'
+    $env:OLLAMA_NUM_PARALLEL = '3'
+    if ($global:sightScenario -in @('environment_store','explicit_store','missing_explicit_store')) {
+        $env:OLLAMA_MODELS = $global:sightEnvironmentStore
+    }
+    $sightBefore = @{}
+    foreach ($sightName in $sightNames) { $sightBefore[$sightName] = [Environment]::GetEnvironmentVariable($sightName,'Process') }
+    function Test-Path {
+        param([string]$LiteralPath, [string]$PathType)
+        if ($global:sightScenario -in @('ready_without_install','initializing_without_install')) { return $false }
+        if ($LiteralPath -eq $global:sightPerUserExe) { return ($global:sightScenario -ne 'path_executable') }
+        if ($LiteralPath -eq $global:sightPathExe) { return $true }
+        if ($global:sightScenario -eq 'missing_explicit_store') { return ($LiteralPath -eq $global:sightEnvironmentStore) }
+        return ($LiteralPath -eq $global:sightExpectedStore)
+    }
+    function Resolve-Path { param([string]$LiteralPath) return [pscustomobject]@{Path=$LiteralPath} }
+    function Get-Command {
+        param($Name,$CommandType,$ErrorAction)
+        if ($global:sightScenario -eq 'path_executable') { return [pscustomobject]@{Source=$global:sightPathExe} }
+    }
+    function Get-NetTCPConnection {
+        if ($global:sightScenario -eq 'initializing_without_install') { return [pscustomobject]@{LocalPort=11434} }
+    }
+    function Invoke-RestMethod {
+        $global:sightCalls++
+        if ($global:sightScenario -eq 'ready_without_install' -or $global:sightCalls -ge 3) {
+            return [pscustomobject]@{version='synthetic'}
+        }
+        throw 'Synthetic startup in progress'
+    }
+    function Start-Sleep {}
+    function Start-Process {
+        param($FilePath,$ArgumentList,$WindowStyle,[switch]$PassThru)
+        $global:sightSpawned++
+        if ($WindowStyle -ne 'Hidden' -or $ArgumentList -ne 'serve') { throw 'Unsafe launch contract' }
+        if ($env:OLLAMA_HOST -ne '127.0.0.1:11434' -or $env:OLLAMA_NO_CLOUD -ne 'true' -or
+            $env:CUDA_MODULE_LOADING -ne 'EAGER' -or $env:OLLAMA_NUM_PARALLEL -ne '1' -or
+            $env:OLLAMA_MAX_LOADED_MODELS -ne '1' -or $env:OLLAMA_CONTEXT_LENGTH -ne '4096') { throw 'Incorrect child configuration' }
+        $global:sightSelectedStore = $env:OLLAMA_MODELS
+        $global:sightSelectedExe = $FilePath
+        if ($global:sightScenario -eq 'spawn_failure') { throw 'Synthetic process creation failure' }
+        return [pscustomobject]@{HasExited=$false;ExitCode=$null}
+    }
+    $sightCaught = $null
+    try {
+        if ($global:sightScenario -in @('explicit_store','missing_explicit_store')) {
+            &amp; 'LAUNCHER' -ModelsDirectory $global:sightExplicitStore
+        } else { &amp; 'LAUNCHER' }
+    } catch { $sightCaught = $_.Exception.Message }
+    foreach ($sightName in $sightNames) {
+        if ([Environment]::GetEnvironmentVariable($sightName,'Process') -cne $sightBefore[$sightName]) {
+            throw "Launcher changed caller environment: $sightName"
+        }
+    }
+    if ($global:sightScenario -eq 'missing_explicit_store') {
+        if ($global:sightSpawned -ne 0 -or $sightCaught -notlike '*model directory*') { throw 'Explicit invalid directory was silently replaced' }
+    } elseif ($global:sightScenario -eq 'spawn_failure') {
+        if ($sightCaught -ne 'Synthetic process creation failure') { throw 'Expected spawn failure was not preserved' }
+    } else {
+        if ($sightCaught) { throw $sightCaught }
+        $sightExpectedSpawn = if ($global:sightScenario -in @('ready_without_install','initializing_without_install')) { 0 } else { 1 }
+        if ($global:sightSpawned -ne $sightExpectedSpawn) { throw 'Unexpected spawn count' }
+        if ($sightExpectedSpawn) {
+            if ($global:sightSelectedStore -ne $global:sightExpectedStore) { throw 'Wrong existing model directory selected' }
+            $sightExpectedExe = if ($global:sightScenario -eq 'path_executable') { $global:sightPathExe } else { $global:sightPerUserExe }
+            if ($global:sightSelectedExe -ne $sightExpectedExe) { throw 'Wrong executable selected' }
+        }
+    }
+    Write-Output 'PORTABILITY_CHECK_PASS'
+    '''.replace('SCENARIO', scenario).replace('LAUNCHER', launcher), encoding='utf-8')
+        executable = Path(os.environ['SystemRoot']) / 'System32/WindowsPowerShell/v1.0/powershell.exe'
+        result = subprocess.run([str(executable), '-NoProfile', '-NonInteractive', '-File', str(wrapper)],
+                                capture_output=True, text=True, timeout=15, creationflags=0x08000000)
+&gt;       assert result.returncode == 0, result.stdout + result.stderr
+E       AssertionError: Install Ollama or update the runtime path in this helper.
+E         At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-61\test_runtime_portable_paths_an7\portable.ps1:81 char:25
+E         +     if ($sightCaught) { throw $sightCaught }
+E         +                         ~~~~~~~~~~~~~~~~~~
+E             + CategoryInfo          : OperationStopped: (Install Ollama ...in this helper.:String) [], RuntimeException
+E             + FullyQualifiedErrorId : Install Ollama or update the runtime path in this helper.
+E          
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...g) [], RuntimeException\n    + FullyQualifiedErrorId : Install Ollama or update the runtime path in this helper.\n \n').returncode
+
+tests\test_runtime_portability.py:114: AssertionError</failure></testcase><testcase classname="tests.test_runtime_portability" name="test_runtime_portable_paths_and_parent_environment[spawn_failure]" time="0.539"><failure message="AssertionError: Expected spawn failure was not preserved&#10;  At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-61\test_runtime_portable_paths_an8\portable.ps1:79 char:66&#10;  + ... eation failure') { throw 'Expected spawn failure was not preserved' }&#10;  +                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&#10;      + CategoryInfo          : OperationStopped: (Expected spawn failure was not preserved:String) [], RuntimeException&#10;      + FullyQualifiedErrorId : Expected spawn failure was not preserved&#10;   &#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...t preserved:String) [], RuntimeException\n    + FullyQualifiedErrorId : Expected spawn failure was not preserved\n \n&quot;).returncode">tmp_path = WindowsPath('C:/Users/Dell/AppData/Local/Temp/pytest-of-Dell/pytest-61/test_runtime_portable_paths_an8')
+scenario = 'spawn_failure'
+
+    @pytest.mark.parametrize('scenario', SCENARIOS)
+    def test_runtime_portable_paths_and_parent_environment(tmp_path, scenario):
+        if os.name != 'nt':
+            pytest.skip('Windows runtime launcher')
+        launcher = str(Path(__file__).resolve().parents[2] / 'Start-Local-Runtime.ps1').replace("'", "''")
+        wrapper = tmp_path / 'portable.ps1'
+        wrapper.write_text(r'''
+    $ErrorActionPreference = 'Stop'
+    $global:sightScenario = 'SCENARIO'
+    $global:sightCalls = 0
+    $global:sightSpawned = 0
+    $global:sightSelectedStore = $null
+    $global:sightSelectedExe = $null
+    $global:sightPerUserExe = Join-Path $env:LOCALAPPDATA 'Programs\Ollama\ollama.exe'
+    $global:sightPathExe = Join-Path $env:TEMP 'Synthetic App\ollama.exe'
+    $global:sightEnvironmentStore = Join-Path $env:TEMP 'Synthetic Env Models'
+    $global:sightExplicitStore = Join-Path $env:TEMP 'Synthetic Explicit Models'
+    $global:sightDefaultStore = Join-Path $env:USERPROFILE '.ollama\models'
+    $global:sightExpectedStore = switch ($global:sightScenario) {
+        'environment_store' { $global:sightEnvironmentStore }
+        'explicit_store' { $global:sightExplicitStore }
+        'legacy_store' { 'D:\Ollama Models' }
+        default { $global:sightDefaultStore }
+    }
+    $sightNames = @('OLLAMA_MODELS','OLLAMA_HOST','OLLAMA_NO_CLOUD','CUDA_MODULE_LOADING',
+                    'OLLAMA_NUM_PARALLEL','OLLAMA_MAX_LOADED_MODELS','OLLAMA_CONTEXT_LENGTH')
+    foreach ($sightName in $sightNames) { [Environment]::SetEnvironmentVariable($sightName, $null, 'Process') }
+    $env:OLLAMA_HOST = '127.0.0.1:9999'
+    $env:OLLAMA_NUM_PARALLEL = '3'
+    if ($global:sightScenario -in @('environment_store','explicit_store','missing_explicit_store')) {
+        $env:OLLAMA_MODELS = $global:sightEnvironmentStore
+    }
+    $sightBefore = @{}
+    foreach ($sightName in $sightNames) { $sightBefore[$sightName] = [Environment]::GetEnvironmentVariable($sightName,'Process') }
+    function Test-Path {
+        param([string]$LiteralPath, [string]$PathType)
+        if ($global:sightScenario -in @('ready_without_install','initializing_without_install')) { return $false }
+        if ($LiteralPath -eq $global:sightPerUserExe) { return ($global:sightScenario -ne 'path_executable') }
+        if ($LiteralPath -eq $global:sightPathExe) { return $true }
+        if ($global:sightScenario -eq 'missing_explicit_store') { return ($LiteralPath -eq $global:sightEnvironmentStore) }
+        return ($LiteralPath -eq $global:sightExpectedStore)
+    }
+    function Resolve-Path { param([string]$LiteralPath) return [pscustomobject]@{Path=$LiteralPath} }
+    function Get-Command {
+        param($Name,$CommandType,$ErrorAction)
+        if ($global:sightScenario -eq 'path_executable') { return [pscustomobject]@{Source=$global:sightPathExe} }
+    }
+    function Get-NetTCPConnection {
+        if ($global:sightScenario -eq 'initializing_without_install') { return [pscustomobject]@{LocalPort=11434} }
+    }
+    function Invoke-RestMethod {
+        $global:sightCalls++
+        if ($global:sightScenario -eq 'ready_without_install' -or $global:sightCalls -ge 3) {
+            return [pscustomobject]@{version='synthetic'}
+        }
+        throw 'Synthetic startup in progress'
+    }
+    function Start-Sleep {}
+    function Start-Process {
+        param($FilePath,$ArgumentList,$WindowStyle,[switch]$PassThru)
+        $global:sightSpawned++
+        if ($WindowStyle -ne 'Hidden' -or $ArgumentList -ne 'serve') { throw 'Unsafe launch contract' }
+        if ($env:OLLAMA_HOST -ne '127.0.0.1:11434' -or $env:OLLAMA_NO_CLOUD -ne 'true' -or
+            $env:CUDA_MODULE_LOADING -ne 'EAGER' -or $env:OLLAMA_NUM_PARALLEL -ne '1' -or
+            $env:OLLAMA_MAX_LOADED_MODELS -ne '1' -or $env:OLLAMA_CONTEXT_LENGTH -ne '4096') { throw 'Incorrect child configuration' }
+        $global:sightSelectedStore = $env:OLLAMA_MODELS
+        $global:sightSelectedExe = $FilePath
+        if ($global:sightScenario -eq 'spawn_failure') { throw 'Synthetic process creation failure' }
+        return [pscustomobject]@{HasExited=$false;ExitCode=$null}
+    }
+    $sightCaught = $null
+    try {
+        if ($global:sightScenario -in @('explicit_store','missing_explicit_store')) {
+            &amp; 'LAUNCHER' -ModelsDirectory $global:sightExplicitStore
+        } else { &amp; 'LAUNCHER' }
+    } catch { $sightCaught = $_.Exception.Message }
+    foreach ($sightName in $sightNames) {
+        if ([Environment]::GetEnvironmentVariable($sightName,'Process') -cne $sightBefore[$sightName]) {
+            throw "Launcher changed caller environment: $sightName"
+        }
+    }
+    if ($global:sightScenario -eq 'missing_explicit_store') {
+        if ($global:sightSpawned -ne 0 -or $sightCaught -notlike '*model directory*') { throw 'Explicit invalid directory was silently replaced' }
+    } elseif ($global:sightScenario -eq 'spawn_failure') {
+        if ($sightCaught -ne 'Synthetic process creation failure') { throw 'Expected spawn failure was not preserved' }
+    } else {
+        if ($sightCaught) { throw $sightCaught }
+        $sightExpectedSpawn = if ($global:sightScenario -in @('ready_without_install','initializing_without_install')) { 0 } else { 1 }
+        if ($global:sightSpawned -ne $sightExpectedSpawn) { throw 'Unexpected spawn count' }
+        if ($sightExpectedSpawn) {
+            if ($global:sightSelectedStore -ne $global:sightExpectedStore) { throw 'Wrong existing model directory selected' }
+            $sightExpectedExe = if ($global:sightScenario -eq 'path_executable') { $global:sightPathExe } else { $global:sightPerUserExe }
+            if ($global:sightSelectedExe -ne $sightExpectedExe) { throw 'Wrong executable selected' }
+        }
+    }
+    Write-Output 'PORTABILITY_CHECK_PASS'
+    '''.replace('SCENARIO', scenario).replace('LAUNCHER', launcher), encoding='utf-8')
+        executable = Path(os.environ['SystemRoot']) / 'System32/WindowsPowerShell/v1.0/powershell.exe'
+        result = subprocess.run([str(executable), '-NoProfile', '-NonInteractive', '-File', str(wrapper)],
+                                capture_output=True, text=True, timeout=15, creationflags=0x08000000)
+&gt;       assert result.returncode == 0, result.stdout + result.stderr
+E       AssertionError: Expected spawn failure was not preserved
+E         At C:\Users\Dell\AppData\Local\Temp\pytest-of-Dell\pytest-61\test_runtime_portable_paths_an8\portable.ps1:79 char:66
+E         + ... eation failure') { throw 'Expected spawn failure was not preserved' }
+E         +                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+E             + CategoryInfo          : OperationStopped: (Expected spawn failure was not preserved:String) [], RuntimeException
+E             + FullyQualifiedErrorId : Expected spawn failure was not preserved
+E          
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv...t preserved:String) [], RuntimeException\n    + FullyQualifiedErrorId : Expected spawn failure was not preserved\n \n").returncode
+
+tests\test_runtime_portability.py:114: AssertionError</failure></testcase></testsuite></testsuites>

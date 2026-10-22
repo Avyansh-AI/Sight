@@ -1,0 +1,410 @@
+[
+  {
+    "path": "sight/sight_core/__init__.py",
+    "status": "modified",
+    "original_sha256": "618a9d817b5cdd4d3113c0521c789f3fb75d93c776b183a1e74c6ebc985de6a5",
+    "sha256": "ba90670254fe47f418ab14be3b3be9504f17d926353794588fc52ee42faa745d"
+  },
+  {
+    "path": "sight/sight_core/api.py",
+    "status": "modified",
+    "original_sha256": "cf519bf871836cec3847b5d449d41450bcc5ad53b6c6eccc1c4231e82c931289",
+    "sha256": "fbe04062a624d4e9a9fdd68cfe2a42a8b4f68f4d4fd38435fe8c1002d96bd0dc"
+  },
+  {
+    "path": "sight/sight_core/brain_store.py",
+    "status": "modified",
+    "original_sha256": "34c0d6687b75459e4f7a71ca6853dea620843a8bddcbeeb9cdd140434d6e96d9",
+    "sha256": "fcaa29228b8986e8aa86fac9bcf069a1561b4e85f1217936dd79d07db407f5ff"
+  },
+  {
+    "path": "sight/sight_core/capability_worker.py",
+    "status": "modified",
+    "original_sha256": "d033a1dd808df6977f91ca343ae164a4251a7880aa5999e215222192b3ab45b6",
+    "sha256": "9153358ea1ae4145c00e18aba87fed95177a9abc56745e0e69963e7558043451"
+  },
+  {
+    "path": "sight/sight_core/cli.py",
+    "status": "modified",
+    "original_sha256": "7f384bd732636f947c40b5b90ee04e022ec8b41667ec9916ca66f32cb8626046",
+    "sha256": "61a701c56a9e513a0100379c6c546f2e3a474714bb754f18b15898b745c752e8"
+  },
+  {
+    "path": "sight/sight_core/config.py",
+    "status": "modified",
+    "original_sha256": "f56ce87c2bc8696a5cbd53368e3ed6f15e3b3f2b25586304df57d1d35dd8c9e4",
+    "sha256": "8f130850712c01a2a5c731cc7e538d55c71600d45f1db36c39eab0e068238d7a"
+  },
+  {
+    "path": "sight/sight_core/learning_api.py",
+    "status": "modified",
+    "original_sha256": "f1f8cfcf64c25912066f082f1e5ecd04d21a54ac264f701c72ebed79904ba7b0",
+    "sha256": "d0c7c2f37fb10d211e3f8cfdde8c9ab8a4f9da329c22de0bbeba985f22b06336"
+  },
+  {
+    "path": "sight/sight_core/mcp_bridge.py",
+    "status": "modified",
+    "original_sha256": "42321bd97604cab255084e587965bbbeea372a55b9ae6a9500c62ed10b71fd12",
+    "sha256": "49d6c1e6e9e326dc4188ec81c976ca62ba1d260918dc59a53b98d9e28ef69460"
+  },
+  {
+    "path": "sight/sight_core/memory.py",
+    "status": "modified",
+    "original_sha256": "13f8d865655ea0057886fa2b7e96fd9a730aa2e20dc9730af6e4a478d3d7ff4a",
+    "sha256": "2f0de18e51c9108668b8002ea41c03f80c683e62b09d59d2c4aceaf8fa2b3cee"
+  },
+  {
+    "path": "sight/sight_core/models.py",
+    "status": "modified",
+    "original_sha256": "faee806bf7d90406860535659b4b4cbfdb8c93cdac1402c1b6f20007ef1ab81f",
+    "sha256": "6ce1aa9d130faee59c78580ffda40a162e338f53600ee801c2de839791b7b4bc"
+  },
+  {
+    "path": "sight/sight_core/recovery.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "90031d470fe5759074210f1ce4a7965ae131a0777c1858079e2f92f68f2ea9bf"
+  },
+  {
+    "path": "sight/sight_core/releases.py",
+    "status": "modified",
+    "original_sha256": "4845bc1a1c0e61fe4eedc4e62702b3db2c836c16316a849cccdd291aeb607f55",
+    "sha256": "fffc22da8bf3596c1d9f3e116b9e253573c0e106042a74a36afb1066880503c6"
+  },
+  {
+    "path": "sight/sight_core/routing.py",
+    "status": "modified",
+    "original_sha256": "3bf5f0432ff2b000c636da4d7fd0c2ed4276db1f8c177e80c38ce8b4dd3553ca",
+    "sha256": "4e27f6a0f66a19974f717c825b5adf8b9ef93036478fe4635eb68ca1e6b84759"
+  },
+  {
+    "path": "sight/sight_core/security.py",
+    "status": "modified",
+    "original_sha256": "adf619fcdcdbd40adbd926b872a28d74ce9aca4e5e10b3f1c3661db216517495",
+    "sha256": "1b2eeb4442fae466f87ca2a94c1705b69d7577f269f1f28fe24403a302712ec3"
+  },
+  {
+    "path": "sight/sight_core/store.py",
+    "status": "modified",
+    "original_sha256": "67673ebe94951124fc29a2856ee62231e408c12b6fb7e614f165057853f3e0d3",
+    "sha256": "6e89a62392497bbaf6a2618aa1154c82309b6a68a375867f8066cf95f089c9ab"
+  },
+  {
+    "path": "sight/tests/test_archive_security.py",
+    "status": "modified",
+    "original_sha256": "bfd900971149e207102a5c41b76a47f5a73a03cdedb290d80179b55b9c7f47d0",
+    "sha256": "91531668888d95c67136196ce6d3785aabd942bdb069d44bddf7bd1bcfe9e1c7"
+  },
+  {
+    "path": "sight/tests/test_browser_sandbox.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "91f479cd61fdd3174d1ca62ff3455d8dcf6701f7d6c542f57bc3810b1be61551"
+  },
+  {
+    "path": "sight/tests/test_core.py",
+    "status": "modified",
+    "original_sha256": "20524f65c90ef1e5bdd7f3cbd400509a390478e1b0ba42e87f75f59b4a32447e",
+    "sha256": "05ea9062b61dc0c5b68b078d1bf80f51a15766e58cea4828bf9b0733b82b52a9"
+  },
+  {
+    "path": "sight/tests/test_gate_requirements.py",
+    "status": "modified",
+    "original_sha256": "e070e7ab0155d6e2b55cbd16aa01b7e245ac78a9808a97b56016a1bf9e43a26e",
+    "sha256": "eb9e25bc92b0114bae1bdc92e0be43f0eb39261ae078d7516aa33667e5df1559"
+  },
+  {
+    "path": "sight/tests/test_memory_integrity.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "9cfa6d1532918fa3bbbad6c23aae3069b24da67a636505691263baded69de8fc"
+  },
+  {
+    "path": "sight/tests/test_official_gemma.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "2f1422d294c0bb2fdbe689744bd42e0bbfcd2bc18a46f437731f643b0381b6c9"
+  },
+  {
+    "path": "sight/tests/test_phase4_hardening.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "a8a7f3be1768bf0c8af287f3df2003640a3667652135de6a81f835326e0c706f"
+  },
+  {
+    "path": "sight/tests/test_phase4_injection.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "654c5e427a7b2ebf6339b31e86a0e9b9b157ec40f926f80005d0253484df7de0"
+  },
+  {
+    "path": "sight/tests/test_recovery.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "d0f9433fe489bc73b4f7f03f034fce61fc200341505126f98f204641d43fada6"
+  },
+  {
+    "path": "sight/tests/test_runtime_launcher.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "1fd0d4182a6d9bbe99c21fc7448518a3d21fee42dfaeb02f76b571684f204866"
+  },
+  {
+    "path": "sight/tests/test_runtime_portability.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "d66995ed0b76e3a590905ce6048a7c563bd14e331cff1c8a7674e2b762662916"
+  },
+  {
+    "path": "sight/scripts/audit_inputs.py",
+    "status": "modified",
+    "original_sha256": "d27dddc9dfa794825b284fc721ee1cf70fc723456f0d45264201b8fd2892f6cc",
+    "sha256": "1f01156e55b88156ee28b5eac88872d577ffbdf68e960c0932d6193e0b7fd8eb"
+  },
+  {
+    "path": "sight/scripts/check_phase4_handoff.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "7bb9533f3ae41c8453d87078194fad69e112f1b04edb0a209e0625634e92bcbb"
+  },
+  {
+    "path": "sight/scripts/configure_gemma_profile.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "87fcc327fd9d72a9c18aca67458eb123dcd733e4c4c074155cfdc75d2225d551"
+  },
+  {
+    "path": "sight/scripts/dependency_audit.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "ece0b5abee147ce92866d729f31bca76034fba7dc920040832002feeadbbe1cf"
+  },
+  {
+    "path": "sight/scripts/find_ollama.ps1",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "fdc28f802ab917c53e4b1c98b01455d037aa33ed160d3c8113fd5b0bd4e754d8"
+  },
+  {
+    "path": "sight/scripts/gemma_diagnose.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "bf3045d7f04e9bf8ca419535e67407c253460b6fbe31f9e62884a3db9f10a65d"
+  },
+  {
+    "path": "sight/scripts/gemma_prompt_eval.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "2e2d14f31ca09ad962a3deadee58fc9bbd893eddb0a84e1ec5f6d19fb4dc5e62"
+  },
+  {
+    "path": "sight/scripts/gemma_repeat_check.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "e9d2981eecd90a8de3e7c5b4ebec155167dcf859a271bb66f555c87ba835ba31"
+  },
+  {
+    "path": "sight/scripts/growth_benchmark.py",
+    "status": "modified",
+    "original_sha256": "117c333f02b2acb8c9f3dd9f8af588fea6cc71f1265b5ab4a664510e474ce22b",
+    "sha256": "4b535c1fed94614878c9e1317a02e11e526fc7d45cd96ba9e704969ef527378d"
+  },
+  {
+    "path": "sight/scripts/install.ps1",
+    "status": "modified",
+    "original_sha256": "125d900acdff36ea32cc8cc4654aee5309f69e00232c69d6361c2c8819eb7f45",
+    "sha256": "207e74da6e2d33789130568bb510013f6cda65a72d15217b634f946651553896"
+  },
+  {
+    "path": "sight/scripts/launch.py",
+    "status": "modified",
+    "original_sha256": "49e1e6568e23624fbc5a42a822b66eadaeb78b85f2c9d7065c6c7c027cca3e49",
+    "sha256": "e7372eaa4853c97ec3d0c8339b06725e320ec6779401ecf6a88767fcde474fc9"
+  },
+  {
+    "path": "sight/scripts/offline_install_check.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "bc1793da46e1a1952a22031163db91fe2344464d8263e2b3930139a6a34e1494"
+  },
+  {
+    "path": "sight/scripts/package_handoff.py",
+    "status": "modified",
+    "original_sha256": "241d8cd3306de6f49b20ca80754f26ef6f240c91963202706f448e8fe36951b2",
+    "sha256": "c3857a9c4138c1ec7965dae0f958d6c77629471920cff69d47a588f860870736"
+  },
+  {
+    "path": "sight/scripts/phase4_smoke.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "bddd5a747dda1acb70ae1c5d5e5f977bdda2c774f8546fe7ea27ef671d7f800b"
+  },
+  {
+    "path": "sight/scripts/phase4_soak.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "27897ed2e1bfb379db6c745e8d0ad96a51a19d1bb6b8429a767a4a4df7b2ffa7"
+  },
+  {
+    "path": "sight/scripts/pull_gemma_official.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "34d2b8f105542720dc0aa18f8b8681e76321a16f6a4a21c4588f9d74a55c07cd"
+  },
+  {
+    "path": "sight/scripts/reconcile_phase4.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "376aa5d9436c95c94dd5281c4a8dfa6930a354d5b8d3c0dac2faa4b1f580b4c1"
+  },
+  {
+    "path": "sight/scripts/runtime_inventory.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "da9ce25d10bc2b823150a530323e2a75b513c5d087b6facef56cdab555a5b585"
+  },
+  {
+    "path": "sight/scripts/soak_worker.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "b7cfcc10ee2697647e496393729a9f1f375dbc009384c707bc521a0825ab02c4"
+  },
+  {
+    "path": "sight/scripts/update_phase4_identity.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "911493428805aab35ecdef49f5df314d89a8f4ff42bc0b8c29474ab3fcbf0d7c"
+  },
+  {
+    "path": "sight/scripts/verify.py",
+    "status": "modified",
+    "original_sha256": "5ab6193393f2ae4da315381310aee55229deaafb3ebf078fe0f2726385c0355b",
+    "sha256": "ddb1300fd343529f9f1189c73ccf24891ee7099dbfe541669f17a8fb262b2231"
+  },
+  {
+    "path": "sight/scripts/verify_gemma_weights.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "03107cc2b5d64895a1a35e848c53af6570e66ca1ad29625970980df701b781dd"
+  },
+  {
+    "path": "sight/scripts/write_phase4_reports.py",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "e2dcd4623eae218fa902dc245ba9a5969908013bf6f8aeb892237caa86e4a5d4"
+  },
+  {
+    "path": "sight/docs/Gemma.Modelfile",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "89f84e2b9a503e4e4ade57321b4e07d5cfa7b7664a5f89fb90396a09591af172"
+  },
+  {
+    "path": "sight/docs/GEMMA_REPAIR.md",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "501961a48246bbf542740306d158a4db12902dfff7ba67421c10960cb026a9a9"
+  },
+  {
+    "path": "sight/docs/OFFICIAL_GEMMA.md",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "1e1f5d1bab778f33925e439ed5a3dfef5fc6d37f9d0b8bfb7e984c71cf996c90"
+  },
+  {
+    "path": "sight/docs/PHASE4_AUDIT.md",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "b22d47086d0d7fe60f44797c4e4c486eec3ed8a92f40164671615242cb4f2eed"
+  },
+  {
+    "path": "sight/docs/PHASE4_BUG_FIXES.md",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "d21b8b47fd8400920eb458e6ac7bc4850e763490b29d107f232d2c9e215ffee9"
+  },
+  {
+    "path": "sight/docs/PHASE4_READINESS.md",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "79ba1bd233f87a8eeab46c1e9f928116dfd5e7c9951bac174202ce2745c1cd10"
+  },
+  {
+    "path": "sight/docs/PHASE4_TEST_RESULTS.md",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "099316c37c5a4aa075924481d3f4c57ab6ac70ffe307c425bc0ac0d93cdaeb82"
+  },
+  {
+    "path": "sight/docs/SECURITY_AND_RECOVERY.md",
+    "status": "modified",
+    "original_sha256": "7fedc729ed96ce2b45937852f443974d13a39b0654e21b11fbd51f4c4282a1f8",
+    "sha256": "cadca4afeb944e67cfa96b260a4aa52eff525d16f1b154bd4b8117e0274b7722"
+  },
+  {
+    "path": "sight/docs/START_HERE.md",
+    "status": "modified",
+    "original_sha256": "973b9a4d5d6fae4c69430965408e6e1aa044cedd7c929f308c73f07164eeab41",
+    "sha256": "cd7df598d9b9aef7e71f141f69bd1fe6da3323ac6bc8319b12cb24b5a19d8d18"
+  },
+  {
+    "path": "README.md",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "4298dc11cbe8a748fd8cd83534f5eef84868c15ed6c6d504b4da420c67dc5cc5"
+  },
+  {
+    "path": "PLAN.md",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "b8c0b5c584f8894df82c78e783d9c0184f5aec3680545a2403c04164115a43e4"
+  },
+  {
+    "path": "Start-SIGHT.ps1",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "334342dbb7c0c816f9fd87ceefe2fe27163cff9adbcfbe34a851bc97cbb1e7d7"
+  },
+  {
+    "path": "Open-SIGHT.ps1",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "2f4bdf61fb703e0ed72cf3bdd8e0421ef021b55e577b6b59560f207125400d23"
+  },
+  {
+    "path": "Start-Local-Runtime.ps1",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "f9e56b1d9292a35719782369ce9dde1539ebf2f335217b5187243d7a4c431807"
+  },
+  {
+    "path": "Run-Gemma.ps1",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "53309233f43144594d4d8e26806bc28082f05be9d05983ac782e50f511038f8f"
+  },
+  {
+    "path": "Verify-SIGHT.ps1",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "e137cb009a22d8bbd8a8d19823db8cea0f136e5c98c5deaf2cea47f4e8f1f7c1"
+  },
+  {
+    "path": "sight/requirements.in",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "416544812d8586615e727448d149b1abe05ec13da36b2dac4ed886f7278d9a18"
+  },
+  {
+    "path": "sight/requirements.lock",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "f2f8b04c54dc2930dfa121cd2c326d5976bb8e985dac0b27e03d8c7611d9aabf"
+  },
+  {
+    "path": "sight/pyproject.toml",
+    "status": "added",
+    "original_sha256": null,
+    "sha256": "59d8d1675ed884b1a60a7e36c2f0ab8457edbcd29cc51339fe5c25a4122db9cf"
+  }
+]

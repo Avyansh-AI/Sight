@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="4" time="1.054" timestamp="2026-10-22T15:33:34.374467+05:30" hostname="Avyansh-PC"><testcase classname="tests.test_official_gemma" name="test_official_model_does_not_inherit_derivative_sampling[gemma4:e4b-it-qat-expected0]" time="0.009"><failure message="assert (0.7, 0.9, 40, 1.1) == (1.0, 0.95, 64, 1.0)&#10;  &#10;  At index 0 diff: 0.7 != 1.0&#10;  Use -v to get more diff">tests\test_official_gemma.py:29: in test_official_model_does_not_inherit_derivative_sampling
+    assert tuple(options[k] for k in ('temperature', 'top_p', 'top_k', 'repeat_penalty')) == expected
+E   assert (0.7, 0.9, 40, 1.1) == (1.0, 0.95, 64, 1.0)
+E     
+E     At index 0 diff: 0.7 != 1.0
+E     Use -v to get more diff</failure></testcase><testcase classname="tests.test_official_gemma" name="test_official_model_does_not_inherit_derivative_sampling[sight-gemma4-e4b:uncensored-expected1]" time="0.028" /><testcase classname="tests.test_official_gemma" name="test_direct_helper_selects_normal_gemma[False]" time="0.514"><failure message="AssertionError: The uncensored profile is not installed. Run sight\scripts\configure_gemma_profile.py using the SIGHT Python &#10;  environment. No download was attempted.&#10;  At C:\Users\Dell\Documents\Ai projects\Sight\Phase-4\Run-Gemma.ps1:8 char:5&#10;  +     throw 'The uncensored profile is not installed. Run sight\scripts ...&#10;  +     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&#10;      + CategoryInfo          : OperationStopped: (The uncensored ... was attempted.:String) [], RuntimeException&#10;      + FullyQualifiedErrorId : The uncensored profile is not installed. Run sight\scripts\configure_gemma_profile.py us &#10;     ing the SIGHT Python environment. No download was attempted.&#10;   &#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv... sight\\scripts\\configure_gemma_profile.py us \n   ing the SIGHT Python environment. No download was attempted.\n \n&quot;).returncode">tests\test_official_gemma.py:49: in test_direct_helper_selects_normal_gemma
+    assert result.returncode==0,result.stdout+result.stderr
+E   AssertionError: The uncensored profile is not installed. Run sight\scripts\configure_gemma_profile.py using the SIGHT Python 
+E     environment. No download was attempted.
+E     At C:\Users\Dell\Documents\Ai projects\Sight\Phase-4\Run-Gemma.ps1:8 char:5
+E     +     throw 'The uncensored profile is not installed. Run sight\scripts ...
+E     +     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+E         + CategoryInfo          : OperationStopped: (The uncensored ... was attempted.:String) [], RuntimeException
+E         + FullyQualifiedErrorId : The uncensored profile is not installed. Run sight\scripts\configure_gemma_profile.py us 
+E        ing the SIGHT Python environment. No download was attempted.
+E      
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv... sight\\scripts\\configure_gemma_profile.py us \n   ing the SIGHT Python environment. No download was attempted.\n \n").returncode</failure></testcase><testcase classname="tests.test_official_gemma" name="test_direct_helper_selects_normal_gemma[True]" time="0.351"><failure message="AssertionError: The uncensored profile is not installed. Run sight\scripts\configure_gemma_profile.py using the SIGHT Python &#10;  environment. No download was attempted.&#10;  At C:\Users\Dell\Documents\Ai projects\Sight\Phase-4\Run-Gemma.ps1:8 char:5&#10;  +     throw 'The uncensored profile is not installed. Run sight\scripts ...&#10;  +     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&#10;      + CategoryInfo          : OperationStopped: (The uncensored ... was attempted.:String) [], RuntimeException&#10;      + FullyQualifiedErrorId : The uncensored profile is not installed. Run sight\scripts\configure_gemma_profile.py us &#10;     ing the SIGHT Python environment. No download was attempted.&#10;   &#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv... sight\\scripts\\configure_gemma_profile.py us \n   ing the SIGHT Python environment. No download was attempted.\n \n&quot;).returncode">tests\test_official_gemma.py:49: in test_direct_helper_selects_normal_gemma
+    assert result.returncode==0,result.stdout+result.stderr
+E   AssertionError: The uncensored profile is not installed. Run sight\scripts\configure_gemma_profile.py using the SIGHT Python 
+E     environment. No download was attempted.
+E     At C:\Users\Dell\Documents\Ai projects\Sight\Phase-4\Run-Gemma.ps1:8 char:5
+E     +     throw 'The uncensored profile is not installed. Run sight\scripts ...
+E     +     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+E         + CategoryInfo          : OperationStopped: (The uncensored ... was attempted.:String) [], RuntimeException
+E         + FullyQualifiedErrorId : The uncensored profile is not installed. Run sight\scripts\configure_gemma_profile.py us 
+E        ing the SIGHT Python environment. No download was attempted.
+E      
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe', '-NoProfile', '-NonInteractiv... sight\\scripts\\configure_gemma_profile.py us \n   ing the SIGHT Python environment. No download was attempted.\n \n").returncode</failure></testcase></testsuite></testsuites>

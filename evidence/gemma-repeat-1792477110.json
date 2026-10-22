@@ -1,0 +1,96 @@
+{
+  "started_utc": "2026-10-20T06:18:30.779936+00:00",
+  "model": "sight-gemma4-e4b:uncensored",
+  "cloud_requests": 0,
+  "rows": [
+    {
+      "seed": 0,
+      "status": 200,
+      "seconds": 53.922,
+      "answer": "32",
+      "thinking_characters": 2702,
+      "done": true,
+      "done_reason": "stop",
+      "generated_tokens": 858,
+      "error": null
+    },
+    {
+      "seed": 1,
+      "status": 200,
+      "seconds": 8.015,
+      "answer": "42",
+      "thinking_characters": 1076,
+      "done": true,
+      "done_reason": "stop",
+      "generated_tokens": 466,
+      "error": null
+    },
+    {
+      "seed": 2,
+      "status": 200,
+      "seconds": 6.235,
+      "answer": "",
+      "thinking_characters": 862,
+      "done": true,
+      "done_reason": "stop",
+      "generated_tokens": 359,
+      "error": null
+    },
+    {
+      "seed": 3,
+      "status": 200,
+      "seconds": 5.75,
+      "answer": "42",
+      "thinking_characters": 906,
+      "done": true,
+      "done_reason": "stop",
+      "generated_tokens": 329,
+      "error": null
+    },
+    {
+      "seed": 4,
+      "status": 200,
+      "seconds": 2.468,
+      "answer": "42",
+      "thinking_characters": 417,
+      "done": true,
+      "done_reason": "stop",
+      "generated_tokens": 140,
+      "error": null
+    },
+    {
+      "seed": 5,
+      "status": 200,
+      "seconds": 0.485,
+      "answer": "42",
+      "thinking_characters": 29,
+      "done": true,
+      "done_reason": "stop",
+      "generated_tokens": 26,
+      "error": null
+    },
+    {
+      "seed": 6,
+      "status": 200,
+      "seconds": 0.797,
+      "answer": "",
+      "thinking_characters": 54,
+      "done": true,
+      "done_reason": "stop",
+      "generated_tokens": 45,
+      "error": null
+    },
+    {
+      "seed": 7,
+      "status": 200,
+      "seconds": 18.843,
+      "answer": "42",
+      "thinking_characters": 2515,
+      "done": true,
+      "done_reason": "stop",
+      "generated_tokens": 1085,
+      "error": null
+    }
+  ],
+  "complete": true
+}
